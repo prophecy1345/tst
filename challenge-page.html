@@ -635,6 +635,14 @@
       .navbar-toggler {
         display: block !important;
       }
+
+      .challenge-meta {
+        align-items: flex-start !important;
+      }
+
+      .tags-container {
+        max-width: 430px;
+      }
     }
 
     @media (max-width: 767px) {
@@ -687,13 +695,14 @@
         border-radius: 12px !important;
       }
 
-      .d-flex.flex-wrap.gap-2 {
+      .share-buttons {
         flex-direction: column;
         align-items: flex-start !important;
       }
 
       .tags-container {
         justify-content: center !important;
+        max-width: 343px;
       }
 
       .footer {
@@ -718,7 +727,7 @@
         padding: 12px 16px;
       }
 
-      .d-flex.flex-wrap.gap-2.align-items-center.justify-content-between {
+      .challenge-meta {
         flex-direction: column;
         align-items: center !important;
         gap: 20px !important;
@@ -856,7 +865,7 @@
           <div class="d-flex justify-content-center align-items-center gap-2 mb-5">
             <span class="share-label"
               style="font-family: Inter; font-size: 18px; font-weight: 400; line-height: 27px; color: #1F2937;">Share:</span>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 share-buttons">
               <a href="https://www.facebook.com/sharer/sharer.php?u=https://thesimstree.com/challenges/not-so-berry-legacy-challenge.html"
                 target="_blank" rel="noopener" class="d-flex justify-content-center align-items-center"
                 style="width: 32px; height: 32px; padding: 8px; color: #434A57; text-decoration: none;">
@@ -955,7 +964,7 @@
               popularity rating based on appearance, skills, hobbies, and even the number of social media followers.</p>
           </div>
 
-          <div class="d-flex flex-wrap gap-2 align-items-center justify-content-between pt-5 mt-5"
+          <div class="challenge-meta d-flex flex-wrap gap-2 align-items-center justify-content-between pt-5 mt-5"
             style="border-top: 1px solid #E3E9EF;">
             <div class="d-flex flex-wrap gap-2 tags-container">
               <a href="#" class="d-inline-flex align-items-center justify-content-center"
