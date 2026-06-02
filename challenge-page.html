@@ -640,11 +640,12 @@
     }
 
     .author-name {
+      color: #1F2937;
       transition: color .15s;
     }
 
-    .author-name:hover {
-      color: #2e8a47 !important;
+    .author-name:hover:not(.disabled) {
+      color: var(--ar-navbar-hover-color, var(--ar-primary)) !important;
     }
 
     .challenge-share {
@@ -1027,6 +1028,7 @@
     }
 
     .challenge-authors {
+      --ar-navbar-hover-color: var(--ar-primary);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1195,7 +1197,7 @@
               </div>
               <div class="challenge-author__names">
                 <a href="https://thesimstree.com/" target="_blank" rel="noopener" class="author-name"
-                  style="font-family: Inter; font-size: 18px; font-weight: 400; line-height: 27px; color: #1F2937; text-decoration: none;">Martha
+                  style="font-family: Inter; font-size: 18px; font-weight: 400; line-height: 27px; text-decoration: none;">Martha
                   Stewart</a>
               </div>
             </div>
