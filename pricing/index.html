@@ -532,25 +532,36 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 10;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
       background: #fff;
       color: #434A57;
       box-shadow: 0 4px 20px rgba(18, 21, 25, .18);
     }
 
     .pricing-features-prev {
-      left: 20px;
+      left: calc((100% - min(1300px, 100% - 160px)) / 2 - 54px);
+      right: auto;
     }
 
     .pricing-features-next {
-      right: 20px;
+      right: calc((100% - min(1300px, 100% - 160px)) / 2 - 54px);
+      left: auto;
     }
 
     .pricing-swiper-button::after {
-      font-size: 16px;
-      font-weight: 700;
+      font-family: around-icons;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .pricing-features-prev::after {
+      content: "\f10d";
+    }
+
+    .pricing-features-next::after {
+      content: "\f10e";
     }
 
     .pricing-promises {
@@ -843,6 +854,10 @@
       .footer-socials .d-flex {
         flex-wrap: nowrap !important;
         gap: 8px !important;
+      }
+
+      .pricing-tree-slide {
+        width: min(1300px, calc(100% - 160px));
       }
     }
 
@@ -1305,7 +1320,7 @@
       </div>
       <div class="pricing-features-carousel" data-aos="fade-up">
         <div class="swiper"
-          data-swiper-options='{"slidesPerView":1.2,"centeredSlides":true,"spaceBetween":32,"loop":true,"navigation":{"prevEl":".pricing-features-prev","nextEl":".pricing-features-next"},"breakpoints":{"0":{"spaceBetween":16,"slidesPerView":1.1},"768":{"spaceBetween":24,"slidesPerView":1.15},"1200":{"spaceBetween":32,"slidesPerView":1.2}},"effect":"slide"}'>
+          data-swiper-options='{"slidesPerView":1.2,"centeredSlides":true,"spaceBetween":32,"loop":true,"navigation":{"prevEl":".pricing-features-prev","nextEl":".pricing-features-next"},"breakpoints":{"0":{"spaceBetween":16,"slidesPerView":1.1},"768":{"spaceBetween":24,"slidesPerView":1.15},"992":{"spaceBetween":64,"slidesPerView":"auto"},"1200":{"spaceBetween":64,"slidesPerView":"auto"}},"effect":"slide"}'>
           <div class="swiper-wrapper">
             <div class="swiper-slide pricing-tree-slide" data-feature-type="free" data-title="Уже доступно тебе"
               data-description="Древо, которое можно создать на Free плане">
