@@ -261,7 +261,9 @@
     }
 
     .pricing-card--free .pricing-badge {
-      min-height: 42px;
+      align-self: flex-start;
+      padding: 14px 16px;
+      border: 1px solid var(--pricing-primary-dark);
     }
 
     .pricing-style-card__title {
@@ -309,7 +311,7 @@
     .pricing-card__content {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 28px;
     }
 
     .pricing-card__heading {
@@ -345,10 +347,11 @@
     }
 
     .pricing-periods__button {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 8px;
       flex: 1;
       min-height: 32px;
       padding: 6px 10px;
@@ -362,6 +365,17 @@
       white-space: nowrap;
     }
 
+    .pricing-periods__button:not(:first-child)::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 25px;
+      background: #BCCBDA;
+    }
+
     .pricing-periods__button.active {
       background: var(--pricing-primary);
       color: #fff;
@@ -369,11 +383,16 @@
 
     .pricing-periods__save {
       padding: 4px 6px;
+      border: 1px solid var(--pricing-primary);
       border-radius: 6px;
       background: var(--pricing-green-soft);
       color: var(--pricing-primary);
       font-size: 12px;
       line-height: 12px;
+    }
+
+    .pricing-periods__button.active .pricing-periods__save {
+      border-color: transparent;
     }
 
     .pricing-price {
@@ -417,7 +436,7 @@
 
     .pricing-features li {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 12px;
       color: var(--pricing-text);
       font-size: 16px;
@@ -428,7 +447,6 @@
       content: "";
       width: 5px;
       height: 5px;
-      margin-top: 9px;
       flex: 0 0 auto;
       border-radius: 50%;
       background: var(--pricing-text);
@@ -962,6 +980,7 @@
 
       .pricing-card {
         flex: 0 0 100%;
+        min-width: 0;
         scroll-snap-align: start;
         min-height: auto;
         padding: 28px;
@@ -1000,6 +1019,20 @@
       .pricing-periods {
         width: 100%;
         overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .pricing-periods::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pricing-periods__button {
+        padding: 6px 6px;
+        gap: 4px;
+      }
+
+      .pricing-periods__save {
+        padding: 3px 5px;
       }
 
       .pricing-price {
@@ -1189,7 +1222,7 @@
               <div class="pricing-card__heading">
                 <h3 class="pricing-card__title">Free</h3>
                 <p class="pricing-card__description">Save your family's story</p>
-              </div><span class="pricing-badge">Free</span>
+              </div><span class="pricing-badge">Forever</span>
               <div class="pricing-price"><span class="pricing-price__value">$0</span><span
                   class="pricing-price__slash">/</span><span class="pricing-price__meta">month</span></div>
               <ul class="pricing-features">
