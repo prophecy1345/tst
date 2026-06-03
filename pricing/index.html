@@ -122,7 +122,7 @@
 
     .pricing-title {
       margin: 0;
-      color: var(--pricing-heading);
+      color: #1F2937;
       font-size: 40px;
       font-weight: 600;
       line-height: 52px;
@@ -222,7 +222,7 @@
     .pricing-style-card {
       display: grid;
       grid-template-columns: 450px minmax(0, 1fr);
-      align-items: center;
+      align-items: start;
       gap: 24px;
     }
 
@@ -747,12 +747,27 @@
         min-height: 300px;
       }
 
+      .pricing-title {
+        font-size: 32px;
+        line-height: 42px;
+      }
+
+      .pricing-style-list {
+        gap: 28px;
+      }
+
       .pricing-style-card {
-        grid-template-columns: 45% minmax(0, 1fr);
+        grid-template-columns: 344px minmax(0, 1fr);
+        gap: 20px;
       }
 
       .pricing-style-card__image {
-        height: 220px;
+        height: 230px;
+      }
+
+      .pricing-style-card__text {
+        font-size: 16px;
+        line-height: 24px;
       }
 
       .pricing-plans {
@@ -830,6 +845,11 @@
         width: min(375px, 50%);
         height: 398px;
       }
+
+      .pricing-style-card__title {
+        font-size: 22px;
+        line-height: 32px;
+      }
     }
 
     @media (max-width: 767px) {
@@ -844,6 +864,7 @@
       .pricing-title {
         font-size: 28px;
         line-height: 42px;
+        color: #121519;
       }
 
       .pricing-subtitle {
@@ -852,8 +873,8 @@
       }
 
       .pricing-eyebrow {
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 16px;
+        line-height: 24px;
       }
 
       .pricing-hero {
@@ -903,11 +924,16 @@
 
       .pricing-style-card {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 20px;
       }
 
       .pricing-style-card__image {
-        height: 180px;
+        height: 230px;
+      }
+
+      .pricing-style-card__title {
+        font-size: 22px;
+        line-height: 30px;
       }
 
       .pricing-style-card__text {
