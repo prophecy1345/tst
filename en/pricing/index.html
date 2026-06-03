@@ -743,15 +743,6 @@
         line-height: 54px;
       }
 
-      .pricing-hero__visual {
-        position: static;
-        width: auto;
-        height: auto;
-        background-position: center bottom;
-        filter: none;
-      }
-
-      .pricing-hero__visual,
       .pricing-final__visual {
         min-height: 300px;
       }
@@ -829,6 +820,16 @@
         gap: 8px;
         justify-content: end;
       }
+
+      .pricing-hero {
+        min-height: 365px;
+      }
+
+      .pricing-hero__visual {
+        top: 76px;
+        width: min(375px, 50%);
+        height: 398px;
+      }
     }
 
     @media (max-width: 767px) {
@@ -861,6 +862,14 @@
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
+      }
+
+      .pricing-hero__visual {
+        position: static;
+        width: auto;
+        height: auto;
+        background-position: center bottom;
+        filter: none;
       }
 
       .pricing-hero__content,
