@@ -1169,16 +1169,12 @@
                     }
 
                     .tst-search-input:focus {
-                        border-color: #45bc60;
+                        border-color: #1f2937;
                     }
 
                     @media (min-width: 992px) {
                         .tst-search-bar {
                             max-width: 861px;
-                        }
-                        .tst-search-input::placeholder {
-                            color: #697488;
-                            font-weight: 500;
                         }
                     }
 
@@ -1237,7 +1233,7 @@
                     }
 
                     .tst-filter-btn.tst-open {
-                        border-color: #45bc60;
+                        border-color: #1f2937;
                     }
 
                     .tst-filter-chevron {
@@ -1381,7 +1377,7 @@
                             aria-expanded="false"
                         >
                             <span class="tst-filter-label" id="tstFilterLabel"
-                                >All challenges</span
+                                >All tags</span
                             >
                             <svg
                                 class="tst-filter-chevron"
@@ -2456,7 +2452,7 @@
                                 var filter = item.getAttribute("data-filter");
                                 if (activeFilter === filter) {
                                     activeFilter = null;
-                                    filterLabel.textContent = "All challenges";
+                                    filterLabel.textContent = "All tags";
                                     filterItems.forEach(function (i) {
                                         i.classList.remove("tst-active");
                                     });
