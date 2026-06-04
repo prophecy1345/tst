@@ -931,6 +931,197 @@
           cursor: default;
           pointer-events: none;
         }
+        /* Search + Filter bar */
+        .tst-search-bar {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-bottom: 24px;
+        }
+
+        @media (min-width: 576px) {
+          .tst-search-bar {
+            flex-direction: row;
+            align-items: center;
+          }
+        }
+
+        .tst-search-wrap {
+          flex: 1;
+          min-width: 0;
+        }
+
+        .tst-search-form {
+          position: relative;
+          width: 100%;
+        }
+
+        .tst-search-input {
+          width: 100%;
+          height: 48px;
+          box-sizing: border-box;
+          padding: 0 16px 0 48px;
+          border: 1px solid #D7DDE2;
+          border-radius: 16px;
+          font-family: Inter, sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          color: #1F2937;
+          outline: none;
+          transition: border-color .2s;
+          background: #fff;
+        }
+
+        .tst-search-input::placeholder {
+          color: #B4BBC3;
+          font-weight: 400;
+        }
+
+        .tst-search-input:focus {
+          border-color: #45bc60;
+        }
+
+        @media (min-width: 992px) {
+          .tst-search-bar {
+            max-width: 861px;
+          }
+          .tst-search-input::placeholder {
+            color: #697488;
+            font-weight: 500;
+          }
+        }
+
+        .tst-search-icon {
+          position: absolute;
+          left: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          pointer-events: none;
+        }
+
+        .tst-filter-wrap {
+          position: relative;
+          width: 100%;
+          flex-shrink: 0;
+        }
+
+        @media (min-width: 576px) {
+          .tst-filter-wrap {
+            flex: 1;
+            width: auto;
+          }
+        }
+
+        @media (min-width: 992px) {
+          .tst-filter-wrap {
+            flex: none;
+            width: 220px;
+          }
+        }
+
+        .tst-filter-btn {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 16px;
+          width: 100%;
+          height: 48px;
+          box-sizing: border-box;
+          border: 1px solid #D7DDE2;
+          border-radius: 16px;
+          background: #fff;
+          cursor: pointer;
+          font-family: Inter, sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #697488;
+          transition: border-color .2s;
+        }
+
+        .tst-filter-btn:hover {
+          border-color: #b0b8c1;
+        }
+
+        .tst-filter-btn.tst-open {
+          border-color: #45bc60;
+        }
+
+        .tst-filter-chevron {
+          flex-shrink: 0;
+          transition: transform .2s;
+        }
+
+        .tst-filter-btn.tst-open .tst-filter-chevron {
+          transform: rotate(180deg);
+        }
+
+        .tst-filter-dropdown-menu {
+          display: none;
+          position: absolute;
+          top: calc(100% + 8px);
+          right: 0;
+          width: 100%;
+          min-width: 220px;
+          box-sizing: border-box;
+          background: #fff;
+          border: 1px solid #D7DDE2;
+          border-radius: 16px;
+          padding: 8px 0;
+          box-shadow: 0 6px 20px rgba(0,0,0,.12);
+          z-index: 1000;
+          flex-direction: column;
+        }
+
+        @media (min-width: 992px) {
+          .tst-filter-dropdown-menu {
+            width: 220px;
+          }
+        }
+
+        .tst-filter-dropdown-menu.tst-open {
+          display: flex;
+        }
+
+        .tst-filter-group {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .tst-filter-item {
+          display: flex;
+          align-items: center;
+          padding: 8px 16px;
+          height: 37px;
+          box-sizing: border-box;
+          width: 100%;
+          font-family: Inter, sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #697488;
+          cursor: pointer;
+          transition: background .15s, color .15s;
+          white-space: nowrap;
+          user-select: none;
+        }
+
+        .tst-filter-item:hover {
+          background: #F6F8FA;
+        }
+
+        .tst-filter-item.tst-active {
+          background: #F6F8FA;
+          color: #1F2937;
+        }
+
+        .tst-filter-divider {
+          width: 100%;
+          height: 1px;
+          background: #D7DDE2;
+          flex-shrink: 0;
+        }
       </style>
 
       <section class="row align-items-start justify-content-between g-4 mb-5">
@@ -942,6 +1133,52 @@
             descriptions for Not So Berry, 100 Baby, Decades and many other legacy and gameplay challenges.</p>
         </div>
       </section>
+
+      <!-- Search + Filter bar -->
+      <div class="tst-search-bar">
+        <div class="tst-search-wrap">
+          <div class="tst-search-form">
+            <span class="tst-search-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667Z" stroke="#576071" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 14l-2.9-2.9" stroke="#576071" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <input type="text" class="tst-search-input" id="tstSearchInput" placeholder="Search" autocomplete="off">
+          </div>
+        </div>
+        <div class="tst-filter-wrap" id="tstFilterWrap">
+          <button class="tst-filter-btn" type="button" id="tstFilterBtn" aria-haspopup="listbox" aria-expanded="false">
+            <span class="tst-filter-label" id="tstFilterLabel">All challenges</span>
+            <svg class="tst-filter-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 4l4 4 4-4" stroke="#697488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="tst-filter-dropdown-menu" id="tstFilterMenu" role="listbox">
+            <div class="tst-filter-group">
+              <div class="tst-filter-item" data-filter="Legacy" role="option" tabindex="0">Legacy</div>
+              <div class="tst-filter-item" data-filter="Build" role="option" tabindex="0">Build</div>
+              <div class="tst-filter-item" data-filter="CAS" role="option" tabindex="0">CAS</div>
+              <div class="tst-filter-item" data-filter="Gameplay" role="option" tabindex="0">Gameplay</div>
+            </div>
+            <div class="tst-filter-divider"></div>
+            <div class="tst-filter-group">
+              <div class="tst-filter-item" data-filter="Family" role="option" tabindex="0">Family</div>
+              <div class="tst-filter-item" data-filter="Romance" role="option" tabindex="0">Romance</div>
+              <div class="tst-filter-item" data-filter="Career" role="option" tabindex="0">Career</div>
+              <div class="tst-filter-item" data-filter="Occult" role="option" tabindex="0">Occult</div>
+              <div class="tst-filter-item" data-filter="Historical" role="option" tabindex="0">Historical</div>
+              <div class="tst-filter-item" data-filter="Nature" role="option" tabindex="0">Nature</div>
+            </div>
+            <div class="tst-filter-divider"></div>
+            <div class="tst-filter-group">
+              <div class="tst-filter-item" data-filter="Base game" role="option" tabindex="0">Base game</div>
+              <div class="tst-filter-item" data-filter="Expansion packs" role="option" tabindex="0">Expansion packs</div>
+              <div class="tst-filter-item" data-filter="Mods" role="option" tabindex="0">Mods</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="tst-grid">
 
@@ -1449,6 +1686,97 @@
           } else {
             initAll();
           }
+        })();
+      </script>
+
+      <script>
+        (function () {
+          var searchInput = document.getElementById('tstSearchInput');
+          var filterBtn = document.getElementById('tstFilterBtn');
+          var filterMenu = document.getElementById('tstFilterMenu');
+          var filterLabel = document.getElementById('tstFilterLabel');
+          var filterItems = filterMenu ? Array.from(filterMenu.querySelectorAll('.tst-filter-item')) : [];
+          var activeFilter = null;
+
+          function applyFilters() {
+            var query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+            var cards = document.querySelectorAll('.tst-grid .tst-card');
+            cards.forEach(function (card) {
+              var titleEl = card.querySelector('.tst-card-title');
+              var title = titleEl ? titleEl.textContent.toLowerCase() : '';
+              var matchSearch = !query || title.indexOf(query) !== -1;
+
+              var matchFilter = true;
+              if (activeFilter) {
+                var tags = card.querySelectorAll('.tst-tag');
+                var found = false;
+                tags.forEach(function (tag) {
+                  if (tag.textContent.trim() === activeFilter) found = true;
+                });
+                matchFilter = found;
+              }
+
+              card.style.display = (matchSearch && matchFilter) ? '' : 'none';
+            });
+          }
+
+          function openMenu() {
+            filterMenu.classList.add('tst-open');
+            filterBtn.classList.add('tst-open');
+            filterBtn.setAttribute('aria-expanded', 'true');
+          }
+
+          function closeMenu() {
+            filterMenu.classList.remove('tst-open');
+            filterBtn.classList.remove('tst-open');
+            filterBtn.setAttribute('aria-expanded', 'false');
+          }
+
+          if (searchInput) {
+            searchInput.addEventListener('input', applyFilters);
+          }
+
+          if (filterBtn) {
+            filterBtn.addEventListener('click', function (e) {
+              e.stopPropagation();
+              filterMenu.classList.contains('tst-open') ? closeMenu() : openMenu();
+            });
+          }
+
+          filterItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+              var filter = item.getAttribute('data-filter');
+              if (activeFilter === filter) {
+                activeFilter = null;
+                filterLabel.textContent = 'All challenges';
+                filterItems.forEach(function (i) { i.classList.remove('tst-active'); });
+              } else {
+                activeFilter = filter;
+                filterLabel.textContent = filter;
+                filterItems.forEach(function (i) { i.classList.remove('tst-active'); });
+                item.classList.add('tst-active');
+              }
+              closeMenu();
+              applyFilters();
+            });
+
+            item.addEventListener('keydown', function (e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                item.click();
+              }
+            });
+          });
+
+          document.addEventListener('click', function (e) {
+            if (!filterMenu || !filterMenu.classList.contains('tst-open')) return;
+            var wrap = document.getElementById('tstFilterWrap');
+            if (wrap && !wrap.contains(e.target)) closeMenu();
+          });
+
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeMenu();
+          });
         })();
       </script>
 
