@@ -1,1755 +1,2428 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-
-<head>
-  <title>Тарифы | TheSimsTree</title>
-  <meta charset="UTF-8" />
-  <meta name="description"
-    content="Тарифы TheSimsTree: Free навсегда и Pro для расширенных семейных деревьев, дневников, галерей и кастомизации." />
-  <meta name="keywords" content="TheSimsTree, тарифы, семейное древо, Sims, genealogy, legacy" />
-  <link rel="canonical" href="https://thesimstree.com/pricing/">
-  <meta name="author" content="TheSimsTree - save your history">
-  <meta property="og:title" content="Тарифы | TheSimsTree" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="TheSimsTree" />
-  <meta property="og:description"
-    content="Создай семейное древо бесплатно или перейди на Pro, чтобы сохранять больше историй, деталей и миров." />
-  <meta property="og:image" content="https://thesimstree.com/logo.svg" />
-  <meta property="og:url" content="https://thesimstree.com/pricing/" />
-  <link rel="icon" href="https://thesimstree.com/favicon.ico">
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@thesimstree" />
-  <meta name="twitter:title" content="Тарифы | TheSimsTree" />
-  <meta name="twitter:description" content="Free навсегда и Pro для расширенных семейных деревьев TheSimsTree." />
-  <meta name="twitter:image" content="https://thesimstree.com/logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="theme-color" content="white">
-
-  <style>
-    @font-face {
-      font-family: Inter;
-      font-style: normal;
-      font-weight: 100 900;
-      src: url(../fonts/inter-latin-normal.woff2);
-      font-display: swap;
-    }
-  </style>
-
-  <link rel="stylesheet" media="screen" href="../vendor/aos/dist/aos.css?ver=3.83">
-  <link rel="stylesheet" media="screen" href="../vendor/swiper/swiper-bundle.min.css?ver=3.83">
-  <link rel="stylesheet" href="../icons/around-icons.min.css?ver=3.83">
-  <link rel="stylesheet" media="screen" href="../css/theme.css?ver=3.83">
-  <link rel="stylesheet" media="screen" href="../css/custom.css?ver=3.83">
-
-  <style>
-    :root {
-      --pricing-primary: var(--ar-primary, #45BC60);
-      --pricing-primary-dark: #41B475;
-      --pricing-heading: #121519;
-      --pricing-text: #576071;
-      --pricing-muted: #697488;
-      --pricing-border: #EDF1F5;
-      --pricing-soft: #F6F8FA;
-      --pricing-green-soft: #EEF9F0;
-    }
-    .pricing-lang__toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 8px;
-      border: 0;
-      border-radius: 8px;
-      background: transparent;
-      cursor: pointer;
-      transition: background .15s;
-    }
-    .pricing-lang__toggle:hover {
-      background: rgba(18, 21, 25, .06);
-    }
-    .pricing-lang__toggle .ai-chevron-down {
-      font-size: 14px;
-      color: rgba(18, 21, 25, .45);
-      transition: transform .2s;
-    }
-    .pricing-lang__toggle[aria-expanded="true"] .ai-chevron-down {
-      transform: rotate(180deg);
-    }
-    .pricing-lang__menu {
-      min-width: 140px;
-    }
-
-    body {
-      font-family: Inter, sans-serif;
-      color: var(--pricing-text);
-      background: #fff;
-    }
-
-    .pricing-page {
-      overflow: hidden;
-    }
-
-    .pricing-container {
-      width: min(calc(95% - 32px), 1296px);
-      margin: 0 auto;
-    }
-
-    .pricing-section {
-      padding: 80px 0;
-    }
-
-    .pricing-section--hero,
-    .pricing-section--final {
-      background: linear-gradient(75.3deg, #E7F5E3 16.06%, #FFFDE9 113.41%);
-    }
-
-    .pricing-section--hero,
-    .pricing-section--final {
-      overflow: hidden;
-    }
-
-    .pricing-section--features {
-      background: linear-gradient(135.04deg, #F8F6E1 19.4%, #FDEAE6 97.06%);
-    }
-
-    .pricing-eyebrow {
-      margin-bottom: 12px;
-      color: var(--pricing-primary);
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 24px;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .pricing-title {
-      margin: 0;
-      color: #1F2937;
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 52px;
-      text-align: center;
-    }
-
-    .pricing-subtitle {
-      margin: 12px auto 0;
-      color: var(--pricing-muted);
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 27px;
-      text-align: center;
-    }
-
-    .pricing-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 56px;
-      padding: 16px 32px;
-      border: 1px solid var(--pricing-primary-dark);
-      border-radius: 18px;
-      background: var(--pricing-primary);
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 22px;
-      text-decoration: none;
-      transition: transform .15s, background .15s, border-color .15s, color .15s;
-    }
-
-    .pricing-btn:hover {
-      transform: translateY(-1px);
-      background: var(--pricing-primary-dark);
-      border-color: var(--pricing-primary-dark);
-      color: #fff;
-    }
-
-    .pricing-btn--outline {
-      background: transparent;
-      color: var(--pricing-primary);
-    }
-
-    .pricing-btn--outline:hover {
-      background: var(--pricing-primary);
-      color: #fff;
-    }
-
-    .pricing-hero {
-      position: relative;
-      min-height: 482px;
-      padding: 0;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
-      align-items: center;
-      gap: 64px;
-    }
-
-    .pricing-hero__content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 30px;
-    }
-
-    .pricing-hero__title {
-      margin: 0;
-      color: var(--pricing-heading);
-      font-size: 56px;
-      font-weight: 600;
-      line-height: 72px;
-    }
-
-    .pricing-hero__text {
-      margin: 8px 0 0;
-      color: var(--pricing-text);
-      font-size: 18px;
-      line-height: 27px;
-    }
-
-    .pricing-hero__visual,
-    .pricing-final__visual {
-      min-height: 360px;
-      border-radius: 32px;
-      background: radial-gradient(circle at 50% 30%, rgba(69, 188, 96, .18), transparent 45%), url('../img/landing/influencer/hero.png') center bottom / contain no-repeat;
-      filter: drop-shadow(5px 17px 25.6px rgba(0, 0, 0, .1));
-    }
-
-    .pricing-style-list {
-      display: grid;
-      gap: 40px;
-      max-width: 1020px;
-      margin: 64px auto 0;
-    }
-
-    .pricing-style-card {
-      display: grid;
-      grid-template-columns: 450px minmax(0, 1fr);
-      align-items: start;
-      gap: 24px;
-    }
-
-    .pricing-style-card__image {
-      width: 100%;
-      height: 274px;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-
-    .pricing-style-card__body {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .pricing-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 24px;
-      padding: 6px 12px;
-      border-radius: 8px;
-      background: var(--pricing-green-soft);
-      color: var(--pricing-primary);
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 12px;
-    }
-
-    .pricing-badge--muted {
-      background: var(--pricing-soft);
-      border: 1px solid #BCCBDA;
-      color: #434A57;
-    }
-
-    .pricing-card--free .pricing-badge {
-      align-self: flex-start;
-      padding: 14px 16px;
-      border: 1px solid var(--pricing-primary-dark);
-    }
-
-    .pricing-style-card__title {
-      margin: 0;
-      color: #1F2937;
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 32px;
-    }
-
-    .pricing-style-card__text {
-      margin: 0;
-      color: var(--pricing-muted);
-      font-size: 18px;
-      line-height: 27px;
-    }
-
-    .pricing-plans {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 499px));
-      justify-content: center;
-      gap: 24px;
-      margin-top: 64px;
-    }
-
-    .pricing-card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 712px;
-      padding: 40px;
-      border-radius: 20px;
-    }
-
-    .pricing-card--free {
-      background: var(--pricing-green-soft);
-      border: 2px dashed var(--pricing-primary-dark);
-    }
-
-    .pricing-card--pro {
-      background: var(--pricing-soft);
-      border: 2px solid var(--pricing-border);
-    }
-
-    .pricing-card__content {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-
-    .pricing-card__heading {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .pricing-card__title {
-      margin: 0;
-      color: var(--pricing-heading);
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 52px;
-    }
-
-    .pricing-card__description {
-      margin: 0;
-      color: var(--pricing-text);
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    .pricing-periods {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      width: 100%;
-      padding: 4px;
-      border: 1px solid #BCCBDA;
-      border-radius: 8px;
-      background: var(--pricing-soft);
-    }
-
-    .pricing-periods__button {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      flex: 1;
-      min-height: 32px;
-      padding: 6px 10px;
-      border: 0;
-      border-radius: 8px;
-      background: transparent;
-      color: var(--pricing-text);
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 12px;
-      white-space: nowrap;
-    }
-
-    .pricing-periods__button:not(:first-child)::before {
-      content: "";
-      position: absolute;
-      left: -2px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 1px;
-      height: 25px;
-      background: #BCCBDA;
-    }
-
-    .pricing-periods__button.active {
-      background: var(--pricing-primary);
-      color: #fff;
-    }
-
-    .pricing-periods__save {
-      padding: 4px 6px;
-      border: 1px solid var(--pricing-primary);
-      border-radius: 6px;
-      background: var(--pricing-green-soft);
-      color: var(--pricing-primary);
-      font-size: 12px;
-      line-height: 12px;
-    }
-
-    .pricing-periods__button.active .pricing-periods__save {
-      border-color: transparent;
-    }
-
-    .pricing-price {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--pricing-heading);
-    }
-
-    .pricing-price__value,
-    .pricing-price__slash {
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 52px;
-      flex-shrink: 0;
-      white-space: nowrap;
-    }
-
-    .pricing-price__meta {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      color: var(--pricing-text);
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    .pricing-price__note {
-      color: var(--pricing-heading);
-      font-weight: 500;
-    }
-
-    .pricing-features {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .pricing-features li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--pricing-text);
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    .pricing-features li::before {
-      content: "";
-      width: 5px;
-      height: 5px;
-      flex: 0 0 auto;
-      border-radius: 50%;
-      background: var(--pricing-text);
-    }
-
-    .pricing-features-section__header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-      margin-bottom: 64px;
-    }
-
-    .pricing-section--features {
-      overflow: hidden;
-    }
-
-    .pricing-features-carousel {
-      position: relative;
-    }
-
-    .pricing-features-carousel .swiper {
-      overflow: visible !important;
-    }
-
-    .pricing-tree-slide {
-      width: 100%;
-      height: 560px;
-      border-radius: 20px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 18px 50px rgba(18, 21, 25, .08);
-      transition: opacity 0.4s, transform 0.4s;
-      opacity: 0.5;
-    }
-
-    .pricing-tree-slide.swiper-slide-active {
-      opacity: 1;
-    }
-
-    .pricing-tree-btn {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      padding: 0;
-      background: transparent;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .pricing-tree-frame {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-    }
-
-    .pricing-tree-frame__bar {
-      display: none;
-    }
-
-    .pricing-tree-frame__dot {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-    }
-
-    .pricing-tree-frame__dot--red { background: #ff6057; }
-    .pricing-tree-frame__dot--yellow { background: #ffbd2e; }
-    .pricing-tree-frame__dot--green { background: #27c93f; }
-
-    .pricing-tree-frame__img {
-      flex: 1;
-      min-height: 0;
-      width: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .pricing-swiper-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      background: #fff;
-      color: #434A57;
-      box-shadow: 0 4px 20px rgba(18, 21, 25, .18);
-    }
-
-    .pricing-features-prev {
-      left: calc((100% - min(1300px, 100% - 160px)) / 2 - 54px);
-      right: auto;
-    }
-
-    .pricing-features-next {
-      right: calc((100% - min(1300px, 100% - 160px)) / 2 - 54px);
-      left: auto;
-    }
-
-    .pricing-swiper-button::after {
-      font-family: around-icons;
-      font-size: 24px;
-      font-weight: 400;
-    }
-
-    .pricing-features-prev::after {
-      content: "\f10d";
-    }
-
-    .pricing-features-next::after {
-      content: "\f10e";
-    }
-
-    .pricing-promises {
-      display: grid;
-      grid-template-columns: repeat(3, 312px);
-      justify-content: center;
-      gap: 40px;
-      margin-top: 60px;
-    }
-
-    .pricing-promise {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-      text-align: center;
-    }
-
-    .pricing-promise__icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 52px;
-      height: 52px;
-      color: var(--pricing-primary);
-      font-size: 36px;
-    }
-
-    .pricing-promise__text {
-      margin: 0;
-      max-width: 272px;
-      color: var(--pricing-muted);
-      font-size: 18px;
-      line-height: 27px;
-    }
-
-    .pricing-faq {
-      max-width: 1020px;
-      margin: 60px auto 0;
-    }
-
-    .pricing-faq .accordion-item {
-      margin-bottom: 12px;
-      overflow: hidden;
-      border: 2px solid var(--pricing-border);
-      border-radius: 20px;
-      background: var(--pricing-soft);
-    }
-
-    .pricing-faq .accordion-button {
-      padding: 24px;
-      color: var(--pricing-heading);
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 32px;
-      background: var(--pricing-soft);
-    }
-
-    .pricing-faq .accordion-body {
-      padding: 0 120px 24px 24px;
-      color: var(--pricing-text);
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    .pricing-final {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-      align-items: center;
-      gap: 64px;
-      min-height: 576px;
-      padding: 0;
-    }
-
-    .pricing-final__content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 40px;
-    }
-
-    .pricing-final__group {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 40px;
-    }
-
-    .pricing-final__heading {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .pricing-final__logo img {
-      display: block;
-      width: 140px;
-      height: auto;
-    }
-
-    .pricing-final__title {
-      margin: 0;
-      color: var(--pricing-heading);
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 52px;
-    }
-
-    .pricing-final__text {
-      margin: 0;
-      color: var(--pricing-text);
-      font-size: 18px;
-      line-height: 27px;
-    }
-
-    .pricing-final__visual {
-      min-height: 317px;
-      background-image: url('../img/landing/influencer/cta.png');
-      background-size: cover;
-      background-position: center top;
-      border-radius: 0;
-      filter: none;
-    }
-
-    .pricing-hero__visual {
-      position: absolute;
-      top: 53px;
-      right: 0;
-      width: min(560px, 46%);
-      height: 600px;
-      border-radius: 0;
-      background-image: url('../img/landing/influencer/hero.png');
-      background-size: contain;
-      background-position: top center;
-      background-repeat: no-repeat;
-      filter: drop-shadow(5px 17px 25.6px rgba(0, 0, 0, .1));
-    }
-
-    .pricing-modal-image {
-      width: 100%;
-      border-radius: 16px;
-    }
-
-    .pricing-plan-dots {
-      display: none;
-    }
-
-    .footer .nav-link {
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    .footer-socials .btn-icon {
-      color: #434A57;
-    }
-
-    .footer-socials .btn-instagram:hover,
-    .footer-socials .btn-instagram:focus,
-    .footer-socials .btn-instagram:active {
-      background-color: #405de6 !important;
-      border-color: #405de6 !important;
-      color: #fff !important;
-    }
-
-    .footer-socials .btn-youtube:hover,
-    .footer-socials .btn-youtube:focus,
-    .footer-socials .btn-youtube:active {
-      background-color: #f00 !important;
-      border-color: #f00 !important;
-      color: #fff !important;
-    }
-
-    .footer-socials .btn-x:hover,
-    .footer-socials .btn-x:focus,
-    .footer-socials .btn-x:active {
-      background-color: #000 !important;
-      border-color: #000 !important;
-      color: #fff !important;
-    }
-
-    .footer-socials .btn-tiktok:hover,
-    .footer-socials .btn-tiktok:focus,
-    .footer-socials .btn-tiktok:active {
-      background-color: #fe2c55 !important;
-      border-color: #fe2c55 !important;
-      color: #fff !important;
-    }
-
-    .footer-socials .btn-pinterest:hover,
-    .footer-socials .btn-pinterest:focus,
-    .footer-socials .btn-pinterest:active {
-      background-color: #e60023 !important;
-      border-color: #e60023 !important;
-      color: #fff !important;
-    }
-
-    .footer-socials .btn-twitch:hover,
-    .footer-socials .btn-twitch:focus,
-    .footer-socials .btn-twitch:active {
-      background-color: #9146ff !important;
-      border-color: #9146ff !important;
-      color: #fff !important;
-    }
-
-    .footer-socials .btn-discord:hover,
-    .footer-socials .btn-discord:focus,
-    .footer-socials .btn-discord:active {
-      background-color: #7289da !important;
-      border-color: #7289da !important;
-      color: #fff !important;
-    }
-
-    .footer-socials .btn-reddit:hover,
-    .footer-socials .btn-reddit:focus,
-    .footer-socials .btn-reddit:active {
-      background-color: #ff4500 !important;
-      border-color: #ff4500 !important;
-      color: #fff !important;
-    }
-
-    @media (max-width: 991px) {
-      .pricing-section {
-        padding: 64px 0;
-      }
-
-      .pricing-hero__content {
-        padding-left: max(0px, calc((100vw - 720px) / 2 - 4px));
-      }
-
-      .pricing-hero,
-      .pricing-final {
-        grid-template-columns: 1fr 280px;
-        gap: 32px;
-      }
-
-      .pricing-hero__title {
-        font-size: 42px;
-        line-height: 54px;
-      }
-
-      .pricing-final__visual {
-        min-height: 300px;
-      }
-
-      .pricing-title {
-        font-size: 32px;
-        line-height: 42px;
-      }
-
-      .pricing-style-list {
-        gap: 28px;
-      }
-
-      .pricing-style-card {
-        grid-template-columns: 344px minmax(0, 1fr);
-        gap: 20px;
-      }
-
-      .pricing-style-card__image {
-        height: 230px;
-      }
-
-      .pricing-style-card__text {
-        font-size: 16px;
-        line-height: 24px;
-      }
-
-      .pricing-plans {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        gap: 24px;
-        padding: 0 0 12px;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .pricing-plans::-webkit-scrollbar {
-        display: none;
-      }
-
-      .pricing-card {
-        flex: 0 0 460px;
-        scroll-snap-align: start;
-        padding: 28px;
-      }
-
-      .pricing-tree-slide {
-        height: 380px;
-      }
-
-      .pricing-swiper-button {
-        display: none;
-      }
-
-      .pricing-promises {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        margin-top: 48px;
-      }
-
-      .pricing-promise {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 16px;
-      }
-
-      .pricing-promise__text {
-        font-size: 16px;
-        line-height: 24px;
-        margin: 0;
-      }
-    }
-
-    @media (min-width: 992px) {
-      .footer-socials .d-flex {
-        flex-wrap: nowrap !important;
-        gap: 8px !important;
-      }
-
-      .pricing-tree-slide {
-        width: min(1300px, calc(100% - 160px));
-      }
-
-      .pricing-final__visual {
-        position: absolute;
-        top: 89px;
-        right: 106px;
-        width: min(589px, 46%);
-        height: 624px;
-        min-height: 0;
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-        filter: drop-shadow(2px 5px 8.7px rgba(0, 0, 0, .1));
-      }
-    }
-
-    @media (min-width: 768px) and (max-width: 991px) {
-      .footer .row {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-      }
-
-      .footer-links,
-      .footer-socials {
-        width: auto;
-        max-width: none;
-        flex: 0 0 auto;
-      }
-
-      .footer-socials .d-flex {
-        display: flex !important;
-        flex-wrap: nowrap;
-        gap: 16px !important;
-        justify-content: flex-end;
-      }
-
-      .pricing-hero {
-        min-height: 365px;
-      }
-
-      .pricing-hero__visual {
-        top: 76px;
-        width: min(375px, 50%);
-        height: 398px;
-      }
-
-      .pricing-style-card__title {
-        font-size: 22px;
-        line-height: 32px;
-      }
-
-      .pricing-promises {
-        gap: 20px;
-        margin-top: 60px;
-      }
-
-      .pricing-promise {
-        gap: 24px;
-      }
-
-      .pricing-promise__text {
-        max-width: 394px;
-        font-size: 18px;
-        line-height: 27px;
-      }
-
-      .pricing-final {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding: 0 0 0 calc(2.5% + 16px);
-        min-height: 438px;
-      }
-
-      .pricing-final__group {
-        gap: 28px;
-      }
-
-      .pricing-final__visual {
-        position: absolute;
-        top: 115px;
-        right: 0;
-        width: 375px;
-        height: 398px;
-        min-height: 0;
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-        filter: drop-shadow(2px 5px 8.7px rgba(0, 0, 0, .1));
-      }
-    }
-
-    @media (max-width: 767px) {
-      .pricing-container {
-        width: min(343px, calc(100% - 32px));
-      }
-
-      .pricing-section {
-        padding: 80px 0;
-      }
-
-      .pricing-title {
-        font-size: 28px;
-        line-height: 42px;
-        color: #121519;
-      }
-
-      .pricing-subtitle {
-        font-size: 16px;
-        line-height: 24px;
-      }
-
-      .pricing-eyebrow {
-        font-size: 16px;
-        line-height: 24px;
-      }
-
-      .pricing-hero {
-        min-height: auto;
-        padding: 100px 0 0;
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-      }
-
-      .pricing-hero__visual {
-        position: static;
-        width: auto;
-        height: auto;
-        background-position: center bottom;
-        filter: none;
-      }
-
-      .pricing-hero__content,
-      .pricing-final__content {
-        align-items: center;
-      }
-
-      .pricing-final__group,
-      .pricing-final__heading {
-        align-items: center;
-      }
-
-      .pricing-final__heading {
-        gap: 12px;
-      }
-
-      .pricing-hero__title,
-      .pricing-final__title {
-        font-size: 28px;
-        line-height: 42px;
-        text-align: center;
-      }
-
-      .pricing-hero__text,
-      .pricing-final__text {
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-      }
-
-      .pricing-hero__visual,
-      .pricing-final__visual {
-        min-height: 317px;
-      }
-
-      .pricing-final__visual {
-        height: 317px;
-        min-height: 317px;
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-        filter: drop-shadow(2px 5px 8.7px rgba(0, 0, 0, .1));
-      }
-
-      .pricing-style-list {
-        gap: 28px;
-        margin-top: 40px;
-      }
-
-      .pricing-style-card {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .pricing-style-card__image {
-        height: 230px;
-      }
-
-      .pricing-style-card__title {
-        font-size: 22px;
-        line-height: 30px;
-      }
-
-      .pricing-style-card__text {
-        font-size: 16px;
-        line-height: 24px;
-      }
-
-      .pricing-plans {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-        gap: 0;
-        margin-top: 40px;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0;
-      }
-
-      .pricing-plans::-webkit-scrollbar {
-        display: none;
-      }
-
-      .pricing-card {
-        flex: 0 0 100%;
-        min-width: 0;
-        scroll-snap-align: start;
-        min-height: auto;
-        padding: 28px;
-      }
-
-      .pricing-plan-dots {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        margin-top: 16px;
-      }
-
-      .pricing-plan-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #D7DDE2;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
-        transition: background 0.15s;
-      }
-
-      .pricing-plan-dot.active {
-        background: var(--pricing-primary);
-      }
-
-      .pricing-card__title,
-      .pricing-price__value,
-      .pricing-price__slash {
-        font-size: 32px;
-        line-height: 42px;
-      }
-
-      .pricing-periods {
-        width: 100%;
-        overflow-x: auto;
-        scrollbar-width: none;
-      }
-
-      .pricing-periods::-webkit-scrollbar {
-        display: none;
-      }
-
-      .pricing-periods__button {
-        padding: 6px 6px;
-        gap: 4px;
-      }
-
-      .pricing-periods__save {
-        padding: 3px 5px;
-      }
-
-      .pricing-price {
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .pricing-price__meta {
-        display: contents;
-      }
-
-      .pricing-price__note {
-        flex-basis: 100%;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 400;
-        color: var(--pricing-muted);
-      }
-
-      .pricing-features-section__header {
-        gap: 28px;
-        margin-bottom: 40px;
-      }
-
-      .pricing-tree-slide {
-        height: 280px;
-        border-radius: 12px;
-      }
-
-      .pricing-swiper-button {
-        display: none;
-      }
-
-      .pricing-promises {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        margin-top: 40px;
-      }
-
-      .pricing-promise__text {
-        max-width: none;
-        font-size: 18px;
-        line-height: 27px;
-      }
-
-      .pricing-faq {
-        margin-top: 40px;
-      }
-
-      .pricing-faq .accordion-button {
-        padding: 16px;
-        font-size: 20px;
-        line-height: 32px;
-      }
-
-      .pricing-faq .accordion-body {
-        padding: 0 16px 16px;
-      }
-
-      .pricing-final {
-        min-height: auto;
-        padding-top: 50px;
-        grid-template-columns: 1fr;
-        gap: 67px;
-      }
-
-      .footer .row {
-        flex-direction: column;
-        align-items: center !important;
-      }
-
-      .footer .footer-links {
-        order: 2;
-      }
-
-      .footer .footer-socials {
-        order: 1;
-        width: 100%;
-        display: block;
-      }
-
-      .footer .d-flex.justify-content-md-end {
-        justify-content: center !important;
-        flex-wrap: wrap;
-        gap: 16px !important;
-        max-width: 348px;
-        margin: 0 auto;
-      }
-
-      .footer-socials .btn-icon {
-        flex: 0 0 auto;
-      }
-    }
-
-    @media (max-width: 374px) {
-      .pricing-container {
-        width: calc(100% - 32px);
-      }
-
-      .footer-socials .btn-icon {
-        width: 32px !important;
-        height: 32px !important;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <main class="page-wrapper pricing-page">
-    <header class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="https://thesimstree.com/">
-          <img src="https://thesimstree.com/logo.svg" alt="TheSimsTree" style="width:140px; height: auto">
-        </a>
-        <a href="https://app.thesimstree.com/auth"
-          class="btn btn-outline-primary btn-sm fs-sm order-lg-3 d-none d-lg-inline-flex inject-ref">
-          <i class="ai-login me-2 ms-n1"></i>
-          Войти
-        </a>
-        <div class="dropdown order-lg-2 ms-auto ms-lg-0 me-2 me-lg-3">
-          <button class="pricing-lang__toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Язык">
-            <img src="../img/icons/globe.png" alt="" width="20" height="20">
-            <i class="ai-chevron-down"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end pricing-lang__menu">
-            <li><a class="dropdown-item active" href="#" aria-current="page">Русский</a></li>
-            <li><a class="dropdown-item" href="../en/pricing/index.html">English</a></li>
-          </ul>
-        </div>
-        <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <nav class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
-            <li class="nav-item"><a class="nav-link fw-bold" href="https://thesimstree.com/pricing/">Тарифы</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://thesimstree.com/en/blog/">Блог</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://thesimstree.com/en/news-about-the-sims/">Новости</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="https://thesimstree.com/challenges/">Челленджи</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://thesimstree.com/en/gallery.html">Галерея</a></li>
-            <li class="nav-item"><a class="nav-link" target="_blank"
-                href="https://thesimstree-guide.notion.site/Instructions-64abad735aec486fadc2e88e107b89d5">Инструкция</a>
-            </li>
-          </ul>
-          <div class="d-sm-none p-3 mt-n3">
-            <a href="https://app.thesimstree.com/auth"
-              class="btn btn-outline-primary btn-sm w-100 fs-sm order-lg-3 d-lg-inline-flex inject-ref">
-              <i class="ai-login me-2 ms-n1"></i>
-              Войти
-            </a>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <section class="pricing-section--hero">
-      <div class="pricing-container pricing-hero">
-        <div class="pricing-hero__content" data-aos="fade-up">
-          <div>
-            <h1 class="pricing-hero__title">Бесплатно и навсегда</h1>
-            <p class="pricing-hero__text">От первого сима до целой династии</p>
-          </div>
-          <a href="https://app.thesimstree.com/auth" class="pricing-btn inject-ref">Создать древо</a>
-        </div>
-        <div class="pricing-hero__visual" data-aos="fade-left"></div>
-      </div>
-    </section>
-
-    <section class="pricing-section">
-      <div class="pricing-container">
-        <div data-aos="fade-up">
-          <div class="pricing-eyebrow">Кто ты?</div>
-          <h2 class="pricing-title">Выбери свой стиль игры</h2>
-        </div>
-        <div class="pricing-style-list">
-          <article class="pricing-style-card" data-aos="fade-up">
-            <img src="../img/about/agency/gallery/01.jpg" alt="Free" class="pricing-style-card__image">
-            <div class="pricing-style-card__body">
-              <span class="pricing-badge">Free</span>
-              <h3 class="pricing-style-card__title">Тот, кто рассказывает главное</h3>
-              <p class="pricing-style-card__text">Ты пишешь свою историю поколение за поколением. Любимые персонажи, их
-                судьбы, связи между ними — всё собрано в одном месте</p>
-            </div>
-          </article>
-          <article class="pricing-style-card" data-aos="fade-up">
-            <img src="../img/about/agency/gallery/02.jpg" alt="Pro" class="pricing-style-card__image">
-            <div class="pricing-style-card__body">
-              <span class="pricing-badge pricing-badge--muted">Pro</span>
-              <h3 class="pricing-style-card__title">Тот, кто сохраняет каждый момент</h3>
-              <p class="pricing-style-card__text">Ты строишь целые миры. Несколько династий, переплетённые судьбы,
-                каждый персонаж оживает через детали — ты выходишь за границы игрового дерева</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing-section">
-      <div class="pricing-container">
-        <div data-aos="fade-up">
-          <div class="pricing-eyebrow">Тарифы</div>
-          <h2 class="pricing-title">Выбери свой тариф</h2>
-          <p class="pricing-subtitle">Разные способы сохранять и рассказывать истории</p>
-        </div>
-        <div class="pricing-plans">
-          <article class="pricing-card pricing-card--free" data-aos="fade-up">
-            <div class="pricing-card__content">
-              <div class="pricing-card__heading">
-                <h3 class="pricing-card__title">Free</h3>
-                <p class="pricing-card__description">Сохрани свою историю династии</p>
-              </div>
-              <span class="pricing-badge">Навсегда</span>
-              <div class="pricing-price">
-                <span class="pricing-price__value">0 ₽</span>
-                <span class="pricing-price__slash">/</span>
-                <span class="pricing-price__meta">месяц</span>
-              </div>
-              <ul class="pricing-features">
-                <li>2 семейных дерева — создай или импортируй из PlumTreeApp</li>
-                <li>Безлимит персонажей и питомцев — добавляй всех, кто живёт в истории</li>
-                <li>Настрой дерево под себя — фоны, иконки, редактор фото и стилизация</li>
-                <li>Доступно с любого устройства — ПК, мобильный браузер и приложение</li>
-                <li>Галерея и сообщество — делись свои творчеством и находи вдохновение</li>
-              </ul>
-            </div>
-            <a href="https://app.thesimstree.com/auth" class="pricing-btn inject-ref">Начать бесплатно</a>
-          </article>
-          <article class="pricing-card pricing-card--pro" data-aos="fade-up" data-pricing-card>
-            <div class="pricing-card__content">
-              <div class="pricing-card__heading">
-                <h3 class="pricing-card__title">Pro</h3>
-                <p class="pricing-card__description">Выйди за границы игрового древа</p>
-              </div>
-              <div class="pricing-periods" role="group" aria-label="Период оплаты">
-                <button class="pricing-periods__button" type="button" data-period="month" data-price="499 ₽"
-                  data-period-text="мес" data-note="" data-save="">1 месяц</button>
-                <button class="pricing-periods__button" type="button" data-period="half" data-price="300 ₽"
-                  data-period-text="мес" data-note="Списывается раз в 6 мес — 1 800 ₽" data-save="-40%">6 месяцев <span
-                    class="pricing-periods__save">-40%</span></button>
-                <button class="pricing-periods__button active" type="button" data-period="year" data-price="250 ₽"
-                  data-period-text="мес" data-note="Списывается раз в год — 3 000 ₽" data-save="-50%">Год <span
-                    class="pricing-periods__save">-50%</span></button>
-              </div>
-              <div class="pricing-price">
-                <span class="pricing-price__value" data-price-value>250 ₽</span>
-                <span class="pricing-price__slash">/</span>
-                <span class="pricing-price__meta"><span data-price-period>мес</span><span class="pricing-price__note"
-                    data-price-note>Списывается раз в год — 3 000 ₽</span></span>
-              </div>
-              <ul class="pricing-features">
-                <li>Безлимитные деревья — столько династий, сколько живёт в твоей голове</li>
-                <li>Дневники, аватары и фотогалерея — вся жизнь сима в одном месте</li>
-                <li>Данные прямо из The Sims с иконками — города, черты, навыки и цели</li>
-                <li>Скрытые поддеревья — партнёры, друзья, соседи со своей историей</li>
-                <li>Полная кастомизация — свои фоны, иконки, стили и цвета дерева</li>
-              </ul>
-            </div>
-            <a href="https://app.thesimstree.com/auth" class="pricing-btn pricing-btn--outline inject-ref">Перейти на
-              Pro</a>
-          </article>
-        </div>
-        <div class="pricing-plan-dots" aria-hidden="true">
-          <button class="pricing-plan-dot active" type="button" aria-label="Free план"></button>
-          <button class="pricing-plan-dot" type="button" aria-label="Pro план"></button>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing-section pricing-section--features">
-      <div class="pricing-container pricing-features-section__header" data-aos="fade-up">
-        <div>
-          <div class="pricing-eyebrow" data-feature-label>Возможности</div>
-          <h2 class="pricing-title" data-feature-title>Уже доступно тебе</h2>
-          <p class="pricing-subtitle" data-feature-description>Древо, которое можно создать на Free плане</p>
-        </div>
-        <a href="https://app.thesimstree.com/auth" class="pricing-btn pricing-btn--outline inject-ref">Создать древо</a>
-      </div>
-      <div class="pricing-features-carousel" data-aos="fade-up">
-        <div class="swiper"
-          data-swiper-options='{"slidesPerView":1.2,"centeredSlides":true,"spaceBetween":32,"loop":true,"navigation":{"prevEl":".pricing-features-prev","nextEl":".pricing-features-next"},"breakpoints":{"0":{"spaceBetween":16,"slidesPerView":1.1},"768":{"spaceBetween":24,"slidesPerView":1.15},"992":{"spaceBetween":64,"slidesPerView":"auto"},"1200":{"spaceBetween":64,"slidesPerView":"auto"}},"effect":"slide"}'>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide pricing-tree-slide" data-feature-type="free" data-title="Уже доступно тебе"
-              data-description="Древо, которое можно создать на Free плане">
-              <button class="pricing-tree-btn" type="button" data-tree-modal="../img/about/agency/gallery/03.jpg"
-                aria-label="Открыть Free древо">
-                <div class="pricing-tree-frame">
-                  <div class="pricing-tree-frame__bar">
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--red"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
-                  </div>
-                  <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/03.jpg" alt="Free tree">
+    <head>
+        <title>Тарифы | TheSimsTree</title>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="Тарифы TheSimsTree: Free навсегда и Pro для расширенных семейных деревьев, дневников, галерей и кастомизации."
+        />
+        <meta
+            name="keywords"
+            content="TheSimsTree, тарифы, семейное древо, Sims, genealogy, legacy"
+        />
+        <link rel="canonical" href="https://thesimstree.com/pricing/" />
+        <meta name="author" content="TheSimsTree - save your history" />
+        <meta property="og:title" content="Тарифы | TheSimsTree" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="TheSimsTree" />
+        <meta
+            property="og:description"
+            content="Создай семейное древо бесплатно или перейди на Pro, чтобы сохранять больше историй, деталей и миров."
+        />
+        <meta property="og:image" content="https://thesimstree.com/logo.svg" />
+        <meta property="og:url" content="https://thesimstree.com/pricing/" />
+        <link rel="icon" href="https://thesimstree.com/favicon.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@thesimstree" />
+        <meta name="twitter:title" content="Тарифы | TheSimsTree" />
+        <meta
+            name="twitter:description"
+            content="Free навсегда и Pro для расширенных семейных деревьев TheSimsTree."
+        />
+        <meta name="twitter:image" content="https://thesimstree.com/logo.svg" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <meta name="theme-color" content="white" />
+
+        <style>
+            @font-face {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 100 900;
+                src: url(../fonts/inter-latin-normal.woff2);
+                font-display: swap;
+            }
+        </style>
+
+        <link
+            rel="stylesheet"
+            media="screen"
+            href="../vendor/aos/dist/aos.css?ver=3.83"
+        />
+        <link
+            rel="stylesheet"
+            media="screen"
+            href="../vendor/swiper/swiper-bundle.min.css?ver=3.83"
+        />
+        <link rel="stylesheet" href="../icons/around-icons.min.css?ver=3.83" />
+        <link
+            rel="stylesheet"
+            media="screen"
+            href="../css/theme.css?ver=3.83"
+        />
+        <link
+            rel="stylesheet"
+            media="screen"
+            href="../css/custom.css?ver=3.83"
+        />
+
+        <style>
+            :root {
+                --pricing-primary: var(--ar-primary, #45bc60);
+                --pricing-primary-dark: #41b475;
+                --pricing-heading: #121519;
+                --pricing-text: #576071;
+                --pricing-muted: #697488;
+                --pricing-border: #edf1f5;
+                --pricing-soft: #f6f8fa;
+                --pricing-green-soft: #eef9f0;
+            }
+            .pricing-lang__toggle {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                padding: 6px 8px;
+                border: 0;
+                border-radius: 8px;
+                background: transparent;
+                cursor: pointer;
+                transition: background 0.15s;
+            }
+            .pricing-lang__toggle:hover {
+                background: rgba(18, 21, 25, 0.06);
+            }
+            .pricing-lang__toggle .ai-chevron-down {
+                font-size: 14px;
+                color: rgba(18, 21, 25, 0.45);
+                transition: transform 0.2s;
+            }
+            .pricing-lang__toggle[aria-expanded="true"] .ai-chevron-down {
+                transform: rotate(180deg);
+            }
+            .pricing-lang__menu {
+                min-width: 140px;
+            }
+
+            body {
+                font-family: Inter, sans-serif;
+                color: var(--pricing-text);
+                background: #fff;
+            }
+
+            .pricing-page {
+                overflow: hidden;
+            }
+
+            .pricing-container {
+                width: min(calc(95% - 32px), 1296px);
+                margin: 0 auto;
+            }
+
+            .pricing-section {
+                padding: 80px 0;
+            }
+
+            .pricing-section--hero,
+            .pricing-section--final {
+                background: linear-gradient(
+                    75.3deg,
+                    #e7f5e3 16.06%,
+                    #fffde9 113.41%
+                );
+            }
+
+            .pricing-section--hero,
+            .pricing-section--final {
+                overflow: hidden;
+            }
+
+            .pricing-section--features {
+                background: linear-gradient(
+                    135.04deg,
+                    #f8f6e1 19.4%,
+                    #fdeae6 97.06%
+                );
+            }
+
+            .pricing-eyebrow {
+                margin-bottom: 12px;
+                color: var(--pricing-primary);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .pricing-title {
+                margin: 0;
+                color: #1f2937;
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 52px;
+                text-align: center;
+            }
+
+            .pricing-subtitle {
+                margin: 12px auto 0;
+                color: var(--pricing-muted);
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 27px;
+                text-align: center;
+            }
+
+            .pricing-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 56px;
+                padding: 16px 32px;
+                border: 1px solid var(--pricing-primary-dark);
+                border-radius: 18px;
+                background: var(--pricing-primary);
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 22px;
+                text-decoration: none;
+                transition:
+                    transform 0.15s,
+                    background 0.15s,
+                    border-color 0.15s,
+                    color 0.15s;
+            }
+
+            .pricing-btn:hover {
+                transform: translateY(-1px);
+                background: var(--pricing-primary-dark);
+                border-color: var(--pricing-primary-dark);
+                color: #fff;
+            }
+
+            .pricing-btn--outline {
+                background: transparent;
+                color: var(--pricing-primary);
+            }
+
+            .pricing-btn--outline:hover {
+                background: var(--pricing-primary);
+                color: #fff;
+            }
+
+            .pricing-hero {
+                position: relative;
+                min-height: 482px;
+                padding: 0;
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+                align-items: center;
+                gap: 64px;
+            }
+
+            .pricing-hero__content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+            }
+
+            .pricing-hero__title {
+                margin: 0;
+                color: var(--pricing-heading);
+                font-size: 56px;
+                font-weight: 600;
+                line-height: 72px;
+            }
+
+            .pricing-hero__text {
+                margin: 8px 0 0;
+                color: var(--pricing-text);
+                font-size: 18px;
+                line-height: 27px;
+            }
+
+            .pricing-hero__visual,
+            .pricing-final__visual {
+                min-height: 360px;
+                border-radius: 32px;
+                background:
+                    radial-gradient(
+                        circle at 50% 30%,
+                        rgba(69, 188, 96, 0.18),
+                        transparent 45%
+                    ),
+                    url("../img/landing/influencer/hero.webp") center bottom /
+                        contain no-repeat;
+                filter: drop-shadow(5px 17px 25.6px rgba(0, 0, 0, 0.1));
+            }
+
+            .pricing-style-list {
+                display: grid;
+                gap: 40px;
+                max-width: 1020px;
+                margin: 64px auto 0;
+            }
+
+            .pricing-style-card {
+                display: grid;
+                grid-template-columns: 450px minmax(0, 1fr);
+                align-items: start;
+                gap: 24px;
+            }
+
+            .pricing-style-card__image {
+                width: 100%;
+                height: 274px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+
+            .pricing-style-card__body {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .pricing-badge {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 24px;
+                padding: 6px 12px;
+                border-radius: 8px;
+                background: var(--pricing-green-soft);
+                color: var(--pricing-primary);
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 12px;
+            }
+
+            .pricing-badge--muted {
+                background: var(--pricing-soft);
+                border: 1px solid #bccbda;
+                color: #434a57;
+            }
+
+            .pricing-card--free .pricing-badge {
+                align-self: flex-start;
+                padding: 14px 16px;
+                border: 1px solid var(--pricing-primary-dark);
+            }
+
+            .pricing-style-card__title {
+                margin: 0;
+                color: #1f2937;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 32px;
+            }
+
+            .pricing-style-card__text {
+                margin: 0;
+                color: var(--pricing-muted);
+                font-size: 18px;
+                line-height: 27px;
+            }
+
+            .pricing-plans {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 499px));
+                justify-content: center;
+                gap: 24px;
+                margin-top: 64px;
+            }
+
+            .pricing-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 712px;
+                padding: 40px;
+                border-radius: 20px;
+            }
+
+            .pricing-card--free {
+                background: var(--pricing-green-soft);
+                border: 2px dashed var(--pricing-primary-dark);
+            }
+
+            .pricing-card--pro {
+                background: var(--pricing-soft);
+                border: 2px solid var(--pricing-border);
+            }
+
+            .pricing-card__content {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .pricing-card__heading {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .pricing-card__title {
+                margin: 0;
+                color: var(--pricing-heading);
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 52px;
+            }
+
+            .pricing-card__description {
+                margin: 0;
+                color: var(--pricing-text);
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .pricing-periods {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                width: 100%;
+                padding: 4px;
+                border: 1px solid #bccbda;
+                border-radius: 8px;
+                background: var(--pricing-soft);
+            }
+
+            .pricing-periods__button {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                flex: 1;
+                min-height: 32px;
+                padding: 6px 10px;
+                border: 0;
+                border-radius: 8px;
+                background: transparent;
+                color: var(--pricing-text);
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 12px;
+                white-space: nowrap;
+            }
+
+            .pricing-periods__button:not(:first-child)::before {
+                content: "";
+                position: absolute;
+                left: -2px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 25px;
+                background: #bccbda;
+            }
+
+            .pricing-periods__button.active {
+                background: var(--pricing-primary);
+                color: #fff;
+            }
+
+            .pricing-periods__save {
+                padding: 4px 6px;
+                border: 1px solid var(--pricing-primary);
+                border-radius: 6px;
+                background: var(--pricing-green-soft);
+                color: var(--pricing-primary);
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+            .pricing-periods__button.active .pricing-periods__save {
+                border-color: transparent;
+            }
+
+            .pricing-price {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: var(--pricing-heading);
+            }
+
+            .pricing-price__value,
+            .pricing-price__slash {
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 52px;
+                flex-shrink: 0;
+                white-space: nowrap;
+            }
+
+            .pricing-price__meta {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                color: var(--pricing-text);
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .pricing-price__note {
+                color: var(--pricing-heading);
+                font-weight: 500;
+            }
+
+            .pricing-features {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .pricing-features li {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                color: var(--pricing-text);
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .pricing-features li::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                flex: 0 0 auto;
+                border-radius: 50%;
+                background: var(--pricing-text);
+            }
+
+            .pricing-features-section__header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 28px;
+                margin-bottom: 64px;
+            }
+
+            .pricing-section--features {
+                overflow: hidden;
+            }
+
+            .pricing-features-carousel {
+                position: relative;
+            }
+
+            .pricing-features-carousel .swiper {
+                overflow: visible !important;
+            }
+
+            .pricing-tree-slide {
+                width: 100%;
+                height: 560px;
+                border-radius: 20px;
+                overflow: hidden;
+                background: #fff;
+                box-shadow: 0 18px 50px rgba(18, 21, 25, 0.08);
+                transition:
+                    opacity 0.4s,
+                    transform 0.4s;
+                opacity: 0.5;
+            }
+
+            .pricing-tree-slide.swiper-slide-active {
+                opacity: 1;
+            }
+
+            .pricing-tree-btn {
+                width: 100%;
+                height: 100%;
+                border: 0;
+                padding: 0;
+                background: transparent;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .pricing-tree-frame {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+            }
+
+            .pricing-tree-frame__bar {
+                display: none;
+            }
+
+            .pricing-tree-frame__dot {
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+            }
+
+            .pricing-tree-frame__dot--red {
+                background: #ff6057;
+            }
+            .pricing-tree-frame__dot--yellow {
+                background: #ffbd2e;
+            }
+            .pricing-tree-frame__dot--green {
+                background: #27c93f;
+            }
+
+            .pricing-tree-frame__img {
+                flex: 1;
+                min-height: 0;
+                width: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .pricing-swiper-button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 10;
+                width: 44px;
+                height: 44px;
+                border-radius: 8px;
+                background: #fff;
+                color: #434a57;
+                box-shadow: 0 4px 20px rgba(18, 21, 25, 0.18);
+            }
+
+            .pricing-features-prev {
+                left: calc((100% - min(1300px, 100% - 160px)) / 2 - 54px);
+                right: auto;
+            }
+
+            .pricing-features-next {
+                right: calc((100% - min(1300px, 100% - 160px)) / 2 - 54px);
+                left: auto;
+            }
+
+            .pricing-swiper-button::after {
+                font-family: around-icons;
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            .pricing-features-prev::after {
+                content: "\f10d";
+            }
+
+            .pricing-features-next::after {
+                content: "\f10e";
+            }
+
+            .pricing-promises {
+                display: grid;
+                grid-template-columns: repeat(3, 312px);
+                justify-content: center;
+                gap: 40px;
+                margin-top: 60px;
+            }
+
+            .pricing-promise {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .pricing-promise__icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 52px;
+                height: 52px;
+                color: var(--pricing-primary);
+                font-size: 36px;
+            }
+
+            .pricing-promise__text {
+                margin: 0;
+                max-width: 272px;
+                color: var(--pricing-muted);
+                font-size: 18px;
+                line-height: 27px;
+            }
+
+            .pricing-faq {
+                max-width: 1020px;
+                margin: 60px auto 0;
+            }
+
+            .pricing-faq .accordion-item {
+                margin-bottom: 12px;
+                overflow: hidden;
+                border: 2px solid var(--pricing-border);
+                border-radius: 20px;
+                background: var(--pricing-soft);
+            }
+
+            .pricing-faq .accordion-button {
+                padding: 24px;
+                color: var(--pricing-heading);
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 32px;
+                background: var(--pricing-soft);
+            }
+
+            .pricing-faq .accordion-body {
+                padding: 0 120px 24px 24px;
+                color: var(--pricing-text);
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .pricing-final {
+                position: relative;
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+                align-items: center;
+                gap: 64px;
+                min-height: 576px;
+                padding: 0;
+            }
+
+            .pricing-final__content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .pricing-final__group {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .pricing-final__heading {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .pricing-final__logo img {
+                display: block;
+                width: 140px;
+                height: auto;
+            }
+
+            .pricing-final__title {
+                margin: 0;
+                color: var(--pricing-heading);
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 52px;
+            }
+
+            .pricing-final__text {
+                margin: 0;
+                color: var(--pricing-text);
+                font-size: 18px;
+                line-height: 27px;
+            }
+
+            .pricing-final__visual {
+                min-height: 317px;
+                background-image: url("../img/landing/influencer/cta.png");
+                background-size: cover;
+                background-position: center top;
+                border-radius: 0;
+                filter: none;
+            }
+
+            .pricing-hero__visual {
+                position: absolute;
+                top: 53px;
+                right: 0;
+                width: min(560px, 46%);
+                height: 600px;
+                border-radius: 0;
+                background-image: url("../img/landing/influencer/hero.webp");
+                background-size: 104%;
+                background-position: top center;
+                background-repeat: no-repeat;
+                filter: drop-shadow(5px 17px 25.6px rgba(0, 0, 0, 0.1));
+            }
+
+            .pricing-modal-image {
+                width: 100%;
+                border-radius: 16px;
+            }
+
+            .pricing-plan-dots {
+                display: none;
+            }
+
+            .footer .nav-link {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .footer-socials .btn-icon {
+                color: #434a57;
+            }
+
+            .footer-socials .btn-instagram:hover,
+            .footer-socials .btn-instagram:focus,
+            .footer-socials .btn-instagram:active {
+                background-color: #405de6 !important;
+                border-color: #405de6 !important;
+                color: #fff !important;
+            }
+
+            .footer-socials .btn-youtube:hover,
+            .footer-socials .btn-youtube:focus,
+            .footer-socials .btn-youtube:active {
+                background-color: #f00 !important;
+                border-color: #f00 !important;
+                color: #fff !important;
+            }
+
+            .footer-socials .btn-x:hover,
+            .footer-socials .btn-x:focus,
+            .footer-socials .btn-x:active {
+                background-color: #000 !important;
+                border-color: #000 !important;
+                color: #fff !important;
+            }
+
+            .footer-socials .btn-tiktok:hover,
+            .footer-socials .btn-tiktok:focus,
+            .footer-socials .btn-tiktok:active {
+                background-color: #fe2c55 !important;
+                border-color: #fe2c55 !important;
+                color: #fff !important;
+            }
+
+            .footer-socials .btn-pinterest:hover,
+            .footer-socials .btn-pinterest:focus,
+            .footer-socials .btn-pinterest:active {
+                background-color: #e60023 !important;
+                border-color: #e60023 !important;
+                color: #fff !important;
+            }
+
+            .footer-socials .btn-twitch:hover,
+            .footer-socials .btn-twitch:focus,
+            .footer-socials .btn-twitch:active {
+                background-color: #9146ff !important;
+                border-color: #9146ff !important;
+                color: #fff !important;
+            }
+
+            .footer-socials .btn-discord:hover,
+            .footer-socials .btn-discord:focus,
+            .footer-socials .btn-discord:active {
+                background-color: #7289da !important;
+                border-color: #7289da !important;
+                color: #fff !important;
+            }
+
+            .footer-socials .btn-reddit:hover,
+            .footer-socials .btn-reddit:focus,
+            .footer-socials .btn-reddit:active {
+                background-color: #ff4500 !important;
+                border-color: #ff4500 !important;
+                color: #fff !important;
+            }
+
+            @media (max-width: 991px) {
+                .pricing-section {
+                    padding: 64px 0;
+                }
+
+                .pricing-hero__content {
+                    padding-left: max(0px, calc((100vw - 720px) / 2 - 4px));
+                }
+
+                .pricing-hero,
+                .pricing-final {
+                    grid-template-columns: 1fr 280px;
+                    gap: 32px;
+                }
+
+                .pricing-hero__title {
+                    font-size: 42px;
+                    line-height: 54px;
+                }
+
+                .pricing-final__visual {
+                    min-height: 300px;
+                }
+
+                .pricing-title {
+                    font-size: 32px;
+                    line-height: 42px;
+                }
+
+                .pricing-style-list {
+                    gap: 28px;
+                }
+
+                .pricing-style-card {
+                    grid-template-columns: 344px minmax(0, 1fr);
+                    gap: 20px;
+                }
+
+                .pricing-style-card__image {
+                    height: 230px;
+                }
+
+                .pricing-style-card__text {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                .pricing-plans {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    scrollbar-width: none;
+                    gap: 24px;
+                    padding: 0 0 12px;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+                .pricing-plans::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .pricing-card {
+                    flex: 0 0 460px;
+                    scroll-snap-align: start;
+                    padding: 28px;
+                }
+
+                .pricing-tree-slide {
+                    height: 380px;
+                }
+
+                .pricing-swiper-button {
+                    display: none;
+                }
+
+                .pricing-promises {
+                    grid-template-columns: 1fr;
+                    gap: 24px;
+                    margin-top: 48px;
+                }
+
+                .pricing-promise {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 16px;
+                }
+
+                .pricing-promise__text {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 0;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .footer-socials .d-flex {
+                    flex-wrap: nowrap !important;
+                    gap: 8px !important;
+                }
+
+                .pricing-tree-slide {
+                    width: min(1300px, calc(100% - 160px));
+                }
+
+                .pricing-final__visual {
+                    position: absolute;
+                    top: 89px;
+                    right: 106px;
+                    width: min(589px, 46%);
+                    height: 624px;
+                    min-height: 0;
+                    background-size: cover;
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    filter: drop-shadow(2px 5px 8.7px rgba(0, 0, 0, 0.1));
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                .footer .row {
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                }
+
+                .footer-links,
+                .footer-socials {
+                    width: auto;
+                    max-width: none;
+                    flex: 0 0 auto;
+                }
+
+                .footer-socials .d-flex {
+                    display: flex !important;
+                    flex-wrap: nowrap;
+                    gap: 16px !important;
+                    justify-content: flex-end;
+                }
+
+                .pricing-hero {
+                    min-height: 365px;
+                }
+
+                .pricing-hero__visual {
+                    top: 76px;
+                    width: min(375px, 50%);
+                    height: 398px;
+                }
+
+                .pricing-style-card__title {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+
+                .pricing-promises {
+                    gap: 20px;
+                    margin-top: 60px;
+                }
+
+                .pricing-promise {
+                    gap: 24px;
+                }
+
+                .pricing-promise__text {
+                    max-width: 394px;
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+
+                .pricing-final {
+                    width: 100%;
+                    max-width: none;
+                    margin: 0;
+                    padding: 0 0 0 calc(2.5% + 16px);
+                    min-height: 438px;
+                }
+
+                .pricing-final__group {
+                    gap: 28px;
+                }
+
+                .pricing-final__visual {
+                    position: absolute;
+                    top: 115px;
+                    right: 0;
+                    width: 375px;
+                    height: 398px;
+                    min-height: 0;
+                    background-size: cover;
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    filter: drop-shadow(2px 5px 8.7px rgba(0, 0, 0, 0.1));
+                }
+            }
+
+            @media (max-width: 767px) {
+                .pricing-container {
+                    width: min(343px, calc(100% - 32px));
+                }
+
+                .pricing-section {
+                    padding: 80px 0;
+                }
+
+                .pricing-title {
+                    font-size: 28px;
+                    line-height: 42px;
+                    color: #121519;
+                }
+
+                .pricing-subtitle {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                .pricing-eyebrow {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                .pricing-hero {
+                    min-height: auto;
+                    padding: 100px 0 0;
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                    text-align: center;
+                }
+
+                .pricing-hero__visual {
+                    position: static;
+                    width: 321px;
+                    height: 438px;
+                    margin: 0 auto;
+                    background-size: 110%;
+                    background-position: top center;
+                    filter: drop-shadow(5px 17px 25.6px rgba(0, 0, 0, 0.1));
+                }
+
+                .pricing-hero__content,
+                .pricing-final__content {
+                    align-items: center;
+                }
+
+                .pricing-final__group,
+                .pricing-final__heading {
+                    align-items: center;
+                }
+
+                .pricing-final__heading {
+                    gap: 12px;
+                }
+
+                .pricing-hero__title,
+                .pricing-final__title {
+                    font-size: 28px;
+                    line-height: 42px;
+                    text-align: center;
+                }
+
+                .pricing-hero__text,
+                .pricing-final__text {
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: center;
+                }
+
+                .pricing-hero__visual,
+                .pricing-final__visual {
+                    min-height: 317px;
+                }
+
+                .pricing-final__visual {
+                    height: 317px;
+                    min-height: 317px;
+                    background-size: cover;
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    filter: drop-shadow(2px 5px 8.7px rgba(0, 0, 0, 0.1));
+                }
+
+                .pricing-style-list {
+                    gap: 28px;
+                    margin-top: 40px;
+                }
+
+                .pricing-style-card {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+
+                .pricing-style-card__image {
+                    height: 230px;
+                }
+
+                .pricing-style-card__title {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+
+                .pricing-style-card__text {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                .pricing-plans {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    overflow-x: scroll;
+                    scroll-snap-type: x mandatory;
+                    scroll-behavior: smooth;
+                    scrollbar-width: none;
+                    gap: 0;
+                    margin-top: 40px;
+                    margin-left: 0;
+                    margin-right: 0;
+                    padding: 0;
+                }
+
+                .pricing-plans::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .pricing-card {
+                    flex: 0 0 100%;
+                    min-width: 0;
+                    scroll-snap-align: start;
+                    min-height: auto;
+                    padding: 28px;
+                }
+
+                .pricing-plan-dots {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    margin-top: 16px;
+                }
+
+                .pricing-plan-dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #d7dde2;
+                    border: 0;
+                    padding: 0;
+                    cursor: pointer;
+                    transition: background 0.15s;
+                }
+
+                .pricing-plan-dot.active {
+                    background: var(--pricing-primary);
+                }
+
+                .pricing-card__title,
+                .pricing-price__value,
+                .pricing-price__slash {
+                    font-size: 32px;
+                    line-height: 42px;
+                }
+
+                .pricing-periods {
+                    width: 100%;
+                    overflow-x: auto;
+                    scrollbar-width: none;
+                }
+
+                .pricing-periods::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .pricing-periods__button {
+                    padding: 6px 6px;
+                    gap: 4px;
+                }
+
+                .pricing-periods__save {
+                    padding: 3px 5px;
+                }
+
+                .pricing-price {
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+
+                .pricing-price__meta {
+                    display: contents;
+                }
+
+                .pricing-price__note {
+                    flex-basis: 100%;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    color: var(--pricing-muted);
+                }
+
+                .pricing-features-section__header {
+                    gap: 28px;
+                    margin-bottom: 40px;
+                }
+
+                .pricing-tree-slide {
+                    height: 280px;
+                    border-radius: 12px;
+                }
+
+                .pricing-swiper-button {
+                    display: none;
+                }
+
+                .pricing-promises {
+                    grid-template-columns: 1fr;
+                    gap: 28px;
+                    margin-top: 40px;
+                }
+
+                .pricing-promise__text {
+                    max-width: none;
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+
+                .pricing-faq {
+                    margin-top: 40px;
+                }
+
+                .pricing-faq .accordion-button {
+                    padding: 16px;
+                    font-size: 20px;
+                    line-height: 32px;
+                }
+
+                .pricing-faq .accordion-body {
+                    padding: 0 16px 16px;
+                }
+
+                .pricing-final {
+                    min-height: auto;
+                    padding-top: 50px;
+                    grid-template-columns: 1fr;
+                    gap: 67px;
+                }
+
+                .footer .row {
+                    flex-direction: column;
+                    align-items: center !important;
+                }
+
+                .footer .footer-links {
+                    order: 2;
+                }
+
+                .footer .footer-socials {
+                    order: 1;
+                    width: 100%;
+                    display: block;
+                }
+
+                .footer .d-flex.justify-content-md-end {
+                    justify-content: center !important;
+                    flex-wrap: wrap;
+                    gap: 16px !important;
+                    max-width: 348px;
+                    margin: 0 auto;
+                }
+
+                .footer-socials .btn-icon {
+                    flex: 0 0 auto;
+                }
+            }
+
+            @media (max-width: 374px) {
+                .pricing-container {
+                    width: calc(100% - 32px);
+                }
+
+                .footer-socials .btn-icon {
+                    width: 32px !important;
+                    height: 32px !important;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <main class="page-wrapper pricing-page">
+            <header class="navbar navbar-expand-lg fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="https://thesimstree.com/">
+                        <img
+                            src="https://thesimstree.com/logo.svg"
+                            alt="TheSimsTree"
+                            style="width: 140px; height: auto"
+                        />
+                    </a>
+                    <a
+                        href="https://app.thesimstree.com/auth"
+                        class="btn btn-outline-primary btn-sm fs-sm order-lg-3 d-none d-lg-inline-flex inject-ref"
+                    >
+                        <i class="ai-login me-2 ms-n1"></i>
+                        Войти
+                    </a>
+                    <div
+                        class="dropdown order-lg-2 ms-auto ms-lg-0 me-2 me-lg-3"
+                    >
+                        <button
+                            class="pricing-lang__toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="Язык"
+                        >
+                            <img
+                                src="../img/icons/globe.png"
+                                alt=""
+                                width="20"
+                                height="20"
+                            />
+                            <i class="ai-chevron-down"></i>
+                        </button>
+                        <ul
+                            class="dropdown-menu dropdown-menu-end pricing-lang__menu"
+                        >
+                            <li>
+                                <a
+                                    class="dropdown-item active"
+                                    href="#"
+                                    aria-current="page"
+                                    >Русский</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="../en/pricing/index.html"
+                                    >English</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <button
+                        class="navbar-toggler ms-sm-3"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <nav class="collapse navbar-collapse" id="navbarNav">
+                        <ul
+                            class="navbar-nav navbar-nav-scroll me-auto"
+                            style="--ar-scroll-height: 520px"
+                        >
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link fw-bold"
+                                    href="https://thesimstree.com/pricing/"
+                                    >Тарифы</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="https://thesimstree.com/en/blog/"
+                                    >Блог</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="https://thesimstree.com/en/news-about-the-sims/"
+                                    >Новости</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="https://thesimstree.com/challenges/"
+                                    >Челленджи</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="https://thesimstree.com/en/gallery.html"
+                                    >Галерея</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    target="_blank"
+                                    href="https://thesimstree-guide.notion.site/Instructions-64abad735aec486fadc2e88e107b89d5"
+                                    >Инструкция</a
+                                >
+                            </li>
+                        </ul>
+                        <div class="d-sm-none p-3 mt-n3">
+                            <a
+                                href="https://app.thesimstree.com/auth"
+                                class="btn btn-outline-primary btn-sm w-100 fs-sm order-lg-3 d-lg-inline-flex inject-ref"
+                            >
+                                <i class="ai-login me-2 ms-n1"></i>
+                                Войти
+                            </a>
+                        </div>
+                    </nav>
                 </div>
-              </button>
-            </div>
-            <div class="swiper-slide pricing-tree-slide" data-feature-type="pro" data-title="Доступно на Pro"
-              data-description="Древо, которое можно создать на Pro плане">
-              <button class="pricing-tree-btn" type="button" data-tree-modal="../img/about/agency/gallery/04.jpg"
-                aria-label="Открыть Pro древо">
-                <div class="pricing-tree-frame">
-                  <div class="pricing-tree-frame__bar">
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--red"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
-                  </div>
-                  <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/04.jpg" alt="Pro tree">
+            </header>
+
+            <section class="pricing-section--hero">
+                <div class="pricing-container pricing-hero">
+                    <div class="pricing-hero__content" data-aos="fade-up">
+                        <div>
+                            <h1 class="pricing-hero__title">
+                                Бесплатно и навсегда
+                            </h1>
+                            <p class="pricing-hero__text">
+                                От первого сима до целой династии
+                            </p>
+                        </div>
+                        <a
+                            href="https://app.thesimstree.com/auth"
+                            class="pricing-btn inject-ref"
+                            >Создать древо</a
+                        >
+                    </div>
+                    <div
+                        class="pricing-hero__visual"
+                        data-aos="fade-left"
+                    ></div>
                 </div>
-              </button>
-            </div>
-            <div class="swiper-slide pricing-tree-slide" data-feature-type="pro" data-title="Доступно на Pro"
-              data-description="Древо, которое можно создать на Pro плане">
-              <button class="pricing-tree-btn" type="button" data-tree-modal="../img/about/agency/gallery/05.jpg"
-                aria-label="Открыть Pro древо">
-                <div class="pricing-tree-frame">
-                  <div class="pricing-tree-frame__bar">
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--red"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
-                  </div>
-                  <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/05.jpg" alt="Pro tree second">
+            </section>
+
+            <section class="pricing-section">
+                <div class="pricing-container">
+                    <div data-aos="fade-up">
+                        <div class="pricing-eyebrow">Кто ты?</div>
+                        <h2 class="pricing-title">Выбери свой стиль игры</h2>
+                    </div>
+                    <div class="pricing-style-list">
+                        <article class="pricing-style-card" data-aos="fade-up">
+                            <img
+                                src="../img/about/agency/gallery/01.jpg"
+                                alt="Free"
+                                class="pricing-style-card__image"
+                            />
+                            <div class="pricing-style-card__body">
+                                <span class="pricing-badge">Free</span>
+                                <h3 class="pricing-style-card__title">
+                                    Тот, кто рассказывает главное
+                                </h3>
+                                <p class="pricing-style-card__text">
+                                    Ты пишешь свою историю поколение за
+                                    поколением. Любимые персонажи, их судьбы,
+                                    связи между ними — всё собрано в одном месте
+                                </p>
+                            </div>
+                        </article>
+                        <article class="pricing-style-card" data-aos="fade-up">
+                            <img
+                                src="../img/about/agency/gallery/02.jpg"
+                                alt="Pro"
+                                class="pricing-style-card__image"
+                            />
+                            <div class="pricing-style-card__body">
+                                <span class="pricing-badge pricing-badge--muted"
+                                    >Pro</span
+                                >
+                                <h3 class="pricing-style-card__title">
+                                    Тот, кто сохраняет каждый момент
+                                </h3>
+                                <p class="pricing-style-card__text">
+                                    Ты строишь целые миры. Несколько династий,
+                                    переплетённые судьбы, каждый персонаж
+                                    оживает через детали — ты выходишь за
+                                    границы игрового дерева
+                                </p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-              </button>
-            </div>
-            <div class="swiper-slide pricing-tree-slide" data-feature-type="free" data-title="Уже доступно тебе"
-              data-description="Древо, которое можно создать на Free плане">
-              <button class="pricing-tree-btn" type="button" data-tree-modal="../img/about/agency/gallery/03.jpg"
-                aria-label="Открыть Free древо">
-                <div class="pricing-tree-frame">
-                  <div class="pricing-tree-frame__bar">
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--red"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
-                  </div>
-                  <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/03.jpg" alt="Free tree">
+            </section>
+
+            <section class="pricing-section">
+                <div class="pricing-container">
+                    <div data-aos="fade-up">
+                        <div class="pricing-eyebrow">Тарифы</div>
+                        <h2 class="pricing-title">Выбери свой тариф</h2>
+                        <p class="pricing-subtitle">
+                            Разные способы сохранять и рассказывать истории
+                        </p>
+                    </div>
+                    <div class="pricing-plans">
+                        <article
+                            class="pricing-card pricing-card--free"
+                            data-aos="fade-up"
+                        >
+                            <div class="pricing-card__content">
+                                <div class="pricing-card__heading">
+                                    <h3 class="pricing-card__title">Free</h3>
+                                    <p class="pricing-card__description">
+                                        Сохрани свою историю династии
+                                    </p>
+                                </div>
+                                <span class="pricing-badge">Навсегда</span>
+                                <div class="pricing-price">
+                                    <span class="pricing-price__value"
+                                        >0 ₽</span
+                                    >
+                                    <span class="pricing-price__slash">/</span>
+                                    <span class="pricing-price__meta"
+                                        >месяц</span
+                                    >
+                                </div>
+                                <ul class="pricing-features">
+                                    <li>
+                                        2 семейных дерева — создай или
+                                        импортируй из PlumTreeApp
+                                    </li>
+                                    <li>
+                                        Безлимит персонажей и питомцев —
+                                        добавляй всех, кто живёт в истории
+                                    </li>
+                                    <li>
+                                        Настрой дерево под себя — фоны, иконки,
+                                        редактор фото и стилизация
+                                    </li>
+                                    <li>
+                                        Доступно с любого устройства — ПК,
+                                        мобильный браузер и приложение
+                                    </li>
+                                    <li>
+                                        Галерея и сообщество — делись свои
+                                        творчеством и находи вдохновение
+                                    </li>
+                                </ul>
+                            </div>
+                            <a
+                                href="https://app.thesimstree.com/auth"
+                                class="pricing-btn inject-ref"
+                                >Начать бесплатно</a
+                            >
+                        </article>
+                        <article
+                            class="pricing-card pricing-card--pro"
+                            data-aos="fade-up"
+                            data-pricing-card
+                        >
+                            <div class="pricing-card__content">
+                                <div class="pricing-card__heading">
+                                    <h3 class="pricing-card__title">Pro</h3>
+                                    <p class="pricing-card__description">
+                                        Выйди за границы игрового древа
+                                    </p>
+                                </div>
+                                <div
+                                    class="pricing-periods"
+                                    role="group"
+                                    aria-label="Период оплаты"
+                                >
+                                    <button
+                                        class="pricing-periods__button"
+                                        type="button"
+                                        data-period="month"
+                                        data-price="499 ₽"
+                                        data-period-text="мес"
+                                        data-note=""
+                                        data-save=""
+                                    >
+                                        1 месяц
+                                    </button>
+                                    <button
+                                        class="pricing-periods__button"
+                                        type="button"
+                                        data-period="half"
+                                        data-price="300 ₽"
+                                        data-period-text="мес"
+                                        data-note="Списывается раз в 6 мес — 1 800 ₽"
+                                        data-save="-40%"
+                                    >
+                                        6 месяцев
+                                        <span class="pricing-periods__save"
+                                            >-40%</span
+                                        >
+                                    </button>
+                                    <button
+                                        class="pricing-periods__button active"
+                                        type="button"
+                                        data-period="year"
+                                        data-price="250 ₽"
+                                        data-period-text="мес"
+                                        data-note="Списывается раз в год — 3 000 ₽"
+                                        data-save="-50%"
+                                    >
+                                        Год
+                                        <span class="pricing-periods__save"
+                                            >-50%</span
+                                        >
+                                    </button>
+                                </div>
+                                <div class="pricing-price">
+                                    <span
+                                        class="pricing-price__value"
+                                        data-price-value
+                                        >250 ₽</span
+                                    >
+                                    <span class="pricing-price__slash">/</span>
+                                    <span class="pricing-price__meta"
+                                        ><span data-price-period>мес</span
+                                        ><span
+                                            class="pricing-price__note"
+                                            data-price-note
+                                            >Списывается раз в год — 3 000
+                                            ₽</span
+                                        ></span
+                                    >
+                                </div>
+                                <ul class="pricing-features">
+                                    <li>
+                                        Безлимитные деревья — столько династий,
+                                        сколько живёт в твоей голове
+                                    </li>
+                                    <li>
+                                        Дневники, аватары и фотогалерея — вся
+                                        жизнь сима в одном месте
+                                    </li>
+                                    <li>
+                                        Данные прямо из The Sims с иконками —
+                                        города, черты, навыки и цели
+                                    </li>
+                                    <li>
+                                        Скрытые поддеревья — партнёры, друзья,
+                                        соседи со своей историей
+                                    </li>
+                                    <li>
+                                        Полная кастомизация — свои фоны, иконки,
+                                        стили и цвета дерева
+                                    </li>
+                                </ul>
+                            </div>
+                            <a
+                                href="https://app.thesimstree.com/auth"
+                                class="pricing-btn pricing-btn--outline inject-ref"
+                                >Перейти на Pro</a
+                            >
+                        </article>
+                    </div>
+                    <div class="pricing-plan-dots" aria-hidden="true">
+                        <button
+                            class="pricing-plan-dot active"
+                            type="button"
+                            aria-label="Free план"
+                        ></button>
+                        <button
+                            class="pricing-plan-dot"
+                            type="button"
+                            aria-label="Pro план"
+                        ></button>
+                    </div>
                 </div>
-              </button>
-            </div>
-            <div class="swiper-slide pricing-tree-slide" data-feature-type="pro" data-title="Доступно на Pro"
-              data-description="Древо, которое можно создать на Pro плане">
-              <button class="pricing-tree-btn" type="button" data-tree-modal="../img/about/agency/gallery/04.jpg"
-                aria-label="Открыть Pro древо">
-                <div class="pricing-tree-frame">
-                  <div class="pricing-tree-frame__bar">
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--red"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
-                  </div>
-                  <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/04.jpg" alt="Pro tree">
+            </section>
+
+            <section class="pricing-section pricing-section--features">
+                <div
+                    class="pricing-container pricing-features-section__header"
+                    data-aos="fade-up"
+                >
+                    <div>
+                        <div class="pricing-eyebrow" data-feature-label>
+                            Возможности
+                        </div>
+                        <h2 class="pricing-title" data-feature-title>
+                            Уже доступно тебе
+                        </h2>
+                        <p class="pricing-subtitle" data-feature-description>
+                            Древо, которое можно создать на Free плане
+                        </p>
+                    </div>
+                    <a
+                        href="https://app.thesimstree.com/auth"
+                        class="pricing-btn pricing-btn--outline inject-ref"
+                        >Создать древо</a
+                    >
                 </div>
-              </button>
-            </div>
-            <div class="swiper-slide pricing-tree-slide" data-feature-type="pro" data-title="Доступно на Pro"
-              data-description="Древо, которое можно создать на Pro плане">
-              <button class="pricing-tree-btn" type="button" data-tree-modal="../img/about/agency/gallery/05.jpg"
-                aria-label="Открыть Pro древо">
-                <div class="pricing-tree-frame">
-                  <div class="pricing-tree-frame__bar">
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--red"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
-                    <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
-                  </div>
-                  <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/05.jpg" alt="Pro tree second">
+                <div class="pricing-features-carousel" data-aos="fade-up">
+                    <div
+                        class="swiper"
+                        data-swiper-options='{"slidesPerView":1.2,"centeredSlides":true,"spaceBetween":32,"loop":true,"navigation":{"prevEl":".pricing-features-prev","nextEl":".pricing-features-next"},"breakpoints":{"0":{"spaceBetween":16,"slidesPerView":1.1},"768":{"spaceBetween":24,"slidesPerView":1.15},"992":{"spaceBetween":64,"slidesPerView":"auto"},"1200":{"spaceBetween":64,"slidesPerView":"auto"}},"effect":"slide"}'
+                    >
+                        <div class="swiper-wrapper">
+                            <div
+                                class="swiper-slide pricing-tree-slide"
+                                data-feature-type="free"
+                                data-title="Уже доступно тебе"
+                                data-description="Древо, которое можно создать на Free плане"
+                            >
+                                <button
+                                    class="pricing-tree-btn"
+                                    type="button"
+                                    data-tree-modal="../img/about/agency/gallery/03.jpg"
+                                    aria-label="Открыть Free древо"
+                                >
+                                    <div class="pricing-tree-frame">
+                                        <div class="pricing-tree-frame__bar">
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--red"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--green"
+                                            ></span>
+                                        </div>
+                                        <img
+                                            class="pricing-tree-frame__img"
+                                            src="../img/about/agency/gallery/03.jpg"
+                                            alt="Free tree"
+                                        />
+                                    </div>
+                                </button>
+                            </div>
+                            <div
+                                class="swiper-slide pricing-tree-slide"
+                                data-feature-type="pro"
+                                data-title="Доступно на Pro"
+                                data-description="Древо, которое можно создать на Pro плане"
+                            >
+                                <button
+                                    class="pricing-tree-btn"
+                                    type="button"
+                                    data-tree-modal="../img/about/agency/gallery/04.jpg"
+                                    aria-label="Открыть Pro древо"
+                                >
+                                    <div class="pricing-tree-frame">
+                                        <div class="pricing-tree-frame__bar">
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--red"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--green"
+                                            ></span>
+                                        </div>
+                                        <img
+                                            class="pricing-tree-frame__img"
+                                            src="../img/about/agency/gallery/04.jpg"
+                                            alt="Pro tree"
+                                        />
+                                    </div>
+                                </button>
+                            </div>
+                            <div
+                                class="swiper-slide pricing-tree-slide"
+                                data-feature-type="pro"
+                                data-title="Доступно на Pro"
+                                data-description="Древо, которое можно создать на Pro плане"
+                            >
+                                <button
+                                    class="pricing-tree-btn"
+                                    type="button"
+                                    data-tree-modal="../img/about/agency/gallery/05.jpg"
+                                    aria-label="Открыть Pro древо"
+                                >
+                                    <div class="pricing-tree-frame">
+                                        <div class="pricing-tree-frame__bar">
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--red"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--green"
+                                            ></span>
+                                        </div>
+                                        <img
+                                            class="pricing-tree-frame__img"
+                                            src="../img/about/agency/gallery/05.jpg"
+                                            alt="Pro tree second"
+                                        />
+                                    </div>
+                                </button>
+                            </div>
+                            <div
+                                class="swiper-slide pricing-tree-slide"
+                                data-feature-type="free"
+                                data-title="Уже доступно тебе"
+                                data-description="Древо, которое можно создать на Free плане"
+                            >
+                                <button
+                                    class="pricing-tree-btn"
+                                    type="button"
+                                    data-tree-modal="../img/about/agency/gallery/03.jpg"
+                                    aria-label="Открыть Free древо"
+                                >
+                                    <div class="pricing-tree-frame">
+                                        <div class="pricing-tree-frame__bar">
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--red"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--green"
+                                            ></span>
+                                        </div>
+                                        <img
+                                            class="pricing-tree-frame__img"
+                                            src="../img/about/agency/gallery/03.jpg"
+                                            alt="Free tree"
+                                        />
+                                    </div>
+                                </button>
+                            </div>
+                            <div
+                                class="swiper-slide pricing-tree-slide"
+                                data-feature-type="pro"
+                                data-title="Доступно на Pro"
+                                data-description="Древо, которое можно создать на Pro плане"
+                            >
+                                <button
+                                    class="pricing-tree-btn"
+                                    type="button"
+                                    data-tree-modal="../img/about/agency/gallery/04.jpg"
+                                    aria-label="Открыть Pro древо"
+                                >
+                                    <div class="pricing-tree-frame">
+                                        <div class="pricing-tree-frame__bar">
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--red"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--green"
+                                            ></span>
+                                        </div>
+                                        <img
+                                            class="pricing-tree-frame__img"
+                                            src="../img/about/agency/gallery/04.jpg"
+                                            alt="Pro tree"
+                                        />
+                                    </div>
+                                </button>
+                            </div>
+                            <div
+                                class="swiper-slide pricing-tree-slide"
+                                data-feature-type="pro"
+                                data-title="Доступно на Pro"
+                                data-description="Древо, которое можно создать на Pro плане"
+                            >
+                                <button
+                                    class="pricing-tree-btn"
+                                    type="button"
+                                    data-tree-modal="../img/about/agency/gallery/05.jpg"
+                                    aria-label="Открыть Pro древо"
+                                >
+                                    <div class="pricing-tree-frame">
+                                        <div class="pricing-tree-frame__bar">
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--red"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"
+                                            ></span>
+                                            <span
+                                                class="pricing-tree-frame__dot pricing-tree-frame__dot--green"
+                                            ></span>
+                                        </div>
+                                        <img
+                                            class="pricing-tree-frame__img"
+                                            src="../img/about/agency/gallery/05.jpg"
+                                            alt="Pro tree second"
+                                        />
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="swiper-button-prev pricing-swiper-button pricing-features-prev"
+                        ></div>
+                        <div
+                            class="swiper-button-next pricing-swiper-button pricing-features-next"
+                        ></div>
+                    </div>
                 </div>
-              </button>
+            </section>
+
+            <section class="pricing-section">
+                <div class="pricing-container">
+                    <div data-aos="fade-up">
+                        <div class="pricing-eyebrow">Гарантия</div>
+                        <h2
+                            class="pricing-title"
+                            style="max-width: 628px; margin-inline: auto"
+                        >
+                            Твоя история слишком важна, чтобы исчезнуть
+                        </h2>
+                    </div>
+                    <div class="pricing-promises">
+                        <div class="pricing-promise" data-aos="fade-up">
+                            <span class="pricing-promise__icon"
+                                ><img
+                                    src="../img/icons/bookmark.png"
+                                    alt=""
+                                    width="36"
+                                    height="36"
+                            /></span>
+                            <p class="pricing-promise__text">
+                                При отмене подписки всё, что ты создал, остаётся
+                                без изменений
+                            </p>
+                        </div>
+                        <div class="pricing-promise" data-aos="fade-up">
+                            <span class="pricing-promise__icon"
+                                ><img
+                                    src="../img/icons/save.png"
+                                    alt=""
+                                    width="36"
+                                    height="36"
+                            /></span>
+                            <p class="pricing-promise__text">
+                                В любой момент твоя история доступна с любого
+                                устройства
+                            </p>
+                        </div>
+                        <div class="pricing-promise" data-aos="fade-up">
+                            <span class="pricing-promise__icon"
+                                ><img
+                                    src="../img/icons/infinity.png"
+                                    alt=""
+                                    width="36"
+                                    height="36"
+                            /></span>
+                            <p class="pricing-promise__text">
+                                Бесплатный план останется навсегда, ведь это
+                                часть нашей философии
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pricing-section">
+                <div class="pricing-container">
+                    <div data-aos="fade-up">
+                        <div class="pricing-eyebrow">Вопрос-ответ</div>
+                        <h2 class="pricing-title">Хочешь спросить?</h2>
+                    </div>
+                    <div class="accordion pricing-faq" id="pricingFaq">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeadingOne">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="faqCollapseOne"
+                                >
+                                    Как долго я могу пользоваться бесплатным
+                                    планом?
+                                </button>
+                            </h3>
+                            <div
+                                id="faqCollapseOne"
+                                class="accordion-collapse collapse show"
+                                aria-labelledby="faqHeadingOne"
+                                data-bs-parent="#pricingFaq"
+                            >
+                                <div class="accordion-body">
+                                    Бесплатный план бессрочный — никаких
+                                    ограничений по времени, скрытых условий или
+                                    обязательных апгрейдов. Это часть нашей
+                                    философии
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeadingTwo">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="faqCollapseTwo"
+                                >
+                                    Что будет с моими данными, если я отменю
+                                    Pro?
+                                </button>
+                            </h3>
+                            <div
+                                id="faqCollapseTwo"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="faqHeadingTwo"
+                                data-bs-parent="#pricingFaq"
+                            >
+                                <div class="accordion-body">
+                                    Всё, что ты создал, остаётся с тобой:
+                                    деревья, персонажи, фото, истории и
+                                    стилизация. Ты просто вернёшься на
+                                    бесплатный план
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeadingThree">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseThree"
+                                    aria-expanded="false"
+                                    aria-controls="faqCollapseThree"
+                                >
+                                    Зачем Pro, если есть бесплатный план?
+                                </button>
+                            </h3>
+                            <div
+                                id="faqCollapseThree"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="faqHeadingThree"
+                                data-bs-parent="#pricingFaq"
+                            >
+                                <div class="accordion-body">
+                                    Бесплатный план — полноценный продукт для
+                                    тех, кто хочет строить историю и делиться ей
+                                    с сообществом. Pro для тех, кому хочется
+                                    больше деревьев, глубины и кастомизации
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeadingFour">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faqCollapseFour"
+                                    aria-expanded="false"
+                                    aria-controls="faqCollapseFour"
+                                >
+                                    Сложно ли начать? Нужно ли что-то
+                                    устанавливать?
+                                </button>
+                            </h3>
+                            <div
+                                id="faqCollapseFour"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="faqHeadingFour"
+                                data-bs-parent="#pricingFaq"
+                            >
+                                <div class="accordion-body">
+                                    Ничего устанавливать не нужно — сервис
+                                    работает в браузере с любого устройства.
+                                    Регистрация занимает 30 секунд, а если
+                                    возникнут вопросы, есть инструкция и чат
+                                    поддержки
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pricing-section--final">
+                <div class="pricing-container pricing-final">
+                    <div class="pricing-final__content" data-aos="fade-up">
+                        <a
+                            class="pricing-final__logo"
+                            href="https://thesimstree.com/"
+                        >
+                            <img
+                                src="https://thesimstree.com/logo.svg"
+                                alt="TheSimsTree"
+                                width="140"
+                            />
+                        </a>
+                        <div class="pricing-final__group">
+                            <div class="pricing-final__heading">
+                                <h2 class="pricing-final__title">
+                                    Начни прямо сейчас
+                                </h2>
+                                <p class="pricing-final__text">
+                                    Регистрация занимает 30 секунд.
+                                </p>
+                            </div>
+                            <a
+                                href="https://app.thesimstree.com/auth"
+                                class="pricing-btn inject-ref"
+                                >Создать древо</a
+                            >
+                        </div>
+                    </div>
+                    <div
+                        class="pricing-final__visual"
+                        data-aos="fade-left"
+                    ></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" style="background: #ffffff">
+            <hr />
+            <div class="container py-4">
+                <div class="row align-items-center py-2 py-sm-3">
+                    <div class="col-md-8 order-md-1 footer-links">
+                        <div
+                            class="d-sm-flex text-nowrap justify-content-center justify-content-md-start"
+                        >
+                            <div
+                                class="nav justify-content-center justify-content-sm-start order-sm-2 mb-3 mb-sm-0"
+                            >
+                                <a
+                                    class="nav-link fw-normal py-0 px-2"
+                                    href="https://thesimstree.com/en/confidentioal.html"
+                                    >Confidentiality</a
+                                ><a
+                                    class="nav-link fw-normal py-0 px-2"
+                                    href="https://thesimstree.com/en/public-offer.html"
+                                    >Public offer</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-md-4 order-md-2 mb-4 mb-md-0 footer-socials"
+                    >
+                        <div
+                            class="d-flex justify-content-center justify-content-md-end gap-3 flex-wrap"
+                        >
+                            <a
+                                class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle"
+                                target="_blank"
+                                href="https://www.instagram.com/the.simstree"
+                                aria-label="Instagram"
+                                style="
+                                    background: #edf1f5;
+                                    border: 1px solid #edf1f5;
+                                    width: 36px;
+                                    height: 36px;
+                                "
+                                ><i class="ai-instagram"></i></a
+                            ><a
+                                class="btn btn-icon btn-sm btn-secondary btn-youtube rounded-circle"
+                                target="_blank"
+                                href="https://www.youtube.com/@TheSimsTree"
+                                aria-label="YouTube"
+                                style="
+                                    background: #edf1f5;
+                                    border: 1px solid #edf1f5;
+                                    width: 36px;
+                                    height: 36px;
+                                "
+                                ><i class="ai-youtube"></i></a
+                            ><a
+                                class="btn btn-icon btn-sm btn-secondary btn-x rounded-circle"
+                                target="_blank"
+                                href="https://twitter.com/thesimstree"
+                                aria-label="Twitter"
+                                style="
+                                    background: #edf1f5;
+                                    border: 1px solid #edf1f5;
+                                    width: 36px;
+                                    height: 36px;
+                                "
+                                ><i class="ai-x"></i></a
+                            ><a
+                                class="btn btn-icon btn-sm btn-secondary btn-tiktok rounded-circle"
+                                target="_blank"
+                                href="https://www.tiktok.com/@thesimstree"
+                                aria-label="TikTok"
+                                style="
+                                    background: #edf1f5;
+                                    border: 1px solid #edf1f5;
+                                    width: 36px;
+                                    height: 36px;
+                                "
+                                ><i class="ai-tiktok"></i></a
+                            ><a
+                                class="btn btn-icon btn-sm btn-secondary btn-pinterest rounded-circle"
+                                target="_blank"
+                                href="https://ru.pinterest.com/thesimstree/"
+                                aria-label="Pinterest"
+                                style="
+                                    background: #edf1f5;
+                                    border: 1px solid #edf1f5;
+                                    width: 36px;
+                                    height: 36px;
+                                "
+                                ><i class="ai-pinterest"></i></a
+                            ><a
+                                class="btn btn-icon btn-sm btn-secondary btn-twitch rounded-circle"
+                                target="_blank"
+                                href="https://www.twitch.tv/thesimstree"
+                                aria-label="Twitch"
+                                style="
+                                    background: #edf1f5;
+                                    border: 1px solid #edf1f5;
+                                    width: 36px;
+                                    height: 36px;
+                                "
+                                ><i class="ai-twitch"></i></a
+                            ><a
+                                class="btn btn-icon btn-sm btn-secondary btn-discord rounded-circle"
+                                target="_blank"
+                                href="https://discord.com/invite/VEB3tmWH8G"
+                                aria-label="Discord"
+                                style="
+                                    background: #edf1f5;
+                                    border: 1px solid #edf1f5;
+                                    width: 36px;
+                                    height: 36px;
+                                "
+                                ><i class="ai-discord"></i></a
+                            ><a
+                                class="btn btn-icon btn-sm btn-secondary btn-reddit rounded-circle"
+                                target="_blank"
+                                href="https://www.reddit.com/r/TheSimsTree"
+                                aria-label="Reddit"
+                                style="
+                                    background: #edf1f5;
+                                    border: 1px solid #edf1f5;
+                                    width: 36px;
+                                    height: 36px;
+                                "
+                                ><i class="ai-reddit"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="swiper-button-prev pricing-swiper-button pricing-features-prev"></div>
-          <div class="swiper-button-next pricing-swiper-button pricing-features-next"></div>
-        </div>
-      </div>
-    </section>
+        </footer>
 
-    <section class="pricing-section">
-      <div class="pricing-container">
-        <div data-aos="fade-up">
-          <div class="pricing-eyebrow">Гарантия</div>
-          <h2 class="pricing-title" style="max-width: 628px; margin-inline: auto;">Твоя история слишком важна, чтобы исчезнуть</h2>
-        </div>
-        <div class="pricing-promises">
-          <div class="pricing-promise" data-aos="fade-up"><span class="pricing-promise__icon"><img src="../img/icons/bookmark.png" alt="" width="36" height="36"></span>
-            <p class="pricing-promise__text">При отмене подписки всё, что ты создал, остаётся без изменений</p>
-          </div>
-          <div class="pricing-promise" data-aos="fade-up"><span class="pricing-promise__icon"><img src="../img/icons/save.png" alt="" width="36" height="36"></span>
-            <p class="pricing-promise__text">В любой момент твоя история доступна с любого устройства</p>
-          </div>
-          <div class="pricing-promise" data-aos="fade-up"><span class="pricing-promise__icon"><img src="../img/icons/infinity.png" alt="" width="36" height="36"></span>
-            <p class="pricing-promise__text">Бесплатный план останется навсегда, ведь это часть нашей философии</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing-section">
-      <div class="pricing-container">
-        <div data-aos="fade-up">
-          <div class="pricing-eyebrow">Вопрос-ответ</div>
-          <h2 class="pricing-title">Хочешь спросить?</h2>
-        </div>
-        <div class="accordion pricing-faq" id="pricingFaq">
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqHeadingOne"><button class="accordion-button" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true"
-                aria-controls="faqCollapseOne">Как долго я могу пользоваться бесплатным планом?</button></h3>
-            <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne"
-              data-bs-parent="#pricingFaq">
-              <div class="accordion-body">Бесплатный план бессрочный — никаких ограничений по времени, скрытых условий
-                или обязательных апгрейдов. Это часть нашей философии</div>
+        <div class="modal fade" id="treeModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5">Древо</h2>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Закрыть"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <img
+                            src="../img/about/agency/gallery/03.jpg"
+                            alt="Древо"
+                            class="pricing-modal-image"
+                            data-tree-modal-image
+                        />
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqHeadingTwo"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false"
-                aria-controls="faqCollapseTwo">Что будет с моими данными, если я отменю Pro?</button></h3>
-            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
-              data-bs-parent="#pricingFaq">
-              <div class="accordion-body">Всё, что ты создал, остаётся с тобой: деревья, персонажи, фото, истории и
-                стилизация. Ты просто вернёшься на бесплатный план</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqHeadingThree"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false"
-                aria-controls="faqCollapseThree">Зачем Pro, если есть бесплатный план?</button></h3>
-            <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree"
-              data-bs-parent="#pricingFaq">
-              <div class="accordion-body">Бесплатный план — полноценный продукт для тех, кто хочет строить историю и
-                делиться ей с сообществом. Pro для тех, кому хочется больше деревьев, глубины и кастомизации</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqHeadingFour"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false"
-                aria-controls="faqCollapseFour">Сложно ли начать? Нужно ли что-то устанавливать?</button></h3>
-            <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour"
-              data-bs-parent="#pricingFaq">
-              <div class="accordion-body">Ничего устанавливать не нужно — сервис работает в браузере с любого
-                устройства. Регистрация занимает 30 секунд, а если возникнут вопросы, есть инструкция и чат поддержки
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="pricing-section--final">
-      <div class="pricing-container pricing-final">
-        <div class="pricing-final__content" data-aos="fade-up">
-          <a class="pricing-final__logo" href="https://thesimstree.com/">
-            <img src="https://thesimstree.com/logo.svg" alt="TheSimsTree" width="140">
-          </a>
-          <div class="pricing-final__group">
-            <div class="pricing-final__heading">
-              <h2 class="pricing-final__title">Начни прямо сейчас</h2>
-              <p class="pricing-final__text">Регистрация занимает 30 секунд.</p>
-            </div>
-            <a href="https://app.thesimstree.com/auth" class="pricing-btn inject-ref">Создать древо</a>
-          </div>
-        </div>
-        <div class="pricing-final__visual" data-aos="fade-left"></div>
-      </div>
-    </section>
-  </main>
+        <script src="../vendor/aos/dist/aos.js?ver=3.83"></script>
+        <script src="../vendor/parallax-js/dist/parallax.min.js?ver=3.83"></script>
+        <script src="../vendor/swiper/swiper-bundle.min.js?ver=3.83"></script>
+        <script src="../js/theme.min.js?ver=3.83"></script>
+        <script>
+            const default_ref = "tstnews";
+            const ref = new URLSearchParams(location.search).get("ref");
+            if (ref) localStorage.setItem("ref", ref);
+            document.addEventListener("DOMContentLoaded", () => {
+                const storedRef = localStorage.getItem("ref") || default_ref;
+                document
+                    .querySelectorAll(".inject-ref")
+                    .forEach((element) =>
+                        element.setAttribute(
+                            "href",
+                            element.getAttribute("href") + "?ref=" + storedRef,
+                        ),
+                    );
+                document
+                    .querySelectorAll("[data-pricing-card]")
+                    .forEach((card) => {
+                        const priceValue =
+                            card.querySelector("[data-price-value]");
+                        const pricePeriod = card.querySelector(
+                            "[data-price-period]",
+                        );
+                        const priceNote =
+                            card.querySelector("[data-price-note]");
+                        card.querySelectorAll("[data-period]").forEach(
+                            (button) => {
+                                button.addEventListener("click", () => {
+                                    card.querySelectorAll(
+                                        "[data-period]",
+                                    ).forEach((item) =>
+                                        item.classList.remove("active"),
+                                    );
+                                    button.classList.add("active");
+                                    priceValue.textContent =
+                                        button.dataset.price;
+                                    pricePeriod.textContent =
+                                        button.dataset.periodText;
+                                    priceNote.textContent = button.dataset.note;
+                                });
+                            },
+                        );
+                    });
+                const featureTitle = document.querySelector(
+                    "[data-feature-title]",
+                );
+                const featureDescription = document.querySelector(
+                    "[data-feature-description]",
+                );
 
-  <footer class="footer" style="background: #FFFFFF;">
-    <hr />
-    <div class="container py-4">
-      <div class="row align-items-center py-2 py-sm-3">
-        <div class="col-md-8 order-md-1 footer-links">
-          <div class="d-sm-flex text-nowrap justify-content-center justify-content-md-start">
-            <div class="nav justify-content-center justify-content-sm-start order-sm-2 mb-3 mb-sm-0"><a
-                class="nav-link fw-normal py-0 px-2"
-                href="https://thesimstree.com/en/confidentioal.html">Confidentiality</a><a
-                class="nav-link fw-normal py-0 px-2" href="https://thesimstree.com/en/public-offer.html">Public
-                offer</a></div>
-          </div>
-        </div>
-        <div class="col-md-4 order-md-2 mb-4 mb-md-0 footer-socials">
-          <div class="d-flex justify-content-center justify-content-md-end gap-3 flex-wrap"><a
-              class="btn btn-icon btn-sm btn-secondary btn-instagram rounded-circle" target="_blank"
-              href="https://www.instagram.com/the.simstree" aria-label="Instagram"
-              style="background: #EDF1F5; border: 1px solid #EDF1F5; width: 36px; height: 36px;"><i
-                class="ai-instagram"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-youtube rounded-circle"
-              target="_blank" href="https://www.youtube.com/@TheSimsTree" aria-label="YouTube"
-              style="background: #EDF1F5; border: 1px solid #EDF1F5; width: 36px; height: 36px;"><i
-                class="ai-youtube"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-x rounded-circle"
-              target="_blank" href="https://twitter.com/thesimstree" aria-label="Twitter"
-              style="background: #EDF1F5; border: 1px solid #EDF1F5; width: 36px; height: 36px;"><i
-                class="ai-x"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-tiktok rounded-circle"
-              target="_blank" href="https://www.tiktok.com/@thesimstree" aria-label="TikTok"
-              style="background: #EDF1F5; border: 1px solid #EDF1F5; width: 36px; height: 36px;"><i
-                class="ai-tiktok"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-pinterest rounded-circle"
-              target="_blank" href="https://ru.pinterest.com/thesimstree/" aria-label="Pinterest"
-              style="background: #EDF1F5; border: 1px solid #EDF1F5; width: 36px; height: 36px;"><i
-                class="ai-pinterest"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-twitch rounded-circle"
-              target="_blank" href="https://www.twitch.tv/thesimstree" aria-label="Twitch"
-              style="background: #EDF1F5; border: 1px solid #EDF1F5; width: 36px; height: 36px;"><i
-                class="ai-twitch"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-discord rounded-circle"
-              target="_blank" href="https://discord.com/invite/VEB3tmWH8G" aria-label="Discord"
-              style="background: #EDF1F5; border: 1px solid #EDF1F5; width: 36px; height: 36px;"><i
-                class="ai-discord"></i></a><a class="btn btn-icon btn-sm btn-secondary btn-reddit rounded-circle"
-              target="_blank" href="https://www.reddit.com/r/TheSimsTree" aria-label="Reddit"
-              style="background: #EDF1F5; border: 1px solid #EDF1F5; width: 36px; height: 36px;"><i
-                class="ai-reddit"></i></a></div>
-        </div>
-      </div>
-    </div>
-  </footer>
+                function syncFeatureLabel() {
+                    const active = document.querySelector(
+                        ".pricing-features-carousel .swiper-slide-active",
+                    );
+                    if (!active || !featureTitle) return;
+                    featureTitle.textContent = active.dataset.title || "";
+                    featureDescription.textContent =
+                        active.dataset.description || "";
+                }
 
-  <div class="modal fade" id="treeModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title fs-5">Древо</h2><button type="button" class="btn-close" data-bs-dismiss="modal"
-            aria-label="Закрыть"></button>
-        </div>
-        <div class="modal-body"><img src="../img/about/agency/gallery/03.jpg" alt="Древо" class="pricing-modal-image"
-            data-tree-modal-image></div>
-      </div>
-    </div>
-  </div>
+                // Update on slide change via MutationObserver
+                const swiperWrapper = document.querySelector(
+                    ".pricing-features-carousel .swiper-wrapper",
+                );
+                if (swiperWrapper) {
+                    new MutationObserver(syncFeatureLabel).observe(
+                        swiperWrapper,
+                        { attributeFilter: ["class"], subtree: true },
+                    );
+                }
 
-  <script src="../vendor/aos/dist/aos.js?ver=3.83"></script>
-  <script src="../vendor/parallax-js/dist/parallax.min.js?ver=3.83"></script>
-  <script src="../vendor/swiper/swiper-bundle.min.js?ver=3.83"></script>
-  <script src="../js/theme.min.js?ver=3.83"></script>
-  <script>
-    const default_ref = 'tstnews';
-    const ref = new URLSearchParams(location.search).get('ref');
-    if (ref) localStorage.setItem('ref', ref);
-    document.addEventListener('DOMContentLoaded', () => {
-      const storedRef = localStorage.getItem('ref') || default_ref;
-      document.querySelectorAll('.inject-ref').forEach(element => element.setAttribute('href', element.getAttribute('href') + '?ref=' + storedRef));
-      document.querySelectorAll('[data-pricing-card]').forEach(card => {
-        const priceValue = card.querySelector('[data-price-value]');
-        const pricePeriod = card.querySelector('[data-price-period]');
-        const priceNote = card.querySelector('[data-price-note]');
-        card.querySelectorAll('[data-period]').forEach(button => {
-          button.addEventListener('click', () => {
-            card.querySelectorAll('[data-period]').forEach(item => item.classList.remove('active'));
-            button.classList.add('active');
-            priceValue.textContent = button.dataset.price;
-            pricePeriod.textContent = button.dataset.periodText;
-            priceNote.textContent = button.dataset.note;
-          });
-        });
-      });
-      const featureTitle = document.querySelector('[data-feature-title]');
-      const featureDescription = document.querySelector('[data-feature-description]');
+                document
+                    .querySelectorAll("[data-tree-modal]")
+                    .forEach((button) => {
+                        button.addEventListener("click", () => {
+                            document
+                                .querySelector("[data-tree-modal-image]")
+                                .setAttribute("src", button.dataset.treeModal);
+                            new bootstrap.Modal(
+                                document.getElementById("treeModal"),
+                            ).show();
+                        });
+                    });
 
-      function syncFeatureLabel() {
-        const active = document.querySelector('.pricing-features-carousel .swiper-slide-active');
-        if (!active || !featureTitle) return;
-        featureTitle.textContent = active.dataset.title || '';
-        featureDescription.textContent = active.dataset.description || '';
-      }
-
-      // Update on slide change via MutationObserver
-      const swiperWrapper = document.querySelector('.pricing-features-carousel .swiper-wrapper');
-      if (swiperWrapper) {
-        new MutationObserver(syncFeatureLabel).observe(swiperWrapper, { attributeFilter: ['class'], subtree: true });
-      }
-
-      document.querySelectorAll('[data-tree-modal]').forEach(button => {
-        button.addEventListener('click', () => {
-          document.querySelector('[data-tree-modal-image]').setAttribute('src', button.dataset.treeModal);
-          new bootstrap.Modal(document.getElementById('treeModal')).show();
-        });
-      });
-
-      // Mobile plan switcher dots
-      const plansEl = document.querySelector('.pricing-plans');
-      const planDots = document.querySelectorAll('.pricing-plan-dot');
-      if (plansEl && planDots.length) {
-        planDots.forEach((dot, i) => {
-          dot.addEventListener('click', () => {
-            plansEl.scrollTo({ left: plansEl.offsetWidth * i, behavior: 'smooth' });
-          });
-        });
-        plansEl.addEventListener('scroll', () => {
-          const idx = Math.round(plansEl.scrollLeft / plansEl.offsetWidth);
-          planDots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
-        }, { passive: true });
-      }
-    });
-  </script>
-</body>
-
+                // Mobile plan switcher dots
+                const plansEl = document.querySelector(".pricing-plans");
+                const planDots = document.querySelectorAll(".pricing-plan-dot");
+                if (plansEl && planDots.length) {
+                    planDots.forEach((dot, i) => {
+                        dot.addEventListener("click", () => {
+                            plansEl.scrollTo({
+                                left: plansEl.offsetWidth * i,
+                                behavior: "smooth",
+                            });
+                        });
+                    });
+                    plansEl.addEventListener(
+                        "scroll",
+                        () => {
+                            const idx = Math.round(
+                                plansEl.scrollLeft / plansEl.offsetWidth,
+                            );
+                            planDots.forEach((dot, i) =>
+                                dot.classList.toggle("active", i === idx),
+                            );
+                        },
+                        { passive: true },
+                    );
+                }
+            });
+        </script>
+    </body>
 </html>
