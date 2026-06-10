@@ -513,6 +513,17 @@
 
             .pricing-features-carousel {
                 position: relative;
+                max-width: 1920px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            .pricing-features-carousel .swiper-wrapper {
+                visibility: hidden;
+            }
+
+            .pricing-features-carousel .swiper-initialized .swiper-wrapper {
+                visibility: visible;
             }
 
             .pricing-features-carousel .swiper {
@@ -521,7 +532,7 @@
 
             .pricing-tree-slide {
                 width: 100%;
-                height: 560px;
+                height: 616px;
                 border-radius: 20px;
                 overflow: hidden;
                 background: #fff;
@@ -596,12 +607,12 @@
             }
 
             .pricing-features-prev {
-                left: calc((100% - min(1300px, 100% - 160px)) / 2 - 54px);
+                left: 226px;
                 right: auto;
             }
 
             .pricing-features-next {
-                right: calc((100% - min(1300px, 100% - 160px)) / 2 - 54px);
+                right: 226px;
                 left: auto;
             }
 
@@ -943,8 +954,12 @@
                     gap: 8px !important;
                 }
 
+                .pricing-section--features {
+                    padding: 120px 0;
+                }
+
                 .pricing-tree-slide {
-                    width: min(1300px, calc(100% - 160px));
+                    width: min(1300px, calc(100% - 620px));
                 }
 
                 .pricing-final__visual {
@@ -1543,7 +1558,6 @@
                         <a
                             href="https://app.thesimstree.com/auth"
                             class="pricing-btn inject-ref"
-                            data-popup-url="https://app.thesimstree.com/public/tree/T2ewcwPVif9E56I7abSCCDfV3bNwOjG1?ref=tiktok"
                             >Создать древо</a
                         >
                     </div>
@@ -1563,7 +1577,7 @@
                     <div class="pricing-style-list">
                         <article class="pricing-style-card" data-aos="fade-up">
                             <img
-                                src="../img/about/agency/gallery/01.jpg"
+                                src="../img/about/agency/gallery/01.webp"
                                 alt="Free"
                                 class="pricing-style-card__image"
                             />
@@ -1581,7 +1595,7 @@
                         </article>
                         <article class="pricing-style-card" data-aos="fade-up">
                             <img
-                                src="../img/about/agency/gallery/02.jpg"
+                                src="../img/about/agency/gallery/02.webp"
                                 alt="Pro"
                                 class="pricing-style-card__image"
                             />
@@ -1802,14 +1816,13 @@
                     <a
                         href="https://app.thesimstree.com/auth"
                         class="pricing-btn pricing-btn--outline inject-ref"
-                        data-popup-url="https://app.thesimstree.com/public/tree/ZtwHkjHTu92DzBadpu8NycOwRLjQQymK?ref=tiktok"
                         >Создать древо</a
                     >
                 </div>
                 <div class="pricing-features-carousel" data-aos="fade-up">
                     <div
                         class="swiper"
-                        data-swiper-options='{"slidesPerView":1.2,"centeredSlides":true,"spaceBetween":32,"loop":true,"navigation":{"prevEl":".pricing-features-prev","nextEl":".pricing-features-next"},"breakpoints":{"0":{"spaceBetween":16,"slidesPerView":1.1},"768":{"spaceBetween":24,"slidesPerView":1.15},"992":{"spaceBetween":64,"slidesPerView":"auto"},"1200":{"spaceBetween":64,"slidesPerView":"auto"}},"effect":"slide"}'
+                        data-swiper-options='{"slidesPerView":1.2,"centeredSlides":true,"spaceBetween":32,"loop":true,"navigation":{"prevEl":".pricing-features-prev","nextEl":".pricing-features-next"},"breakpoints":{"0":{"spaceBetween":16,"slidesPerView":1.1},"768":{"spaceBetween":24,"slidesPerView":1.15},"992":{"spaceBetween":124,"slidesPerView":"auto"},"1200":{"spaceBetween":124,"slidesPerView":"auto"}},"effect":"slide"}'
                     >
                         <div class="swiper-wrapper">
                             <div
@@ -1821,7 +1834,7 @@
                                 <button
                                     class="pricing-tree-btn"
                                     type="button"
-                                    data-tree-modal="../img/about/agency/gallery/03.jpg"
+                                    data-popup-url="https://app.thesimstree.com/public/tree/T2ewcwPVif9E56I7abSCCDfV3bNwOjG1?ref=tiktok"
                                     aria-label="Открыть Free древо"
                                 >
                                     <div class="pricing-tree-frame">
@@ -1838,7 +1851,7 @@
                                         </div>
                                         <img
                                             class="pricing-tree-frame__img"
-                                            src="../img/about/agency/gallery/03.jpg"
+                                            src="../img/about/agency/gallery/01.webp"
                                             alt="Free tree"
                                         />
                                     </div>
@@ -1853,7 +1866,7 @@
                                 <button
                                     class="pricing-tree-btn"
                                     type="button"
-                                    data-tree-modal="../img/about/agency/gallery/04.jpg"
+                                    data-popup-url="https://app.thesimstree.com/public/tree/ZtwHkjHTu92DzBadpu8NycOwRLjQQymK?ref=tiktok"
                                     aria-label="Открыть Pro древо"
                                 >
                                     <div class="pricing-tree-frame">
@@ -1870,7 +1883,7 @@
                                         </div>
                                         <img
                                             class="pricing-tree-frame__img"
-                                            src="../img/about/agency/gallery/04.jpg"
+                                            src="../img/about/agency/gallery/02.webp"
                                             alt="Pro tree"
                                         />
                                     </div>
@@ -1885,7 +1898,7 @@
                                 <button
                                     class="pricing-tree-btn"
                                     type="button"
-                                    data-tree-modal="../img/about/agency/gallery/05.jpg"
+                                    data-popup-url="https://app.thesimstree.com/public/tree/0PkkiBKwP6hb0uiffJD3G0ZFQ3Gts2Vm?ref=tiktok"
                                     aria-label="Открыть Pro древо"
                                 >
                                     <div class="pricing-tree-frame">
@@ -1902,7 +1915,7 @@
                                         </div>
                                         <img
                                             class="pricing-tree-frame__img"
-                                            src="../img/about/agency/gallery/05.jpg"
+                                            src="../img/about/agency/gallery/03.webp"
                                             alt="Pro tree second"
                                         />
                                     </div>
@@ -1917,7 +1930,7 @@
                                 <button
                                     class="pricing-tree-btn"
                                     type="button"
-                                    data-tree-modal="../img/about/agency/gallery/03.jpg"
+                                    data-popup-url="https://app.thesimstree.com/public/tree/T2ewcwPVif9E56I7abSCCDfV3bNwOjG1?ref=tiktok"
                                     aria-label="Открыть Free древо"
                                 >
                                     <div class="pricing-tree-frame">
@@ -1934,7 +1947,7 @@
                                         </div>
                                         <img
                                             class="pricing-tree-frame__img"
-                                            src="../img/about/agency/gallery/03.jpg"
+                                            src="../img/about/agency/gallery/01.webp"
                                             alt="Free tree"
                                         />
                                     </div>
@@ -1949,7 +1962,7 @@
                                 <button
                                     class="pricing-tree-btn"
                                     type="button"
-                                    data-tree-modal="../img/about/agency/gallery/04.jpg"
+                                    data-popup-url="https://app.thesimstree.com/public/tree/ZtwHkjHTu92DzBadpu8NycOwRLjQQymK?ref=tiktok"
                                     aria-label="Открыть Pro древо"
                                 >
                                     <div class="pricing-tree-frame">
@@ -1966,7 +1979,7 @@
                                         </div>
                                         <img
                                             class="pricing-tree-frame__img"
-                                            src="../img/about/agency/gallery/04.jpg"
+                                            src="../img/about/agency/gallery/02.webp"
                                             alt="Pro tree"
                                         />
                                     </div>
@@ -1981,7 +1994,7 @@
                                 <button
                                     class="pricing-tree-btn"
                                     type="button"
-                                    data-tree-modal="../img/about/agency/gallery/05.jpg"
+                                    data-popup-url="https://app.thesimstree.com/public/tree/0PkkiBKwP6hb0uiffJD3G0ZFQ3Gts2Vm?ref=tiktok"
                                     aria-label="Открыть Pro древо"
                                 >
                                     <div class="pricing-tree-frame">
@@ -1998,7 +2011,7 @@
                                         </div>
                                         <img
                                             class="pricing-tree-frame__img"
-                                            src="../img/about/agency/gallery/05.jpg"
+                                            src="../img/about/agency/gallery/03.webp"
                                             alt="Pro tree second"
                                         />
                                     </div>
@@ -2215,7 +2228,6 @@
                             <a
                                 href="https://app.thesimstree.com/auth"
                                 class="pricing-btn inject-ref"
-                                data-popup-url="https://app.thesimstree.com/public/tree/0PkkiBKwP6hb0uiffJD3G0ZFQ3Gts2Vm?ref=tiktok"
                                 >Создать древо</a
                             >
                         </div>
@@ -2374,7 +2386,7 @@
                     </div>
                     <div class="modal-body">
                         <img
-                            src="../img/about/agency/gallery/03.jpg"
+                            src="../img/about/agency/gallery/01.webp"
                             alt="Древо"
                             class="pricing-modal-image"
                             data-tree-modal-image
@@ -2496,6 +2508,12 @@
                         { passive: true },
                     );
                 }
+                setTimeout(function () {
+                    const el = document.querySelector(
+                        ".pricing-features-carousel .swiper",
+                    );
+                    if (el && el.swiper) el.swiper.slideToLoop(0, 0);
+                }, 0);
             });
         </script>
 
@@ -2542,11 +2560,12 @@
                     document.body.style.overflow = "";
                 }
 
-                document.querySelectorAll("[data-popup-url]").forEach((btn) => {
-                    btn.addEventListener("click", (e) => {
+                document.addEventListener("click", (e) => {
+                    const btn = e.target.closest("[data-popup-url]");
+                    if (btn) {
                         e.preventDefault();
                         openPopup(btn.dataset.popupUrl);
-                    });
+                    }
                 });
 
                 popup
