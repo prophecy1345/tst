@@ -1678,7 +1678,7 @@
                                         type="button"
                                         data-period="month"
                                         data-price="$4.99"
-                                        data-period-text="mo"
+                                        data-period-text="month"
                                         data-note=""
                                         data-save=""
                                     >
@@ -1688,8 +1688,8 @@
                                         type="button"
                                         data-period="half"
                                         data-price="$3"
-                                        data-period-text="mo"
-                                        data-note="Billed every 6 months — $18"
+                                        data-period-text="month"
+                                        data-note="billed every 6 months — $18"
                                         data-save="Save 40%"
                                     >
                                         6 months
@@ -1701,8 +1701,8 @@
                                         type="button"
                                         data-period="year"
                                         data-price="$2.50"
-                                        data-period-text="mo"
-                                        data-note="Billed annually — $30"
+                                        data-period-text="month"
+                                        data-note="billed annually — $30"
                                         data-save="Save 50%"
                                     >
                                         Year
@@ -1722,7 +1722,7 @@
                                         ><span
                                             class="pricing-price__note"
                                             data-price-note
-                                            >Billed annually — $30</span
+                                            >billed annually — $30</span
                                         ></span
                                     >
                                 </div>
@@ -2472,8 +2472,16 @@
             });
         </script>
 
-        <div class="tree-popup" id="treePopup" role="dialog" aria-modal="true" aria-hidden="true">
-            <button class="tree-popup__close" type="button" aria-label="Close">×</button>
+        <div
+            class="tree-popup"
+            id="treePopup"
+            role="dialog"
+            aria-modal="true"
+            aria-hidden="true"
+        >
+            <button class="tree-popup__close" type="button" aria-label="Close">
+                ×
+            </button>
             <div class="tree-popup__inner">
                 <iframe
                     class="tree-popup__iframe"
@@ -2503,14 +2511,12 @@
                     document.body.style.overflow = "";
                 }
 
-                document
-                    .querySelectorAll("[data-popup-url]")
-                    .forEach((btn) => {
-                        btn.addEventListener("click", (e) => {
-                            e.preventDefault();
-                            openPopup(btn.dataset.popupUrl);
-                        });
+                document.querySelectorAll("[data-popup-url]").forEach((btn) => {
+                    btn.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        openPopup(btn.dataset.popupUrl);
                     });
+                });
 
                 popup
                     .querySelector(".tree-popup__close")
@@ -2521,7 +2527,10 @@
                 });
 
                 document.addEventListener("keydown", (e) => {
-                    if (e.key === "Escape" && popup.classList.contains("is-open"))
+                    if (
+                        e.key === "Escape" &&
+                        popup.classList.contains("is-open")
+                    )
                         closePopup();
                 });
             })();

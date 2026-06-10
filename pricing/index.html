@@ -1686,7 +1686,7 @@
                                         type="button"
                                         data-period="month"
                                         data-price="499 ₽"
-                                        data-period-text="мес"
+                                        data-period-text="месяц"
                                         data-note=""
                                         data-save=""
                                     >
@@ -1697,8 +1697,8 @@
                                         type="button"
                                         data-period="half"
                                         data-price="300 ₽"
-                                        data-period-text="мес"
-                                        data-note="Списывается раз в 6 мес — 1 800 ₽"
+                                        data-period-text="месяц"
+                                        data-note="списывается раз в 6 месяц — 1 800 ₽"
                                         data-save="-40%"
                                     >
                                         6 месяцев
@@ -1711,8 +1711,8 @@
                                         type="button"
                                         data-period="year"
                                         data-price="250 ₽"
-                                        data-period-text="мес"
-                                        data-note="Списывается раз в год — 3 000 ₽"
+                                        data-period-text="месяц"
+                                        data-note="списывается раз в год — 3 000 ₽"
                                         data-save="-50%"
                                     >
                                         Год
@@ -1733,7 +1733,7 @@
                                         ><span
                                             class="pricing-price__note"
                                             data-price-note
-                                            >Списывается раз в год — 3 000
+                                            >списывается раз в год — 3 000
                                             ₽</span
                                         ></span
                                     >
@@ -2499,8 +2499,20 @@
             });
         </script>
 
-        <div class="tree-popup" id="treePopup" role="dialog" aria-modal="true" aria-hidden="true">
-            <button class="tree-popup__close" type="button" aria-label="Закрыть">×</button>
+        <div
+            class="tree-popup"
+            id="treePopup"
+            role="dialog"
+            aria-modal="true"
+            aria-hidden="true"
+        >
+            <button
+                class="tree-popup__close"
+                type="button"
+                aria-label="Закрыть"
+            >
+                ×
+            </button>
             <div class="tree-popup__inner">
                 <iframe
                     class="tree-popup__iframe"
@@ -2530,14 +2542,12 @@
                     document.body.style.overflow = "";
                 }
 
-                document
-                    .querySelectorAll("[data-popup-url]")
-                    .forEach((btn) => {
-                        btn.addEventListener("click", (e) => {
-                            e.preventDefault();
-                            openPopup(btn.dataset.popupUrl);
-                        });
+                document.querySelectorAll("[data-popup-url]").forEach((btn) => {
+                    btn.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        openPopup(btn.dataset.popupUrl);
                     });
+                });
 
                 popup
                     .querySelector(".tree-popup__close")
@@ -2548,7 +2558,10 @@
                 });
 
                 document.addEventListener("keydown", (e) => {
-                    if (e.key === "Escape" && popup.classList.contains("is-open"))
+                    if (
+                        e.key === "Escape" &&
+                        popup.classList.contains("is-open")
+                    )
                         closePopup();
                 });
             })();
