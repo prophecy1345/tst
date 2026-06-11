@@ -777,6 +777,10 @@
                 display: none;
             }
 
+            .pricing-tree-dots {
+                display: none;
+            }
+
             .footer .nav-link {
                 font-size: 16px;
                 line-height: 24px;
@@ -1211,6 +1215,29 @@
                     background: var(--pricing-primary);
                 }
 
+                .pricing-tree-dots {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    margin-top: 16px;
+                }
+
+                .pricing-tree-dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #d7dde2;
+                    border: 0;
+                    padding: 0;
+                    cursor: pointer;
+                    transition: background 0.15s;
+                }
+
+                .pricing-tree-dot.active {
+                    background: var(--pricing-primary);
+                }
+
                 .pricing-card__title,
                 .pricing-price__value,
                 .pricing-price__slash {
@@ -1260,7 +1287,7 @@
                 }
 
                 .pricing-tree-slide {
-                    min-height: 200px;
+                    height: 280px;
                     border-radius: 12px;
                 }
 
@@ -1712,7 +1739,7 @@
                                         data-period="half"
                                         data-price="300 ₽"
                                         data-period-text="месяц"
-                                        data-note="списывается раз в 6 месяц — 1 800 ₽"
+                                        data-note="списывается раз в 6 мес. — 1 800 ₽"
                                         data-save="-40%"
                                     >
                                         6 месяцев
@@ -2025,6 +2052,11 @@
                             class="swiper-button-next pricing-swiper-button pricing-features-next"
                         ></div>
                     </div>
+                </div>
+                <div class="pricing-tree-dots" aria-hidden="true">
+                    <button class="pricing-tree-dot active" type="button" aria-label="Слайд 1"></button>
+                    <button class="pricing-tree-dot" type="button" aria-label="Слайд 2"></button>
+                    <button class="pricing-tree-dot" type="button" aria-label="Слайд 3"></button>
                 </div>
             </section>
 
@@ -2457,6 +2489,17 @@
                     featureTitle.textContent = active.dataset.title || "";
                     featureDescription.textContent =
                         active.dataset.description || "";
+                    const swiperEl = document.querySelector(
+                        ".pricing-features-carousel .swiper",
+                    );
+                    if (swiperEl && swiperEl.swiper) {
+                        const dotIdx = swiperEl.swiper.realIndex % 3;
+                        document
+                            .querySelectorAll(".pricing-tree-dot")
+                            .forEach((dot, i) =>
+                                dot.classList.toggle("active", i === dotIdx),
+                            );
+                    }
                 }
 
                 // Update on slide change via MutationObserver
@@ -2469,6 +2512,19 @@
                         { attributeFilter: ["class"], subtree: true },
                     );
                 }
+
+                document
+                    .querySelectorAll(".pricing-tree-dot")
+                    .forEach((dot, i) => {
+                        dot.addEventListener("click", () => {
+                            const swiperEl = document.querySelector(
+                                ".pricing-features-carousel .swiper",
+                            );
+                            if (swiperEl && swiperEl.swiper) {
+                                swiperEl.swiper.slideToLoop(i);
+                            }
+                        });
+                    });
 
                 document
                     .querySelectorAll("[data-tree-modal]")
