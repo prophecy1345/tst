@@ -2494,36 +2494,41 @@
                     "[data-feature-description]",
                 );
 
+                // Single source of truth: label + dots derived from realIndex,
+                // so they can never disagree regardless of Swiper's loop clones.
+                const slideData = [
+                    {
+                        title: "Уже доступно тебе",
+                        description:
+                            "Древо, которое можно создать на Free плане",
+                    },
+                    {
+                        title: "Доступно на Pro",
+                        description: "Древо, которое можно создать на Pro плане",
+                    },
+                    {
+                        title: "Доступно на Pro",
+                        description: "Древо, которое можно создать на Pro плане",
+                    },
+                ];
+
                 function syncFeatureLabel() {
-                    const active = document.querySelector(
-                        ".pricing-features-carousel .swiper-slide-active",
-                    );
-                    if (!active || !featureTitle) return;
-                    featureTitle.textContent = active.dataset.title || "";
-                    featureDescription.textContent =
-                        active.dataset.description || "";
                     const swiperEl = document.querySelector(
                         ".pricing-features-carousel .swiper",
                     );
-                    if (swiperEl && swiperEl.swiper) {
-                        const dotIdx = swiperEl.swiper.realIndex % 3;
-                        document
-                            .querySelectorAll(".pricing-tree-dot")
-                            .forEach((dot, i) =>
-                                dot.classList.toggle("active", i === dotIdx),
-                            );
-                    }
-                }
-
-                // Update on slide change via MutationObserver
-                const swiperWrapper = document.querySelector(
-                    ".pricing-features-carousel .swiper-wrapper",
-                );
-                if (swiperWrapper) {
-                    new MutationObserver(syncFeatureLabel).observe(
-                        swiperWrapper,
-                        { attributeFilter: ["class"], subtree: true },
-                    );
+                    if (!swiperEl || !swiperEl.swiper) return;
+                    const idx =
+                        swiperEl.swiper.realIndex % slideData.length;
+                    if (featureTitle)
+                        featureTitle.textContent = slideData[idx].title;
+                    if (featureDescription)
+                        featureDescription.textContent =
+                            slideData[idx].description;
+                    document
+                        .querySelectorAll(".pricing-tree-dot")
+                        .forEach((dot, i) =>
+                            dot.classList.toggle("active", i === idx),
+                        );
                 }
 
                 document
@@ -2577,12 +2582,44 @@
                         { passive: true },
                     );
                 }
-                setTimeout(function () {
+                (function waitForSwiper() {
                     const el = document.querySelector(
                         ".pricing-features-carousel .swiper",
                     );
-                    if (el && el.swiper) el.swiper.slideToLoop(0, 0);
-                }, 0);
+                    if (!(el && el.swiper)) {
+                        setTimeout(waitForSwiper, 50);
+                        return;
+                    }
+                    const swiper = el.swiper;
+                    let userInteracted = false;
+                    const markInteracted = () => {
+                        userInteracted = true;
+                    };
+                    swiper.on("touchStart", markInteracted);
+                    swiper.on("slideChange", syncFeatureLabel);
+                    document
+                        .querySelectorAll(
+                            ".pricing-features-prev, .pricing-features-next, .pricing-tree-dot",
+                        )
+                        .forEach((b) =>
+                            b.addEventListener("click", markInteracted),
+                        );
+
+                    // Swiper finalizes its loop layout asynchronously and can
+                    // re-snap to another slide after init. Keep re-asserting the
+                    // first slide during that settle window, until it sticks or
+                    // the user interacts.
+                    let tries = 0;
+                    (function settle() {
+                        if (userInteracted) {
+                            syncFeatureLabel();
+                            return;
+                        }
+                        if (swiper.realIndex !== 0) swiper.slideToLoop(0, 0);
+                        syncFeatureLabel();
+                        if (++tries < 15) setTimeout(settle, 80);
+                    })();
+                })();
             });
         </script>
 
