@@ -536,8 +536,8 @@
 
             .pricing-tree-slide {
                 width: 100%;
-                aspect-ratio: 1920 / 911;
-                border-radius: 20px;
+                aspect-ratio: 1155 / 616;
+                border-radius: 12px;
                 overflow: hidden;
                 background: #fff;
                 box-shadow: 0 18px 50px rgba(18, 21, 25, 0.08);
@@ -611,12 +611,12 @@
             }
 
             .pricing-features-prev {
-                left: 226px;
+                left: max(226px, calc(50% - 661.5px));
                 right: auto;
             }
 
             .pricing-features-next {
-                right: 226px;
+                right: max(226px, calc(50% - 661.5px));
                 left: auto;
             }
 
@@ -929,7 +929,7 @@
                 }
 
                 .pricing-tree-slide {
-                    aspect-ratio: 1920 / 911;
+                    aspect-ratio: 1155 / 616;
                 }
 
                 .pricing-swiper-button {
@@ -967,7 +967,7 @@
                 }
 
                 .pricing-tree-slide {
-                    width: min(1300px, calc(100% - 620px));
+                    width: min(1155px, calc(100% - 620px));
                 }
 
                 .pricing-final__visual {
@@ -1292,7 +1292,7 @@
                 }
 
                 .pricing-tree-slide {
-                    height: 280px;
+                    aspect-ratio: 1155 / 616;
                     border-radius: 12px;
                 }
 
@@ -1361,9 +1361,13 @@
                 }
             }
 
-            @media (max-width: 374px) {
+            @media (max-width: 375px) {
                 .pricing-container {
                     width: calc(100% - 32px);
+                }
+
+                .pricing-tree-slide {
+                    aspect-ratio: 1 / 1;
                 }
 
                 .footer-socials .btn-icon {
@@ -1575,9 +1579,15 @@
                 <div class="pricing-container pricing-hero">
                     <div class="pricing-hero__content" data-aos="fade-up">
                         <div>
-                            <h1 class="pricing-hero__title">Free Forever</h1>
+                            <h1 class="pricing-hero__title">
+                                Save Your History
+                            </h1>
                             <p class="pricing-hero__text">
-                                From one sim to a whole legacy
+                                From your very first Sim to a sprawling dynasty.
+                                Track your characters, their stories, and
+                                generational bonds in a family tree that grows
+                                alongside your legacy. Completely free, with no
+                                time limits.
                             </p>
                         </div>
                         <a
@@ -1611,9 +1621,9 @@
                                     The One Who Tells the Story
                                 </h3>
                                 <p class="pricing-style-card__text">
-                                    You build your story one generation at a
-                                    time. Favorite characters, their journeys,
-                                    the bonds between them — all in one place
+                                    You build your dynasty, tell the stories of
+                                    generations, and find your community.
+                                    Everything your story needs is already here.
                                 </p>
                             </div>
                         </article>
@@ -1631,10 +1641,12 @@
                                     The One Who Saves Every Moment
                                 </h3>
                                 <p class="pricing-style-card__text">
-                                    You build entire worlds. Multiple legacies,
-                                    intertwined lives, every character comes
-                                    alive through the details — you go beyond
-                                    the in-game tree
+                                    You build entire worlds. Multiple dynasties,
+                                    intertwined fates, and hidden bonds. Every
+                                    character comes alive through details – from
+                                    traits and skills to personal diaries.
+                                    You’re expanding far beyond the limits of an
+                                    in-game family tree.
                                 </p>
                             </div>
                         </article>
@@ -1671,25 +1683,24 @@
                                     >
                                 </div>
                                 <ul class="pricing-features">
+                                    <li>2 complete family trees</li>
                                     <li>
-                                        2 family trees — build your own or
-                                        import from PlumTreeApp
-                                    </li>
-                                    <li>
-                                        Unlimited sims & pets — add every
+                                        Unlimited sims & pets – add every
                                         character from your stories
                                     </li>
                                     <li>
-                                        Customize your tree — backgrounds,
-                                        icons, photo editing & more
+                                        Make the tree truly yours with custom
+                                        backgrounds, icons, a photo editor, and
+                                        powerful styling tools
                                     </li>
                                     <li>
-                                        Always on hand — PC, mobile browser, or
+                                        Always on hand – PC, mobile browser, or
                                         the app
                                     </li>
                                     <li>
-                                        Gallery & community — share your work,
-                                        find inspiration
+                                        Gallery & Community – share your trees,
+                                        get likes and comments, and find
+                                        inspiration
                                     </li>
                                 </ul>
                             </div>
@@ -1732,7 +1743,7 @@
                                         data-period="half"
                                         data-price="$3"
                                         data-period-text="month"
-                                        data-note="billed every 6 months — $18"
+                                        data-note="Billed every 6 months – $18"
                                         data-save="Save 40%"
                                     >
                                         6 months
@@ -1745,7 +1756,7 @@
                                         data-period="year"
                                         data-price="$2.50"
                                         data-period-text="month"
-                                        data-note="billed annually — $30"
+                                        data-note="Billed annually – $30"
                                         data-save="Save 50%"
                                     >
                                         Year
@@ -1770,25 +1781,29 @@
                                     >
                                 </div>
                                 <ul class="pricing-features">
+                                    <li>Unlimited trees</li>
                                     <li>
-                                        Unlimited trees — as many dynasties as
-                                        you can imagine
+                                        Dynasty & Character Gallery – collect
+                                        and preserve every important moment<br />
+                                        Auto-saved character avatars – track
+                                        their journey growing up
                                     </li>
                                     <li>
-                                        Diaries, avatars & galleries — every
-                                        sim's full life in one place
+                                        Everything from the game is built right
+                                        in – select traits, skills, worlds, and
+                                        careers in a single click<br />
+                                        Character Diaries & Story Gallery –
+                                        chronicle each Sim’s journey generation
+                                        after generation, and share it with the
+                                        community
                                     </li>
                                     <li>
-                                        In-game details with icons — worlds,
-                                        traits, skills, aspirations
+                                        Subtree system for easy management of
+                                        all connections on a single tree
                                     </li>
                                     <li>
-                                        Hidden subtrees — partners, friends,
-                                        neighbors with stories
-                                    </li>
-                                    <li>
-                                        Full customization — your backgrounds,
-                                        icons, and tree styles
+                                        Advanced tree styling – colors, lines,
+                                        custom and exclusive backgrounds
                                     </li>
                                 </ul>
                             </div>
@@ -2082,7 +2097,7 @@
                                     style="width: 38px; height: 38.74px"
                             /></span>
                             <p class="pricing-promise__text">
-                                Cancel anytime — everything you created stays
+                                Cancel anytime – everything you created stays
                                 with you, unchanged
                             </p>
                         </div>
@@ -2095,7 +2110,7 @@
                                     height="39"
                             /></span>
                             <p class="pricing-promise__text">
-                                Access your story anytime, anywhere — from any
+                                Access your story anytime, anywhere – from any
                                 device you own
                             </p>
                         </div>
@@ -2108,8 +2123,8 @@
                                     height="23"
                             /></span>
                             <p class="pricing-promise__text">
-                                The free plan is forever — no strings attached.
-                                That's a promise
+                                Free plan is here to stay forever. That’s just
+                                who we are and what we believe in
                             </p>
                         </div>
                     </div>
@@ -2141,9 +2156,13 @@
                                 aria-labelledby="faqHeadingOne"
                             >
                                 <div class="accordion-body">
-                                    Forever — no time limits, no forced
-                                    upgrades, no hidden catches. That's our
-                                    promise
+                                    Our Free plan has no expiration date, no
+                                    hidden catches, and no forced upgrades.
+                                    Enjoy it without limits – build your
+                                    dynasties and share them with the community.
+                                    Pro is there for those who want extra
+                                    features, but it’s entirely your choice,
+                                    never a requirement.
                                 </div>
                             </div>
                         </div>
@@ -2166,8 +2185,12 @@
                                 aria-labelledby="faqHeadingTwo"
                             >
                                 <div class="accordion-body">
-                                    You keep everything — trees, sims, photos,
-                                    stories, styling. You just return to free.
+                                    Nothing will be lost. Your trees,
+                                    characters, photos, and stories stay with
+                                    you: you’ll just return to the Free tier.
+                                    Pro tools will be locked, but your data is
+                                    fully preserved. We take good care of
+                                    everything you’ve built.
                                 </div>
                             </div>
                         </div>
@@ -2181,7 +2204,7 @@
                                     aria-expanded="false"
                                     aria-controls="faqCollapseThree"
                                 >
-                                    Why upgrade to Pro when free is so good?
+                                    Why go Pro?
                                 </button>
                             </h3>
                             <div
@@ -2190,9 +2213,13 @@
                                 aria-labelledby="faqHeadingThree"
                             >
                                 <div class="accordion-body">
-                                    Free is perfect for building stories. Pro
-                                    adds unlimited trees, more depth, and full
-                                    control.
+                                    We made sure the Free version gives you
+                                    everything you need to create your legacy
+                                    and share it with the community. Pro is
+                                    built for creators who want more: manage
+                                    multiple dynasties, keep character journals,
+                                    pull rich details from the game, unlock
+                                    advanced customization, and more.
                                 </div>
                             </div>
                         </div>
@@ -2206,8 +2233,7 @@
                                     aria-expanded="false"
                                     aria-controls="faqCollapseFour"
                                 >
-                                    Is it hard to start? Do I need to install
-                                    anything?
+                                    How to start?
                                 </button>
                             </h3>
                             <div
@@ -2216,9 +2242,13 @@
                                 aria-labelledby="faqHeadingFour"
                             >
                                 <div class="accordion-body">
-                                    No install needed — runs in your browser.
-                                    Sign-up takes 30 seconds, and support is
-                                    always here
+                                    Nothing to install. Registration takes 30
+                                    seconds with just an email and password.
+                                    Access your tree from your PC or mobile,
+                                    whether in-browser or through the app. Got
+                                    questions along the way? A step-by-step
+                                    guide and live support are right there to
+                                    help.
                                 </div>
                             </div>
                         </div>
@@ -2244,7 +2274,7 @@
                                     Start Right Now
                                 </h2>
                                 <p class="pricing-final__text">
-                                    Get started in 30 seconds.
+                                    Sign up takes just 30 seconds
                                 </p>
                             </div>
                             <a
@@ -2491,8 +2521,7 @@
                         ".pricing-features-carousel .swiper",
                     );
                     if (!swiperEl || !swiperEl.swiper) return;
-                    const idx =
-                        swiperEl.swiper.realIndex % slideData.length;
+                    const idx = swiperEl.swiper.realIndex % slideData.length;
                     if (featureTitle)
                         featureTitle.textContent = slideData[idx].title;
                     if (featureDescription)
