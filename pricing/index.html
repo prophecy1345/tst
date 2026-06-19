@@ -955,6 +955,28 @@
             }
         }
 
+        @media (min-width: 1921px) and (max-width: 2560px) {
+            .pricing-features-carousel {
+                max-width: 2560px;
+                padding: 76px 0;
+            }
+
+            .pricing-tree-slide.swiper-slide-active {
+                transform: scale(1.246753);
+                z-index: 2;
+            }
+
+            .pricing-features-prev {
+                left: calc(50% - 804px);
+                right: auto;
+            }
+
+            .pricing-features-next {
+                right: calc(50% - 804px);
+                left: auto;
+            }
+        }
+
         @media (min-width: 768px) and (max-width: 991px) {
             .footer .row {
                 flex-wrap: nowrap;
@@ -1699,7 +1721,7 @@
             </div>
             <div class="pricing-features-carousel" data-aos="fade-up">
                 <div class="swiper"
-                    data-swiper-options='{"slidesPerView":1.2,"centeredSlides":true,"spaceBetween":32,"loop":true,"navigation":{"prevEl":".pricing-features-prev","nextEl":".pricing-features-next"},"breakpoints":{"0":{"spaceBetween":16,"slidesPerView":1.1},"768":{"spaceBetween":24,"slidesPerView":1.15},"992":{"spaceBetween":124,"slidesPerView":"auto"},"1200":{"spaceBetween":124,"slidesPerView":"auto"}},"effect":"slide"}'>
+                    data-swiper-options='{"slidesPerView":1.2,"centeredSlides":true,"spaceBetween":32,"loop":true,"navigation":{"prevEl":".pricing-features-prev","nextEl":".pricing-features-next"},"breakpoints":{"0":{"spaceBetween":16,"slidesPerView":1.1},"768":{"spaceBetween":24,"slidesPerView":1.15},"992":{"spaceBetween":124,"slidesPerView":"auto"},"1200":{"spaceBetween":124,"slidesPerView":"auto"},"1921":{"spaceBetween":266.5,"slidesPerView":"auto"},"2561":{"spaceBetween":124,"slidesPerView":"auto"}},"effect":"slide"}'>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide pricing-tree-slide" data-feature-type="free"
                             data-title="Уже доступно тебе"
@@ -1713,8 +1735,12 @@
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
                                     </div>
-                                    <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/01.webp"
-                                        alt="Free tree" />
+                                    <picture>
+                                        <source media="(min-width: 1921px) and (max-width: 2560px)"
+                                            srcset="../img/about/agency/gallery/01-2k.webp" />
+                                        <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/01.webp"
+                                            alt="Free tree" />
+                                    </picture>
                                 </div>
                             </button>
                         </div>
@@ -1730,6 +1756,8 @@
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
                                     </div>
                                     <picture>
+                                        <source media="(min-width: 1921px) and (max-width: 2560px)"
+                                            srcset="../img/about/agency/gallery/02-2k.webp" />
                                         <source media="(max-width: 375px)"
                                             srcset="../img/about/agency/gallery/02-mobile.webp" />
                                         <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/02.webp"
@@ -1749,8 +1777,12 @@
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
                                     </div>
-                                    <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/03.webp"
-                                        alt="Pro tree second" />
+                                    <picture>
+                                        <source media="(min-width: 1921px) and (max-width: 2560px)"
+                                            srcset="../img/about/agency/gallery/03-2k.webp" />
+                                        <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/03.webp"
+                                            alt="Pro tree second" />
+                                    </picture>
                                 </div>
                             </button>
                         </div>
@@ -1766,8 +1798,12 @@
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
                                     </div>
-                                    <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/01.webp"
-                                        alt="Free tree" />
+                                    <picture>
+                                        <source media="(min-width: 1921px) and (max-width: 2560px)"
+                                            srcset="../img/about/agency/gallery/01-2k.webp" />
+                                        <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/01.webp"
+                                            alt="Free tree" />
+                                    </picture>
                                 </div>
                             </button>
                         </div>
@@ -1783,6 +1819,8 @@
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
                                     </div>
                                     <picture>
+                                        <source media="(min-width: 1921px) and (max-width: 2560px)"
+                                            srcset="../img/about/agency/gallery/02-2k.webp" />
                                         <source media="(max-width: 375px)"
                                             srcset="../img/about/agency/gallery/02-mobile.webp" />
                                         <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/02.webp"
@@ -1802,8 +1840,12 @@
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--yellow"></span>
                                         <span class="pricing-tree-frame__dot pricing-tree-frame__dot--green"></span>
                                     </div>
-                                    <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/03.webp"
-                                        alt="Pro tree second" />
+                                    <picture>
+                                        <source media="(min-width: 1921px) and (max-width: 2560px)"
+                                            srcset="../img/about/agency/gallery/03-2k.webp" />
+                                        <img class="pricing-tree-frame__img" src="../img/about/agency/gallery/03.webp"
+                                            alt="Pro tree second" />
+                                    </picture>
                                 </div>
                             </button>
                         </div>
