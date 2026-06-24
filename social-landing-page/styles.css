@@ -207,11 +207,13 @@ img {
     width: 1280px;
     height: 1440px;
     background: var(--green-light);
+    z-index: 0;
 }
 
 .hero__curve {
     position: absolute;
     pointer-events: none;
+    z-index: 1;
 }
 
 .hero__curve--1 {
@@ -234,6 +236,7 @@ img {
     width: 1280px;
     height: 1163px;
     opacity: 0.55;
+    z-index: 0;
     -webkit-mask-image: linear-gradient(160deg, #000 5%, transparent 65%);
     mask-image: linear-gradient(160deg, #000 5%, transparent 65%);
 }
@@ -245,11 +248,9 @@ img {
     width: 1280px;
     height: 1440px;
     overflow: hidden;
-    background: linear-gradient(
-        145.73deg,
-        rgba(255, 255, 235, 0) -4.55%,
-        #cdd3cd 93.39%
-    );
+    background: linear-gradient(145.73deg,
+            rgba(255, 255, 235, 0) -4.55%,
+            #cdd3cd 93.39%);
 }
 
 .hero__photo {
@@ -259,6 +260,7 @@ img {
     width: 1280px;
     height: 1390px;
     background: url("img/9.png") center bottom/auto 1300px no-repeat;
+    z-index: 2;
 }
 
 /* Header */
@@ -1623,7 +1625,30 @@ body.modal-open {
 }
 
 @media (max-width: 1024px) {
+
     /* ===================== 01 HERO ===================== */
+    .hero__curve--3 {
+        display: block;
+    }
+
+    .hero__curve--1 {
+        content: url("img/hero-vector-tablet-1.svg");
+        left: 20px;
+        top: 0;
+        width: 467.5px;
+        height: 1440px;
+        z-index: 2;
+    }
+
+    .hero__curve--2 {
+        content: url("img/hero-vector-tablet-2.svg");
+        left: -15px;
+        top: -189px;
+        width: 1197.5px;
+        height: 1640px;
+        z-index: 2;
+    }
+
     .hero__photo {
         height: 1440px;
         background-size: auto 1440px;
