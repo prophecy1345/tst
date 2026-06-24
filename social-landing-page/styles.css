@@ -270,7 +270,7 @@ img {
     top: 0;
     width: 1280px;
     height: 1390px;
-    background: url("img/9.png") center bottom/auto 1300px no-repeat;
+    background: url("img/9.webp") center bottom/auto 1300px no-repeat;
     z-index: 2;
 }
 
@@ -759,7 +759,7 @@ img {
     top: 57px;
     width: 810.28px;
     height: 726.57px;
-    background: url("img/ПнгСемья2.png") center top/cover no-repeat;
+    background: url("img/ПнгСемья2.webp") center top/cover no-repeat;
 }
 
 .tstree__content {
@@ -2261,7 +2261,7 @@ body.modal-open {
         top: -100px;
         width: 2560px;
         height: 5543.47px;
-        background-image: url("img/9.png");
+        background-image: url("img/9.webp");
         background-size: auto 2898px;
         background-position: center 2634px;
         background-repeat: no-repeat;
@@ -2630,7 +2630,7 @@ body.modal-open {
         bottom: 0;
         width: 2008px;
         height: 1804px;
-        background: url("img/ПнгСемья2.png") center top / cover no-repeat;
+        background: url("img/ПнгСемья2.webp") center top / cover no-repeat;
     }
 
     .tstree__content {
