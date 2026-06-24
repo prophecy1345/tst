@@ -2330,4 +2330,107 @@ body.modal-open {
         margin-top: -334px;
         z-index: 3;
     }
+
+    /* ===================== 02 PLATFORM ===================== */
+    .platform {
+        width: 2260px;
+        height: auto;
+        gap: 273.07px;
+        align-items: flex-start;
+    }
+
+    .platform__headline {
+        width: 2260px;
+        gap: 136.53px;
+        align-items: center;
+    }
+
+    .platform .section-title {
+        width: 2260px;
+        font-size: 204.8px;
+        line-height: 245.76px;
+        text-align: center;
+    }
+
+    .underline-orange::after {
+        height: 48px;
+        bottom: 14px;
+    }
+
+    .platform__text {
+        width: 2260px;
+        padding: 0 163.84px;
+        gap: 136.53px;
+        align-items: center;
+    }
+
+    .platform__text .body-24 {
+        width: 2013.9px;
+        font-size: 95.57px;
+        line-height: 122.88px;
+        text-align: center;
+    }
+
+    .platform .btn {
+        width: 791.89px;
+        height: 300.37px;
+        padding: 88.75px 136.53px;
+        border-radius: 54.61px;
+        font-size: 95.57px;
+        line-height: 122.88px;
+    }
+
+    /* Cards -> horizontal scroll (swipe right) */
+    .cards {
+        width: 2260px;
+        gap: 109.23px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        flex: 0 0 2075.3px;
+        width: 2075.3px;
+        gap: 136.53px;
+    }
+
+    .card__img {
+        width: 2075.3px;
+        height: 2490.4px;
+        border-radius: 109.23px;
+    }
+
+    .card__text {
+        width: 2075.3px;
+        gap: 54.61px;
+    }
+
+    .card__title-container {
+        width: 2075.3px;
+        gap: 109.23px;
+    }
+
+    .card__tag {
+        font-size: 95.57px;
+        line-height: 122.88px;
+    }
+
+    .card__title {
+        font-size: 163.84px;
+        line-height: 218.45px;
+    }
+
+    .card__body {
+        width: 1939px;
+        font-size: 95.57px;
+        line-height: 122.88px;
+    }
 }
