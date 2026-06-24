@@ -183,6 +183,11 @@ img {
     color: var(--black);
 }
 
+/* mobile-only forced line break (enabled in the <=480 breakpoint) */
+.br-mobile {
+    display: none;
+}
+
 /* ===================== 01 HERO ===================== */
 .hero {
     position: relative;
@@ -2587,5 +2592,111 @@ body.modal-open {
         left: 1705px;
         top: -260px;
         z-index: 5;
+    }
+
+    /* ===================== 04 TSTREE ===================== */
+    .tstree {
+        height: 4540px;
+        margin-top: -137px;
+    }
+
+    .tstree__bg {
+        left: 0;
+        top: 0;
+        width: 2560px;
+        height: 4710px;
+        border-radius: 164px 164px 0 0;
+    }
+
+    .br-mobile {
+        display: inline;
+    }
+
+    .tstree__photo {
+        left: 276px;
+        top: auto;
+        bottom: 0;
+        width: 2008px;
+        height: 1804px;
+        background: url("img/ПнгСемья2.png") center top / cover no-repeat;
+    }
+
+    .tstree__content {
+        left: calc(50% - 1024px);
+        top: 273px;
+        width: 2048px;
+        gap: 136.53px;
+        align-items: center;
+    }
+
+    .tstree__logo {
+        width: 956px;
+    }
+
+    .tstree__textblock {
+        width: 2048px;
+        gap: 81.92px;
+        align-items: center;
+    }
+
+    .tstree__title {
+        width: 2048px;
+        font-size: 204.8px;
+        line-height: 245.76px;
+        text-align: center;
+    }
+
+    .tstree__textblock .body-24 {
+        width: 2048px;
+        font-size: 95.57px;
+        line-height: 122.88px;
+        text-align: center;
+    }
+
+    .tstree__button {
+        width: 901px;
+        height: 300.37px;
+        padding: 88.75px 163.84px;
+        border-radius: 54.61px;
+        font-size: 95.57px;
+        line-height: 122.88px;
+    }
+
+    /* Sparkles */
+    .spark--lg-right {
+        width: 564px;
+        height: 568px;
+        left: 1855px;
+        top: 3451px;
+        transform: none;
+    }
+
+    .spark--lg-left {
+        width: 776px;
+        height: 672px;
+        left: 150px;
+        top: 710px;
+        transform: rotate(-10.19deg);
+    }
+
+    .spark--md-1 {
+        width: 382px;
+        height: 382px;
+        left: 314px;
+        top: 2683px;
+    }
+
+    .spark--md-2 {
+        width: 191px;
+        height: 191px;
+        left: 2073px;
+        top: 2936px;
+    }
+
+    .spark--md-3 {
+        width: 191px;
+        height: 191px;
+        left: 119px;
+        top: 3154px;
     }
 }
