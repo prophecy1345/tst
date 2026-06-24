@@ -2433,4 +2433,159 @@ body.modal-open {
         font-size: 95.57px;
         line-height: 122.88px;
     }
+
+    /* ===================== 03 TEAM ===================== */
+    .team {
+        width: 2260px;
+        gap: 273.07px;
+        align-items: center;
+    }
+
+    .team__head {
+        width: 2260px;
+        gap: 54.61px;
+        align-items: center;
+    }
+
+    .team .section-title {
+        width: 2260px;
+        font-size: 204.8px;
+        line-height: 245.76px;
+        text-align: center;
+    }
+
+    .team__title {
+        width: 2260px;
+    }
+
+    .highlight-green::before {
+        left: -116px;
+        top: 30px;
+        width: calc(100% + 232px);
+        height: 240px;
+        transform: rotate(-2.39deg);
+    }
+
+    .team__sub {
+        width: 2013.9px;
+        font-size: 95.57px;
+        line-height: 122.88px;
+        text-align: center;
+    }
+
+    .team__body {
+        width: 2260px;
+        gap: 273.07px;
+        align-items: center;
+    }
+
+    /* Feature -> vertical stack (text on top, image below) */
+    .feature {
+        display: flex;
+        flex-direction: column;
+        width: 2260px;
+        height: auto;
+        gap: 163.84px;
+    }
+
+    .feature__media {
+        position: relative;
+        order: 2;
+        left: 0;
+        width: 2260px;
+        height: 1720px;
+        border-radius: 90px;
+    }
+
+    .feature--img-right .feature__media,
+    .feature--img-left .feature__media {
+        left: 0;
+    }
+
+    .window {
+        width: 2117px;
+    }
+
+    .window__bar {
+        gap: 21.4px;
+        height: 71px;
+        padding: 0 32px;
+        border-radius: 36px 36px 0 0;
+    }
+
+    .window__bar span {
+        width: 21.4px;
+        height: 21.4px;
+    }
+
+    .window__shot {
+        width: 2117px;
+        height: 1424px;
+        border-radius: 0 0 36px 36px;
+    }
+
+    .feature__content {
+        position: static;
+        order: 1;
+        width: 2260px;
+    }
+
+    .feature__content .card__tag {
+        font-size: 95.57px;
+        line-height: 122.88px;
+        margin-bottom: 54.61px;
+    }
+
+    .feature__content .feature__title {
+        font-size: 163.84px;
+        line-height: 218.45px;
+        margin-bottom: 109.23px;
+    }
+
+    .feature__title {
+        font-size: 163.84px;
+        line-height: 218.45px;
+    }
+
+    .feature__list {
+        gap: 13.65px;
+    }
+
+    .feature__list li {
+        font-size: 95.57px;
+        line-height: 122.88px;
+        gap: 54.61px;
+    }
+
+    .feature__list li span {
+        width: 163.84px;
+        font-size: 122.88px;
+        line-height: 163.84px;
+    }
+
+    .feature__deco--spark {
+        width: 532px;
+        height: 532px;
+        left: 1809px;
+        top: -200px;
+        z-index: 5;
+    }
+
+    /* arrow sits over the image top-right corner (anchored to bottom) */
+    .feature__deco--arrow {
+        width: 703px;
+        height: 703px;
+        left: 1653px;
+        top: auto;
+        bottom: 1315px;
+        z-index: 5;
+    }
+
+    .feature__deco--heart {
+        width: 734px;
+        height: 734px;
+        left: 1705px;
+        top: -260px;
+        z-index: 5;
+    }
 }
