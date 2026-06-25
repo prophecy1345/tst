@@ -228,6 +228,17 @@ img {
     z-index: 1;
 }
 
+/* ---- Curve animation toggle ---- */
+/* Hide all breakpoint variants by default, then show only the active one */
+.hero__curve-anim {
+    display: none;
+    overflow: visible;
+}
+/* Default (>1920px): show 2560 SVGs */
+.hero__curve-anim--2560 {
+    display: block;
+}
+
 .hero__mobile-vector {
     display: none;
 }
@@ -1274,6 +1285,10 @@ body.modal-open {
 }
 
 @media (min-width: 1600px) and (max-width: 1920px) {
+    /* At 1920bp: show 1920 SVGs, hide others */
+    .hero__curve-anim--2560 { display: none; }
+    .hero__curve-anim--1920 { display: block; }
+
     .hero {
         height: 1086px;
     }
@@ -1285,7 +1300,6 @@ body.modal-open {
     }
 
     .hero__curve--1 {
-        content: url("img/hero-vector-1920-1.svg");
         left: 0;
         top: 0;
         width: 351px;
@@ -1293,7 +1307,6 @@ body.modal-open {
     }
 
     .hero__curve--2 {
-        content: url("img/hero-vector-1920-2.svg");
         left: 0;
         top: 0;
         width: 898px;
@@ -1307,7 +1320,6 @@ body.modal-open {
     }
 
     .hero__curve--3 {
-        content: url("img/hero-vector-1920-3.svg");
         left: 0;
         top: 214px;
         width: 960px;
@@ -1708,6 +1720,11 @@ body.modal-open {
 }
 
 @media (max-width: 1024px) {
+    /* At 1024bp: show 1024 SVGs, hide others */
+    .hero__curve-anim--2560,
+    .hero__curve-anim--1920 { display: none; }
+    .hero__curve-anim--1024 { display: block; }
+
     /* ===================== 01 HERO ===================== */
     .hero {
         height: 576px;
@@ -1730,7 +1747,6 @@ body.modal-open {
     }
 
     .hero__curve--1 {
-        content: url("img/hero-vector-1024-1.svg");
         left: 8px;
         top: 0;
         width: 187px;
@@ -1739,7 +1755,6 @@ body.modal-open {
     }
 
     .hero__curve--2 {
-        content: url("img/hero-vector-1024-2.svg");
         left: -6px;
         top: -75.6px;
         width: 479px;
@@ -1748,7 +1763,6 @@ body.modal-open {
     }
 
     .hero__curve--3 {
-        content: url("img/hero-vector-1024-3.svg");
         left: 0;
         top: 140px;
         width: 512px;
@@ -2318,8 +2332,10 @@ body.modal-open {
         /* native aspect 375:386 -> 2560 * 386/375 */
         height: 385.986px;
         transform: none;
-        /* soft blur to match mockup (~0.732px at 375w) */
-        filter: blur(3.223px);
+        opacity: 0.58;
+        filter: blur(0.6px);
+        -webkit-mask-image: linear-gradient(160deg, transparent 0%, #000 14%, #000 72%, transparent 100%);
+        mask-image: linear-gradient(160deg, transparent 0%, #000 14%, #000 72%, transparent 100%);
         pointer-events: none;
         z-index: 1;
     }

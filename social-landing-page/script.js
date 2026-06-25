@@ -81,4 +81,42 @@
   var toggle = $('.nav__toggle');
   if (toggle) toggle.addEventListener('click', openModal);
 
+  /* ---------- Hero curve stroke animation (all breakpoints) ---------- */
+  function initHeroCurveAnimation() {
+    // Filter to only the visible SVGs at the current breakpoint
+    var visibleCurves = $$('.hero__curve-anim').filter(function (svg) {
+      return getComputedStyle(svg).display !== 'none';
+    });
+
+    var durations = [1800, 2400, 2000]; // ms per curve (1, 2, 3)
+
+    visibleCurves.forEach(function (svg, i) {
+      var path = svg.querySelector('path');
+      if (!path) return;
+
+      var length = path.getTotalLength();
+
+      // Set hidden initial state
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+      path.style.transition = 'none';
+      path.style.willChange = 'stroke-dashoffset';
+
+      // Staggered reveal: curve 1 → 2 → 3
+      var delay = 150 + i * 350;
+      var duration = durations[i] !== undefined ? durations[i] : 2000;
+
+      setTimeout(function () {
+        path.style.transition = 'stroke-dashoffset ' + duration + 'ms cubic-bezier(0.33, 1, 0.68, 1)';
+        path.style.strokeDashoffset = '0';
+      }, delay);
+    });
+  }
+
+  if (document.readyState === 'complete') {
+    initHeroCurveAnimation();
+  } else {
+    window.addEventListener('load', initHeroCurveAnimation);
+  }
+
 })();
