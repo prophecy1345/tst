@@ -131,6 +131,12 @@ img {
     outline: none;
 }
 
+.header .btn,
+.header .btn:hover,
+.header .btn:focus-visible {
+    font-weight: 700;
+}
+
 .btn--green {
     background: var(--green);
 }
