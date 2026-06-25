@@ -434,6 +434,13 @@ img {
     width: 100%;
     height: 12px;
     background: url("img/Line.svg") no-repeat left bottom / 100% auto;
+    /* Initial state: clipped fully from the right (hidden) */
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.underline-orange.line-drawn::after {
+    clip-path: inset(0 0% 0 0);
 }
 
 .platform__text {
