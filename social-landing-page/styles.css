@@ -555,6 +555,12 @@ img {
     background: var(--green-light);
     transform: rotate(-1.5deg);
     z-index: -1;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1.2s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.highlight-green.line-drawn::before {
+    clip-path: inset(0 0% 0 0);
 }
 
 .team__sub {

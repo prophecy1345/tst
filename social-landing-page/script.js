@@ -119,9 +119,9 @@
     window.addEventListener('load', initHeroCurveAnimation);
   }
 
-  /* ---------- Underline (Line.svg) draw animation ---------- */
-  var underlines = $$('.underline-orange');
-  if (underlines.length && 'IntersectionObserver' in window) {
+  /* ---------- Reveal animations: underline (Line.svg) + green highlight ---------- */
+  var revealEls = $$('.underline-orange, .highlight-green');
+  if (revealEls.length && 'IntersectionObserver' in window) {
     var lineObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -131,10 +131,9 @@
       });
     }, { threshold: 0.6 });
 
-    underlines.forEach(function (el) { lineObserver.observe(el); });
+    revealEls.forEach(function (el) { lineObserver.observe(el); });
   } else {
-    // Fallback: show immediately if IntersectionObserver not supported
-    underlines.forEach(function (el) { el.classList.add('line-drawn'); });
+    revealEls.forEach(function (el) { el.classList.add('line-drawn'); });
   }
 
 })();
