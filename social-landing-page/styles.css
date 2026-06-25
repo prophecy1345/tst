@@ -748,6 +748,12 @@ img {
     height: 230px;
     left: 457px;
     top: 151px;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 1.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.feature__deco--spark.line-drawn {
+    clip-path: circle(75% at 50% 50%);
 }
 
 .feature__deco--arrow {
@@ -755,6 +761,13 @@ img {
     height: 230px;
     left: 1015px;
     top: 288px;
+    /* Reveal from top → arrowhead: start fully clipped from the bottom */
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 1.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.feature__deco--arrow.line-drawn {
+    clip-path: circle(75% at 50% 50%);
 }
 
 .feature__deco--heart {
@@ -763,6 +776,12 @@ img {
     left: 877px;
     top: -11px;
     transform: rotate(-12.32deg);
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 1.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.feature__deco--heart.line-drawn {
+    clip-path: circle(75% at 50% 50%);
 }
 
 /* ===================== 04 TSTREE ===================== */

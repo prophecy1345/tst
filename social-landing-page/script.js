@@ -120,20 +120,46 @@
   }
 
   /* ---------- Reveal animations: underline (Line.svg) + green highlight ---------- */
-  var revealEls = $$('.underline-orange, .highlight-green');
-  if (revealEls.length && 'IntersectionObserver' in window) {
-    var lineObserver = new IntersectionObserver(function (entries) {
+  /* ---------- Reveal animations: underline, highlight, spark ---------- */
+
+  // Underline + highlight: observe the elements directly
+  var textRevealEls = $$('.underline-orange, .highlight-green');
+  if (textRevealEls.length && 'IntersectionObserver' in window) {
+    var textObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('line-drawn');
-          lineObserver.unobserve(entry.target);
+          textObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.6 });
 
-    revealEls.forEach(function (el) { lineObserver.observe(el); });
+    textRevealEls.forEach(function (el) { textObserver.observe(el); });
   } else {
-    revealEls.forEach(function (el) { el.classList.add('line-drawn'); });
+    textRevealEls.forEach(function (el) { el.classList.add('line-drawn'); });
   }
+
+  // Spark + Arrow: observe each parent .feature block, reveal the deco inside
+  function makeDecoObserver(featureEl, decoEl) {
+    if (!featureEl || !decoEl) return;
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            decoEl.classList.add('line-drawn');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '0px 0px -15% 0px' });
+      obs.observe(featureEl);
+    } else {
+      decoEl.classList.add('line-drawn');
+    }
+  }
+
+  var featureImgRight = $$('.feature--img-right');
+  makeDecoObserver(featureImgRight[0], $('.feature__deco--spark'));
+  makeDecoObserver($('.feature--img-left'),  $('.feature__deco--arrow'));
+  makeDecoObserver(featureImgRight[1],  $('.feature__deco--heart'));
 
 })();
