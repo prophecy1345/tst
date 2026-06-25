@@ -8,6 +8,17 @@
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    @keyframes spark-pulse {
+      0%   { transform: scale(1); }
+      47%  { transform: scale(1.18); }
+      100% { transform: scale(1); }
+    }
+    .spark--pulse {
+      animation: spark-pulse 2s cubic-bezier(0.412, 0, 0.548, 1) infinite;
+      transform-origin: center center;
+    }
+  </style>
 </head>
 
 <body>
@@ -221,11 +232,11 @@
         <div class="tstree__bg"></div>
         <div class="tstree__photo"></div>
 
-        <img class="spark spark--lg-right" src="img/Sparkles.svg" alt="" />
+        <img class="spark spark--lg-right spark--pulse" src="img/Sparkles.svg" alt="" />
         <img class="spark spark--lg-left" src="img/Sparkles (1).svg" alt="" />
-        <img class="spark spark--md-1" src="img/Sparkles (4).svg" alt="" />
-        <img class="spark spark--md-2" src="img/Sparkles (2).svg" alt="" />
-        <img class="spark spark--md-3" src="img/Sparkles (3).svg" alt="" />
+        <img class="spark spark--md-1 spark--pulse" src="img/Sparkles (4).svg" alt="" />
+        <img class="spark spark--md-2 spark--pulse" src="img/Sparkles (2).svg" alt="" />
+        <img class="spark spark--md-3 spark--pulse" src="img/Sparkles (3).svg" alt="" />
 
         <div class="tstree__content">
           <img class="tstree__logo" src="img/logo.svg.svg" alt="TheSimsTree" />
