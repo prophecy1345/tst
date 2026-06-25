@@ -1,4 +1,4 @@
-/* TST Social — interactions, modal, forms, scaled layout */
+/* TST Social — interactions, modal, forms */
 (function () {
   'use strict';
 
@@ -81,43 +81,4 @@
   var toggle = $('.nav__toggle');
   if (toggle) toggle.addEventListener('click', openModal);
 
-  /* ---------- Fit 2560px design to viewport width ---------- */
-  var DESIGN_WIDTH = 2560;
-  var page = $('.page');
-  var viewport = $('.viewport');
-  var fitFrame = 0;
-
-  function fitPage() {
-    if (!page || !viewport) return;
-    var viewportWidth = document.documentElement.clientWidth || window.innerWidth;
-    var scale = Math.min(1, viewportWidth / DESIGN_WIDTH);
-
-    page.style.transform = 'scale(' + scale + ')';
-
-    if (fitFrame) cancelAnimationFrame(fitFrame);
-    fitFrame = requestAnimationFrame(function () {
-      fitFrame = 0;
-      var height = page.getBoundingClientRect().height;
-      viewport.style.height = Math.ceil(height) + 'px';
-    });
-  }
-
-  function watchPageSize() {
-    if (!page) return;
-    if (window.ResizeObserver) {
-      new ResizeObserver(fitPage).observe(page);
-    }
-    page.querySelectorAll('img').forEach(function (img) {
-      if (!img.complete) img.addEventListener('load', fitPage, { once: true });
-    });
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(fitPage);
-    }
-  }
-
-  window.addEventListener('resize', fitPage, { passive: true });
-  window.addEventListener('orientationchange', fitPage);
-  window.addEventListener('load', fitPage);
-  watchPageSize();
-  fitPage();
 })();
