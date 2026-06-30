@@ -64,6 +64,9 @@
     --muted: #747c76;
     --hover-green: #1c703c;
     --hover-ink: #121212;
+    --bp-desktop: 2560;
+    --bp-laptop: 1920;
+    --bp-tablet: 1024;
 }
 
 html,
@@ -89,10 +92,28 @@ body {
 
 @media (min-width: 1921px) and (max-width: 2559px) {
     .page {
-        width: 2560px;
+        width: calc(var(--bp-desktop) * 1px);
         max-width: none;
         margin: 0;
-        zoom: calc(100vw / 2560);
+        zoom: calc(100vw / var(--bp-desktop));
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+    .page {
+        width: calc(var(--bp-laptop) * 1px);
+        max-width: none;
+        margin: 0;
+        zoom: calc(100vw / var(--bp-laptop));
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1199px) {
+    .page {
+        width: calc(var(--bp-tablet) * 1px);
+        max-width: none;
+        margin: 0;
+        zoom: calc(100vw / var(--bp-tablet));
     }
 }
 
@@ -1321,7 +1342,7 @@ body.modal-open {
     opacity: 1;
 }
 
-@media (min-width: 1600px) and (max-width: 1920px) {
+@media (min-width: 1200px) and (max-width: 1920px) {
     /* At 1920bp: show 1920 SVGs, hide others */
     .hero__curve-anim--2560 {
         display: none;
@@ -1760,7 +1781,7 @@ body.modal-open {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
     /* At 1024bp: show 1024 SVGs, hide others */
     .hero__curve-anim--2560,
     .hero__curve-anim--1920 {
