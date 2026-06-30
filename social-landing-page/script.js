@@ -194,7 +194,64 @@
     }
   }());
 
-  makeDecoObserver($('.feature--img-left'),  $('.feature__deco--arrow'));
-  makeDecoObserver(featureImgRight[1],  $('.feature__deco--heart'));
+  // Arrow — stroke-dashoffset animation
+  (function () {
+    var arrowSvg = $('.feature__deco--arrow');
+    var arrowFeature = $('.feature--img-left');
+    if (!arrowSvg || !arrowFeature) return;
+
+    var path = arrowSvg.querySelector('path');
+    if (!path) return;
+    var len = path.getTotalLength();
+    path.style.strokeDasharray = len;
+    path.style.strokeDashoffset = -len; // negative = старт с конца пути (хвостик → стрелочка)
+    path.style.transition = 'none';
+    path.style.willChange = 'stroke-dashoffset';
+
+    if ('IntersectionObserver' in window) {
+      var arrowObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            path.style.transition = 'stroke-dashoffset 1800ms cubic-bezier(0.33, 1, 0.68, 1)';
+            path.style.strokeDashoffset = '0';
+            arrowObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '0px 0px -15% 0px' });
+      arrowObs.observe(arrowFeature);
+    } else {
+      path.style.strokeDashoffset = '0';
+    }
+  }());
+
+  // Heart — stroke-dashoffset animation
+  (function () {
+    var heartSvg = $('.feature__deco--heart');
+    var heartFeature = featureImgRight[1];
+    if (!heartSvg || !heartFeature) return;
+
+    var path = heartSvg.querySelector('path');
+    if (!path) return;
+    var len = path.getTotalLength();
+    path.style.strokeDasharray = len;
+    path.style.strokeDashoffset = -len;
+    path.style.transition = 'none';
+    path.style.willChange = 'stroke-dashoffset';
+
+    if ('IntersectionObserver' in window) {
+      var heartObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            path.style.transition = 'stroke-dashoffset 1800ms cubic-bezier(0.33, 1, 0.68, 1)';
+            path.style.strokeDashoffset = '0';
+            heartObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '0px 0px -15% 0px' });
+      heartObs.observe(heartFeature);
+    } else {
+      path.style.strokeDashoffset = '0';
+    }
+  }());
 
 })();
