@@ -158,7 +158,42 @@
   }
 
   var featureImgRight = $$('.feature--img-right');
-  makeDecoObserver(featureImgRight[0], $('.feature__deco--spark'));
+
+  // Spark — stroke-dashoffset "drawing" animation
+  (function () {
+    var sparkSvg = $('.feature__deco--spark');
+    var sparkFeature = featureImgRight[0];
+    if (!sparkSvg || !sparkFeature) return;
+
+    var paths = $$('path', sparkSvg);
+    paths.forEach(function (path) {
+      var len = path.getTotalLength();
+      path.style.strokeDasharray = len;
+      path.style.strokeDashoffset = len;
+      path.style.transition = 'none';
+      path.style.willChange = 'stroke-dashoffset';
+    });
+
+    if ('IntersectionObserver' in window) {
+      var sparkObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            paths.forEach(function (path, i) {
+              setTimeout(function () {
+                path.style.transition = 'stroke-dashoffset 1600ms cubic-bezier(0.33, 1, 0.68, 1)';
+                path.style.strokeDashoffset = '0';
+              }, i * 250);
+            });
+            sparkObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '0px 0px -15% 0px' });
+      sparkObs.observe(sparkFeature);
+    } else {
+      paths.forEach(function (path) { path.style.strokeDashoffset = '0'; });
+    }
+  }());
+
   makeDecoObserver($('.feature--img-left'),  $('.feature__deco--arrow'));
   makeDecoObserver(featureImgRight[1],  $('.feature__deco--heart'));
 
