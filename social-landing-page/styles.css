@@ -2783,19 +2783,19 @@ body.modal-open {
 
     /* arrow sits over the image top-right corner (anchored to bottom) */
     .feature__deco--arrow {
-        width: 102.979px;
-        height: 102.979px;
-        left: 259px;
-        top: auto;
+        width: 55px;
+        height: 57px;
+        left: 285px;
+        top: 200px;
         bottom: 196px;
         z-index: 5;
     }
 
     .feature__deco--heart {
-        width: 82px;
-        height: 94px;
-        left: 248px;
-        top: -34px;
+        width: 55px;
+        height: 63px;
+        left: 281px;
+        top: -12px;
         z-index: 5;
     }
 
