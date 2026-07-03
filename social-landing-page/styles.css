@@ -1435,12 +1435,12 @@ img {
 }
 
 .success-card__title {
-    width: 475px;
+    width: 481px;
     margin: 0 0 24px;
-    font-size: 58px;
-    line-height: 48px;
+    font-size: 48px;
+    line-height: 58px;
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: -2.5%;
     color: var(--black);
 }
 
