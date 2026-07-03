@@ -31,18 +31,6 @@
     if (modalSocial) modalSocial.hidden = true;
   }
 
-  function showFooterSuccess() {
-    var title = $('.footer__title-wrap');
-    var form = $('#subscribeForm');
-    var arrow = $('.footer__arrow');
-    var success = $('#footerSuccess');
-
-    if (title) title.hidden = true;
-    if (form) form.hidden = true;
-    if (arrow) arrow.hidden = true;
-    if (success) success.hidden = false;
-  }
-
   function openModal() {
     if (!modal) return;
     resetModalView();
@@ -51,6 +39,14 @@
     document.body.classList.add('modal-open');
     var input = $('input', modal);
     if (input) setTimeout(function () { input.focus(); }, 60);
+  }
+
+  function openModalSuccess() {
+    if (!modal) return;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    showModalSuccess();
   }
 
   function closeModal() {
@@ -106,7 +102,7 @@
     if (inp) inp.addEventListener('input', function () { inp.classList.remove('invalid'); });
   }
 
-  handleForm($('#subscribeForm'), showFooterSuccess);
+  handleForm($('#subscribeForm'), openModalSuccess);
   handleForm($('#modalForm'), showModalSuccess);
 
   /* ---------- Mobile nav toggle (opens modal as simple CTA fallback) ---------- */

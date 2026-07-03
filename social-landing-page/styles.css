@@ -1125,14 +1125,6 @@ img {
     display: none;
 }
 
-.footer__success {
-    width: 713px;
-    min-height: 350px;
-    padding: 80px;
-    background: #f5f5ef;
-    border-radius: 24px;
-}
-
 .footer__copyright {
     width: 2260px;
     height: 32px;
@@ -3164,13 +3156,6 @@ body.modal-open {
         width: 300px;
         font-size: 14px;
         line-height: 18px;
-    }
-
-    .footer__success {
-        width: 300px;
-        min-height: 0;
-        padding: 40px 24px;
-        border-radius: 24px;
     }
 
     .footer__copyright {
