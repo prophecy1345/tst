@@ -653,6 +653,34 @@
                                 </p>
                             </form>
 
+                            <div
+                                class="success-card footer__success"
+                                id="footerSuccess"
+                                hidden
+                            >
+                                <p class="success-card__eyebrow">Success</p>
+                                <h3 class="success-card__title">
+                                    You're on the waitlist for TST Social!
+                                </h3>
+                                <p class="success-card__text">
+                                    Start creating now - every family tree,
+                                    character card and story you make on
+                                    TheSimsTree will be available in TST Social
+                                    at launch
+                                </p>
+                                <button
+                                    type="button"
+                                    class="btn btn--green success-card__button"
+                                >
+                                    <span class="success-card__button-desktop"
+                                        >Get started</span
+                                    >
+                                    <span class="success-card__button-mobile"
+                                        >Create account</span
+                                    >
+                                </button>
+                            </div>
+
                             <img
                                 class="footer__arrow"
                                 src="img/arrow, hand drawn, scribble, doodle, reload, replay, 3.svg"
@@ -716,29 +744,62 @@
                     ×
                 </button>
                 <span class="modal__handle" data-close-modal></span>
-                <div class="modal__title-wrap">
-                    <div class="tag tag--orange">♡ Stay in the Loop</div>
-                    <div class="modal__titles">
-                        <h3 class="modal__title">Let’s Stay Connected</h3>
-                        <p class="modal__text">
-                            Get launch news and early access
+                <div class="modal__view modal__view--form">
+                    <div class="modal__title-wrap">
+                        <div class="tag tag--orange">
+                            <span class="card__tag-icon">♡</span>
+                            <span class="card__tag-text">
+                                Stay in the Loop</span
+                            >
+                        </div>
+                        <div class="modal__titles">
+                            <h3 class="modal__title">Let’s Stay Connected</h3>
+                            <p class="modal__text">
+                                Get launch news and early access
+                            </p>
+                        </div>
+                    </div>
+                    <form id="modalForm" class="modal__form">
+                        <div class="modal__row">
+                            <input type="email" placeholder="Email" required />
+                            <button type="submit" class="btn btn--green">
+                                Send
+                            </button>
+                        </div>
+                        <p class="modal__note">
+                            By entering your Email, you consent to receive
+                            promotional information updates from TheSimsTree in
+                            line with our <a href="#">Privacy Policy</a>. You
+                            can opt out at any time.
                         </p>
-                    </div>
+                    </form>
                 </div>
-                <form id="modalForm" class="modal__form">
-                    <div class="modal__row">
-                        <input type="email" placeholder="Email" required />
-                        <button type="submit" class="btn btn--green">
-                            Send
-                        </button>
-                    </div>
-                    <p class="modal__note">
-                        By entering your Email, you consent to receive
-                        promotional information updates from TheSimsTree in line
-                        with our <a href="#">Privacy Policy</a>. You can opt out
-                        at any time.
+                <div
+                    class="modal__view modal__view--success success-card"
+                    hidden
+                >
+                    <p class="success-card__eyebrow">Success</p>
+                    <h3 class="success-card__title">
+                        You're on the waitlist for TST Social!
+                    </h3>
+                    <p class="success-card__text">
+                        Start creating now - every family tree, character card
+                        and story you make on TheSimsTree will be available in
+                        TST Social at launch
                     </p>
-                </form>
+                    <button
+                        type="button"
+                        class="btn btn--green success-card__button"
+                        data-close-modal
+                    >
+                        <span class="success-card__button-desktop"
+                            >Get started</span
+                        >
+                        <span class="success-card__button-mobile"
+                            >Create account</span
+                        >
+                    </button>
+                </div>
                 <div class="modal__social">
                     <a href="#" aria-label="Instagram"
                         ><img src="icons/Instagram.svg" alt="Instagram"

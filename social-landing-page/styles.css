@@ -54,6 +54,10 @@
     box-sizing: border-box;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 :root {
     --black: #202221;
     --green: #85e878;
@@ -1121,6 +1125,14 @@ img {
     display: none;
 }
 
+.footer__success {
+    width: 713px;
+    min-height: 350px;
+    padding: 80px;
+    background: #f5f5ef;
+    border-radius: 24px;
+}
+
 .footer__copyright {
     width: 2260px;
     height: 32px;
@@ -1280,6 +1292,22 @@ img {
     display: none;
 }
 
+.modal__view {
+    width: 100%;
+}
+
+.modal__view--form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.modal__view--success {
+    min-height: 364px;
+    justify-content: center;
+}
+
 .modal__title-wrap {
     width: 475px;
     height: 172px;
@@ -1388,6 +1416,54 @@ img {
 .modal__note a:focus-visible {
     color: var(--hover-green);
     outline: none;
+}
+
+.success-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.success-card__eyebrow {
+    margin: 0 0 32px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--orange);
+}
+
+.success-card__title {
+    width: 475px;
+    margin: 0 0 24px;
+    font-size: 58px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--black);
+}
+
+.success-card__text {
+    width: 475px;
+    margin: 0 0 50px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--black);
+}
+
+.success-card__button {
+    width: 440px;
+    height: 68px;
+    padding: 22px 36px;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.success-card__button-mobile {
+    display: none;
 }
 
 body.modal-open {
@@ -3090,6 +3166,13 @@ body.modal-open {
         line-height: 18px;
     }
 
+    .footer__success {
+        width: 300px;
+        min-height: 0;
+        padding: 40px 24px;
+        border-radius: 24px;
+    }
+
     .footer__copyright {
         width: 300px;
         height: auto;
@@ -3265,6 +3348,77 @@ body.modal-open {
     .modal__social img {
         width: 24px;
         height: 24px;
+    }
+
+    .modal__view--form {
+        gap: 24px;
+    }
+
+    .modal__view--success {
+        min-height: 156px;
+    }
+
+    .success-card__eyebrow {
+        margin-bottom: 12px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .success-card__title {
+        width: 100%;
+        margin-bottom: 12px;
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .success-card__text {
+        width: 300px;
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0;
+    }
+
+    .success-card__button {
+        width: 100%;
+        height: 44px;
+        padding: 13px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .success-card__button-desktop {
+        display: none;
+    }
+
+    .success-card__button-mobile {
+        display: inline;
+    }
+
+    .modal.modal--success {
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .modal.modal--success .modal__dialog {
+        width: 100%;
+        max-height: none;
+        margin-top: 0;
+        padding: 60px 40px 40px;
+        overflow: visible;
+        border-radius: 24px 24px 0 0;
+        gap: 0;
+    }
+
+    .modal.modal--success .modal__handle {
+        top: 8px;
+        width: 40px;
+        height: 4px;
+    }
+
+    .modal.modal--success .modal__view--success {
+        min-height: 0;
     }
 }
 

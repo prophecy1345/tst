@@ -11,9 +11,41 @@
 
   /* ---------- Modal ---------- */
   var modal = $('#modal');
+  var modalFormView = modal ? $('.modal__view--form', modal) : null;
+  var modalSuccessView = modal ? $('.modal__view--success', modal) : null;
+  var modalSocial = modal ? $('.modal__social', modal) : null;
+
+  function resetModalView() {
+    if (!modal) return;
+    modal.classList.remove('modal--success');
+    if (modalFormView) modalFormView.hidden = false;
+    if (modalSuccessView) modalSuccessView.hidden = true;
+    if (modalSocial) modalSocial.hidden = false;
+  }
+
+  function showModalSuccess() {
+    if (!modal) return;
+    modal.classList.add('modal--success');
+    if (modalFormView) modalFormView.hidden = true;
+    if (modalSuccessView) modalSuccessView.hidden = false;
+    if (modalSocial) modalSocial.hidden = true;
+  }
+
+  function showFooterSuccess() {
+    var title = $('.footer__title-wrap');
+    var form = $('#subscribeForm');
+    var arrow = $('.footer__arrow');
+    var success = $('#footerSuccess');
+
+    if (title) title.hidden = true;
+    if (form) form.hidden = true;
+    if (arrow) arrow.hidden = true;
+    if (success) success.hidden = false;
+  }
 
   function openModal() {
     if (!modal) return;
+    resetModalView();
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -26,6 +58,7 @@
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
+    resetModalView();
   }
 
   $$('[data-open-modal]').forEach(function (btn) {
@@ -67,15 +100,14 @@
       input.classList.remove('invalid');
       form.reset();
       if (typeof afterSuccess === 'function') afterSuccess();
-      showToast("Thanks! You're on the list 💚");
     });
 
     var inp = $('input[type="email"]', form);
     if (inp) inp.addEventListener('input', function () { inp.classList.remove('invalid'); });
   }
 
-  handleForm($('#subscribeForm'));
-  handleForm($('#modalForm'), closeModal);
+  handleForm($('#subscribeForm'), showFooterSuccess);
+  handleForm($('#modalForm'), showModalSuccess);
 
   /* ---------- Mobile nav toggle (opens modal as simple CTA fallback) ---------- */
   var toggle = $('.nav__toggle');
