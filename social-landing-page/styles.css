@@ -1920,9 +1920,9 @@ body.modal-open {
     }
 
     .header .btn {
-        width: 116px;
+        width: 150px;
         height: 44px;
-        padding: 13px 20px;
+        padding: 22px 36px;
         font-size: 14px;
         line-height: 18px;
         border-radius: 8px;
@@ -2011,6 +2011,7 @@ body.modal-open {
     .card__img {
         width: 288px;
         height: 345.6px;
+        border-radius: 33px;
     }
 
     .card__text {
@@ -2518,9 +2519,9 @@ body.modal-open {
     }
 
     .header .btn {
-        width: 116px;
+        width: 150px;
         height: 44px;
-        padding: 13px 20px;
+        padding: 22px 36px;
         border-radius: 8px;
         font-size: 14px;
         line-height: 18px;
