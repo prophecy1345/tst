@@ -3312,12 +3312,37 @@ body.modal-open {
         max-width: calc(100vw - 44px);
     }
 
+    .team,
+    .team__body,
+    .feature {
+        width: calc(100vw - 44px);
+        max-width: calc(100vw - 44px);
+    }
+
     .platform__headline,
     .platform__text,
     .team__head,
     .feature__content {
         width: calc(100vw - 44px);
         max-width: calc(100vw - 44px);
+    }
+
+    .team__head {
+        align-items: center;
+        text-align: center;
+    }
+
+    .team .section-title,
+    .team__title {
+        width: calc(100vw - 44px);
+        max-width: calc(100vw - 44px);
+        text-align: center;
+    }
+
+    .team__sub {
+        width: calc(100vw - 88px);
+        max-width: calc(100vw - 88px);
+        text-align: center;
     }
 
     .platform .section-title {
@@ -3380,5 +3405,9 @@ body.modal-open {
 
     .spark--md-3 {
         left: calc(17.432px + (100vw - 375px) / 2);
+    }
+
+    .feature__deco--arrow {
+        left: calc(285px + (100vw - 375px) / 2);
     }
 }
