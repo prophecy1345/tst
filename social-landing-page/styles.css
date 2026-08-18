@@ -68,9 +68,11 @@
     --muted: #747c76;
     --hover-green: #1c703c;
     --hover-ink: #121212;
-    --bp-desktop: 2560;
-    --bp-laptop: 1920;
-    --bp-tablet: 1024;
+    /* viewport width as a plain <number> (see "Scaling" below) */
+    --vw: tan(atan2(100vw, 1px));
+    /* active design tier width in px + its scale factor; overridden per tier below */
+    --design: 2560;
+    --zoom: min(1, calc(var(--vw) / var(--design)));
 }
 
 html,
@@ -82,7 +84,7 @@ body {
 
 .viewport {
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .page {
@@ -94,58 +96,41 @@ body {
     background: #fff;
 }
 
-@media (min-width: 1921px) and (max-width: 2559px) {
+/* ===================== Scaling =====================
+   The layout is a pixel-perfect export at four design widths. Each tier keeps
+   its native px values and is scaled onto the viewport with `zoom`.
+   `--vw` is the viewport width as a plain <number>: `zoom` accepts only
+   <number>, so calc(100vw / 2560) is a <length> and gets dropped as invalid.
+   tan(atan2(<length>, 1px)) is the standard way to strip the unit. */
+@supports (zoom: 1) and (width: calc(1px * tan(atan2(1px, 1px)))) {
     .page {
-        width: calc(var(--bp-desktop) * 1px);
+        width: calc(var(--design) * 1px);
         max-width: none;
-        margin: 0;
-        zoom: calc(100vw / var(--bp-desktop));
+        /* margin: 0 auto (base rule) centers the page when --zoom hits its cap */
+        zoom: var(--zoom);
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1920px) {
-    .page {
-        width: calc(var(--bp-laptop) * 1px);
-        max-width: none;
-        margin: 0;
-        zoom: calc(100vw / var(--bp-laptop));
+@media (max-width: 1920px) {
+    :root {
+        --design: 1920;
+        --zoom: calc(var(--vw) / var(--design));
     }
 }
 
-@media (min-width: 481px) and (max-width: 1199px) {
-    .page {
-        width: calc(var(--bp-tablet) * 1px);
-        max-width: none;
-        margin: 0;
-        zoom: calc(100vw / var(--bp-tablet));
+@media (max-width: 1199px) {
+    :root {
+        --design: 1024;
+        --zoom: calc(var(--vw) / var(--design));
     }
 }
 
-@media (min-width: 376px) and (max-width: 480px) {
-    .page {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        zoom: 1;
-    }
-
-    .hero,
-    .hero__right,
-    .about,
-    .tstree,
-    .tstree__bg,
-    .footer {
-        width: 100vw;
-    }
-
-    .hero__photo {
-        width: 100vw;
-        background-position: center 385.84px;
-    }
-
-    .hero__mobile-vector {
-        width: 100vw;
-        height: calc(100vw * 386 / 375);
+@media (max-width: 768px) {
+    :root {
+        --design: 375;
+        /* ponytail: cap the upscale at 1.3 so 481-768px shows the mobile tier
+           centered with side gutters instead of a 2x-blown-up phone layout. */
+        --zoom: min(1.3, calc(var(--vw) / var(--design)));
     }
 }
 
@@ -1228,6 +1213,8 @@ img {
 }
 
 .modal__dialog {
+    /* .modal is a full-viewport fixed layer at zoom 1; only the dialog scales */
+    zoom: var(--zoom);
     position: relative;
     width: 713px;
     height: 524px;
@@ -2514,7 +2501,7 @@ body.modal-open {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     /* ===================== 01 HERO ===================== */
     .hero {
         height: 812.032px;
@@ -3227,9 +3214,9 @@ body.modal-open {
     }
 
     .modal__dialog {
-        width: 100%;
+        width: 375px;
         height: auto;
-        max-height: 92vh;
+        max-height: calc(92vh / var(--zoom));
         overflow-y: auto;
         padding: 60px 40px 40px;
         gap: 24px;
@@ -3387,7 +3374,7 @@ body.modal-open {
     }
 
     .modal.modal--success .modal__dialog {
-        width: 100%;
+        width: 375px;
         max-height: none;
         margin-top: 0;
         padding: 60px 40px 40px;
@@ -3407,146 +3394,3 @@ body.modal-open {
     }
 }
 
-@media (min-width: 376px) and (max-width: 480px) {
-    html,
-    body,
-    .viewport {
-        width: 100vw;
-        overflow-x: hidden;
-    }
-
-    .page,
-    .hero,
-    .hero__right,
-    .about,
-    .platform,
-    .platform__headline,
-    .platform__text,
-    .cards,
-    .team,
-    .team__head,
-    .team__body,
-    .feature,
-    .feature__content,
-    .tstree,
-    .tstree__bg,
-    .footer,
-    .footer__inner,
-    .footer__text,
-    .footer__copyright,
-    .footer__bottom {
-        width: 100vw;
-        max-width: 100vw;
-    }
-
-    .platform,
-    .team,
-    .team__body,
-    .feature {
-        align-items: center;
-    }
-
-    .platform {
-        width: calc(100vw - 44px);
-        max-width: calc(100vw - 44px);
-    }
-
-    .team,
-    .team__body,
-    .feature {
-        width: calc(100vw - 44px);
-        max-width: calc(100vw - 44px);
-    }
-
-    .platform__headline,
-    .platform__text,
-    .team__head,
-    .feature__content {
-        width: calc(100vw - 44px);
-        max-width: calc(100vw - 44px);
-    }
-
-    .team__head {
-        align-items: center;
-        text-align: center;
-    }
-
-    .team .section-title,
-    .team__title {
-        width: calc(100vw - 44px);
-        max-width: calc(100vw - 44px);
-        text-align: center;
-    }
-
-    .team__sub {
-        width: calc(100vw - 88px);
-        max-width: calc(100vw - 88px);
-        text-align: center;
-    }
-
-    .platform .section-title {
-        width: calc(100vw - 44px);
-        max-width: calc(100vw - 44px);
-    }
-
-    .platform__text .body-24 {
-        width: calc(100vw - 88px);
-        max-width: calc(100vw - 88px);
-    }
-
-    .cards {
-        width: 100vw;
-        max-width: 100vw;
-        padding-left: 22px;
-        padding-right: 22px;
-    }
-
-    .hero__photo {
-        width: 100vw;
-        background-position: center 385.84px;
-    }
-
-    .hero__mobile-vector {
-        width: 100vw;
-        height: calc(100vw * 386 / 375);
-    }
-
-    .header {
-        left: 22px;
-        width: calc(100vw - 44px);
-    }
-
-    .hero__title {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .tstree__photo {
-        left: calc(40.43px + (100vw - 375px) / 2);
-        transform: none;
-    }
-
-    .spark--lg-right {
-        left: calc(271.729px + (100vw - 375px) / 2);
-    }
-
-    .spark--lg-left {
-        left: calc(21.973px + (100vw - 375px) / 2);
-    }
-
-    .spark--md-1 {
-        left: calc(46px + (100vw - 375px) / 2);
-    }
-
-    .spark--md-2 {
-        left: calc(303.662px + (100vw - 375px) / 2);
-    }
-
-    .spark--md-3 {
-        left: calc(17.432px + (100vw - 375px) / 2);
-    }
-
-    .feature__deco--arrow {
-        left: calc(285px + (100vw - 375px) / 2);
-    }
-}
