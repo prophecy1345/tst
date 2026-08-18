@@ -1213,8 +1213,10 @@ img {
 }
 
 .modal__dialog {
-    /* .modal is a full-viewport fixed layer at zoom 1; only the dialog scales */
-    zoom: var(--zoom);
+    /* ponytail: one fixed 453x333 card above the mobile tier — the dialog is laid
+       out at the 2560 design size and scaled down by a constant, so it does NOT
+       follow --zoom. The mobile tier overrides this back to --zoom below. */
+    zoom: calc(453 / 713);
     position: relative;
     width: 713px;
     height: 524px;
@@ -3214,6 +3216,7 @@ body.modal-open {
     }
 
     .modal__dialog {
+        zoom: var(--zoom);
         width: 375px;
         height: auto;
         max-height: calc(92vh / var(--zoom));
