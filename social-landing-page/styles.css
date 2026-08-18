@@ -3205,13 +3205,31 @@ body.modal-open {
     /* NOTE: the modal is outside .page, so it is NOT scaled — real px here */
     .modal {
         align-items: flex-end;
+        /* iOS keeps the toolbar expanded while body.modal-open blocks scrolling, so
+           `inset: 0` stops at the small viewport and the page shows through behind
+           the translucent toolbar. Reach past it, then pad the sheet back up. */
+        height: 100lvh;
+        padding-bottom: calc(100lvh - 100svh);
+    }
+
+    /* fills the toolbar strip with the sheet colour; 0-height where there is no
+       dynamic toolbar, so desktop is untouched */
+    .modal::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: calc(100lvh - 100svh);
+        background: #f5f5ef;
     }
 
     .modal__dialog {
         zoom: var(--zoom);
         width: 375px;
         height: auto;
-        max-height: calc(92vh / var(--zoom));
+        /* svh, not vh: vh is the large viewport and would overflow the visible area */
+        max-height: calc(92svh / var(--zoom));
         overflow-y: auto;
         padding: 60px 40px 40px;
         gap: 24px;
