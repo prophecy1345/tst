@@ -2508,11 +2508,6 @@ body.modal-open {
     .hero {
         height: 812.032px;
         margin-top: 0;
-        background: linear-gradient(
-            145.73deg,
-            rgba(255, 255, 235, 0) -4.55%,
-            #cdd3cd 93.39%
-        );
         z-index: 0;
     }
 
@@ -2564,11 +2559,7 @@ body.modal-open {
         width: 375px;
         height: 812.032px;
         overflow: hidden;
-        background: linear-gradient(
-            145.73deg,
-            rgba(255, 255, 235, 0) -4.55%,
-            #cdd3cd 93.39%
-        );
+        /* background inherited from the base rule so the tint matches every tier */
     }
 
     .hero__photo {
