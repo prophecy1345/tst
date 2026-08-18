@@ -68,12 +68,23 @@
   function syncModalViewport() {
     if (!modal || !vv) return;
     if (!modal.classList.contains('open')) {
+      modal.style.position = '';
+      modal.style.top = '';
+      modal.style.left = '';
+      modal.style.width = '';
       modal.style.height = '';
-      modal.style.transform = '';
       return;
     }
+    /* Document coordinates, not `position: fixed`: iOS scrolls the document to
+       reveal the focused field even with body overflow hidden, and a fixed
+       overlay does not follow the visual viewport there. pageTop/pageLeft are
+       the visual viewport's offset within the document, so this lands exactly
+       on the visible area whether the keyboard is up, down, or animating. */
+    modal.style.position = 'absolute';
+    modal.style.top = vv.pageTop + 'px';
+    modal.style.left = vv.pageLeft + 'px';
+    modal.style.width = vv.width + 'px';
     modal.style.height = vv.height + 'px';
-    modal.style.transform = 'translateY(' + vv.offsetTop + 'px)';
   }
 
   if (vv) {
