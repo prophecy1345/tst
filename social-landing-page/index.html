@@ -19,6 +19,27 @@
             crossorigin
         />
         <link rel="stylesheet" href="styles.css" />
+        <script>
+            /* Each design tier is scaled onto the viewport with `zoom`, which needs a
+               plain <number>. The pure-CSS unit strip tan(atan2(100vw, 1px)) resolves
+               to 0 in Safari 26, so the number is computed here instead. --design and
+               --zoom-max stay in styles.css so the breakpoints live in one place.
+               This runs after the stylesheet, so getComputedStyle sees the tier values. */
+            (function () {
+                var root = document.documentElement;
+                function setZoom() {
+                    var cs = getComputedStyle(root);
+                    var design = parseFloat(cs.getPropertyValue("--design")) || 2560;
+                    var max = parseFloat(cs.getPropertyValue("--zoom-max")) || 1;
+                    var vw = root.clientWidth || window.innerWidth;
+                    root.style.setProperty("--zoom", Math.min(max, vw / design));
+                }
+                setZoom();
+                root.classList.add("scaled");
+                addEventListener("resize", setZoom);
+                addEventListener("DOMContentLoaded", setZoom);
+            })();
+        </script>
         <style>
             @keyframes spark-pulse {
                 0% {
