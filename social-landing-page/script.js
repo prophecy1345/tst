@@ -37,6 +37,7 @@
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
+    syncModalViewport();
     var input = $('input', modal);
     if (input) setTimeout(function () { input.focus(); }, 60);
   }
@@ -47,6 +48,7 @@
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
     showModalSuccess();
+    syncModalViewport();
   }
 
   function closeModal() {
@@ -55,6 +57,28 @@
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
     resetModalView();
+    syncModalViewport();
+  }
+
+  /* iOS shrinks and pans the visual viewport when the keyboard opens, but keeps
+     `position: fixed` anchored to the layout viewport -- the sheet drifts up and
+     the page shows underneath it. Pin the overlay to the visual viewport instead. */
+  var vv = window.visualViewport;
+
+  function syncModalViewport() {
+    if (!modal || !vv) return;
+    if (!modal.classList.contains('open')) {
+      modal.style.height = '';
+      modal.style.transform = '';
+      return;
+    }
+    modal.style.height = vv.height + 'px';
+    modal.style.transform = 'translateY(' + vv.offsetTop + 'px)';
+  }
+
+  if (vv) {
+    vv.addEventListener('resize', syncModalViewport);
+    vv.addEventListener('scroll', syncModalViewport);
   }
 
   $$('[data-open-modal]').forEach(function (btn) {

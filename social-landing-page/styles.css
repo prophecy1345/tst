@@ -3210,18 +3210,19 @@ body.modal-open {
         align-items: flex-end;
     }
 
-    /* ponytail: iOS Safari stops `position: fixed` at the small viewport, so the
-       page shows through under the sheet behind the toolbar. The sheet overshoots
-       the bottom edge with padding and is pulled back by an equal negative margin:
-       the background covers the strip while the content stays put. No viewport
-       units, so every browser behaves the same (the overshoot is off-screen). */
+    /* ponytail: safety net for the frame between an iOS viewport pan and the
+       visualViewport sync in script.js -- the sheet keeps a strip of its own
+       colour past the bottom edge, pulled back out of layout by a negative
+       margin. A border, not padding: borders sit outside the scrollport, so this
+       adds no blank space to scroll into. */
     .modal__dialog {
         zoom: var(--zoom);
         width: 375px;
         height: auto;
         max-height: calc(92svh / var(--zoom) + var(--sheet-overshoot));
         overflow-y: auto;
-        padding: 60px 40px calc(40px + var(--sheet-overshoot));
+        padding: 60px 40px 40px;
+        border-bottom: var(--sheet-overshoot) solid #f5f5ef;
         margin-bottom: calc(var(--sheet-overshoot) * -1);
         gap: 24px;
         border-radius: 24px 24px 0 0;
@@ -3382,7 +3383,8 @@ body.modal-open {
         max-height: none;
         margin-top: 0;
         margin-bottom: calc(var(--sheet-overshoot) * -1);
-        padding: 60px 40px calc(40px + var(--sheet-overshoot));
+        padding: 60px 40px 40px;
+        border-bottom: var(--sheet-overshoot) solid #f5f5ef;
         overflow: visible;
         border-radius: 24px 24px 0 0;
         gap: 0;
